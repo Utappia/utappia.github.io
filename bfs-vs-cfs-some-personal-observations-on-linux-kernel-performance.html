@@ -6,8 +6,8 @@
         <meta name="author" content="Salih Emin" />
         <meta name="copyright" content="Salih Emin" />
 
-<meta name="keywords" content="bfq, bfs, download, kernel, package, ubuntu, Utappia Projects, " />
-        <title>BFS – BFQ optimized linux kernel packages ready for install  · Utappia
+<meta name="keywords" content="optimus kernel, benchmark, bfq, bfs, cfs, comparison, desktop, kernel, linux, performance, scheduler, story, Utappia Projects, " />
+        <title>BFS vs CFS: Some personal observations on Linux Kernel performance  · Utappia
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -62,51 +62,43 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="./bfs-bfq-optimized-linux-kernel-packages-ready-for-install.html"> BFS – BFQ optimized linux kernel packages ready for install  </a></h1>
+    <h1><a href="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html"> BFS vs CFS: Some personal observations on Linux Kernel performance  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <html><body><p>As <a href="http://cerebrux.net/2012/02/13/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance/" title="BFS vs CFS: Some personal observations on Linux Kernel performance">my previous post</a> was a bit of a surprise for many of <a href="http://en.wikipedia.org/wiki/Linux" title="Linux">Linux</a> users out there, I decided to distribute my work, so that others also can benefit from <a href="http://en.wikipedia.org/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">BFS</a> kernel.</p>
-<p>Not many people are willing to compile a linux kernel from source but would definitely install a prepackaged one if they were given the opportunity.</p>
-<p>So... I have some good news for anyone interested. As you may know <a href="http://gplus.to/zenlinuxkernel" title="Zen Linux Kernel">I keep posting any news about</a> stable releases of Linux Kernel and updates about Zen Kernel.  Well today, <a href="https://plus.google.com/u/0/106359436571697092771/posts/7V4gnwaebNm">I created a github repository</a> to upload prebuilt packages of the latest BFS optimized <a href="http://en.wikipedia.org/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a> so that anyone can download and install these packages.  </p>
+            <html><body><p>For some time now, I have stopped using the Linux kernel that comes bundled with the <a href="http://en.wikipedia.org/wiki/Ubuntu_%28operating_system%29" title="Ubuntu (operating system)">Ubuntu operating system</a> and use a version that has a different approach on the matter of kernel <a href="http://en.wikipedia.org/wiki/Scheduling_%28computing%29" title="Scheduling (computing)">schedulers</a>.</p>
+<p>"Scheduler" is a time-resource-manager (task scheduler) who determines which process and how much it employs the processor (CPU) of the computer. The official scheduler of the Linux kernel is the CFS. In the past, I made several experiments (benchmarks) to see if I could find any <strong>noticeable difference</strong> in performance of my system by optimizing the kernel and changing the scheduler. The results of the experiments did not give me any reasonable grounds for the <strong>necessity of optimizing</strong> the Linux Kernel, let alone to change the scheduler of the kernel on modern machines.</p>
+<p>Nevertheless I continued to use a Linux Kernel with the BFS scheduler (see my article here : [Greek] <a href="http://cerebrux.net/linux-anavolika-preemtive-bfs-bfq-linux-kernel/">Optimizing Ubuntu Linux Kernel with BFS - BFQ</a>) and of course to optimize the kernel according the specs of my machine.</p>
+<p>But yesterday, something really unexpected happened and I saw before my eyes the <strong>huge difference in performance</strong> that can give a Linux Kernel scheduler not only to an old PC but also to a modern PC with 4GB DDR3 RAM and a Intel i7 Quad Core CPU !!</p>
+<h2 id="preface">Preface:</h2>
+<p><em>Completely Fair Schedule (CFS):</em></p>
+<p>To quote Wikipedia "The <a href="http://en.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a> is the name of a task scheduler which was merged into the 2.6.23 release of the <a href="http://en.wikipedia.org/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a>. It handles CPU <a href="http://en.wikipedia.org/wiki/Resource_allocation" title="Resource allocation">resource allocation</a> for executing processes, and aims to maximize overall CPU utilization while also maximizing interactive performance."</p>
+<p>CFS is the standard scheduler for Android. As such it is compatible with all apps and processes run in Android</p>
+<p><em>Brain FUCK Scheduler (BFS):</em></p>
+<p>To quote Mr. <a href="http://en.wikipedia.org/wiki/Con_Kolivas" title="Con Kolivas">Con Kolivas</a>, the developer of BFS "BFS is the <a href="http://en.wikipedia.org/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a>.</p>
+<p>It was designed to be forward looking only, make the most of lower spec machines, and not scale to massive hardware. ie it is a desktop orientated scheduler, with extremely low latencies for excellent interactivity by design rather than "calculated", with rigid fairness, nice priority distribution and extreme scalability within normal load levels."</p>
+<p>Google looked at BFS to use as the Android scheduler but decided that it wasn't mature enough yet.</p>
+<h2 id="experiment">Experiment:</h2>
+<p>In this experiment I used a 1,6 GB video file (.MOV) 40 minutes long and started to render it on 720p resolution. The system had the same Uptime and same conditions. The screenshot was taken on the same percentage so that we can have a fair measurement on "estimated completion time".
+I repeated this experiment for about 10 times, keeping the same conditions and it gave me the same results.</p>
+<p>Now this is what I got :</p>
+<p><img alt="cfs vs bfs kernel on rendering a videofile" src="/images/cfs_vs_bfs_rendering.png" style="width: 1650px; height: auto;"/></p>
+<p>As you can see with the BFS scheduler the "Job" will be completed in half of the time that CFS needs. One observation that can not be seen in a picture is that with BFS the CPU had a constant and steady 98-100% CPU utilization, in contrast with CFS the CPU utilization was dropping from time to time to 25%.</p>
 <blockquote>
-<p>System Requirements :</p>
-<ul>
-<li>OS: Ubuntu</li>
-<li>CPU: <strong><em>Intel</em></strong> or <strong><em>AMD</em></strong></li>
-<li>Arch: 32bit and 64bit</li>
-</ul>
-</blockquote>
-<p><a href="https://github.com/cerebrux/Optimus-Linux-Kernel/tarball/master" target="_blank"><img alt="Download Optimus Kernel" src="/images/download_icon.png" style="width: 150px; height: auto;"/></a></p>
-<p>This repo will always have the latest stable release packages of BFS optimized Linux Kernel so stay tuned...</p>
-<p>To use them just install the 3 packages related to your Operating Systems architecture:</p>
-<p><strong>Ubuntu 32bit</strong>: linux-headers-<em>all.deb , linux-headers-</em>.deb, linux-image-*i386.deb</p>
-<p><strong>Ubuntu 64bit:</strong> linux-headers-<em>all.deb , linux-headers-</em>amd64.deb, linux-image-*amd64.deb</p>
-<p>You can keep up with the latest news about brand new package releases by reading :</p>
-<ul>
-<li><a href="https://plus.google.com/u/0/112806379537201569814/posts">Google+</a> </li>
-</ul>
-<blockquote>
-<p><strong>Update</strong>(13-Mar-2012)<strong>:</strong> Now compatible with Intel and AMD cpu's
-on Ubuntu 64bit. Stay tuned for 32bit packages</p>
-<p><strong>Update</strong> (15-Mar-2012)<strong>:</strong> Because now I don't use Zen Kernel but I
-build my own BFS/BFQ patched Ubuntu kernels, I removed the Zen Deb
-repo and created a new one "Optimus Linux Kernel"</p>
-<p><strong>Update</strong> (15-Mar-2012)<strong>:</strong>Added 32bit packages to the downloaded
-ziped archive<strong><br/>
-</strong></p>
+<p>A "must read" paper for a Scientific measurements of CFS vs BFS : 
+<a href="https://plus.google.com/u/0/b/106359436571697092771/106359436571697092771/posts/95Rz5kgEB9C">Scientific approach to the CFS vs BFS</a></p>
 </blockquote></body></html>
             <aside>
             <hr/>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html" title="Previous: BFS vs CFS: Some personal observations on Linux Kernel performance">BFS vs CFS: Some personal observations on Linux Kernel performance</a></li>
+                <li class="previous_article">« <a href="./interview-with-frostbite-media-on-iqunix-os.html" title="Previous: Interview with Frostbite Media on iQunix OS">Interview with Frostbite Media on iQunix OS</a></li>
  
-                <li class="next_article"><a href="./comparison-ubuntu-update-manager-and-ucaresystem.html" title="Next: Comparison: Ubuntu update manager and uCareSystem">Comparison: Ubuntu update manager and uCareSystem</a> »</li>
+                <li class="next_article"><a href="./bfs-bfq-optimized-linux-kernel-packages-ready-for-install.html" title="Next: BFS – BFQ optimized linux kernel packages ready for install">BFS – BFQ optimized linux kernel packages ready for install</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -115,28 +107,46 @@ ziped archive<strong><br/>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-03-22T15:01:00+02:00">Μάρ 22, 2012</time>
+            <time pubdate="pubdate" datetime="2012-03-22T14:55:00+02:00">Μάρ 22, 2012</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#Utappia-Projects-ref">Utappia Projects</a> 
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#benchmark-ref">benchmark
+                    <span>1</span>
+</a></li>
                 <li><a href="/tags.html#bfq-ref">bfq
                     <span>2</span>
 </a></li>
                 <li><a href="/tags.html#bfs-ref">bfs
                     <span>2</span>
 </a></li>
-                <li><a href="/tags.html#download-ref">download
-                    <span>12</span>
+                <li><a href="/tags.html#cfs-ref">cfs
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#comparison-ref">comparison
+                    <span>3</span>
+</a></li>
+                <li><a href="/tags.html#desktop-ref">desktop
+                    <span>1</span>
 </a></li>
                 <li><a href="/tags.html#kernel-ref">kernel
                     <span>4</span>
 </a></li>
-                <li><a href="/tags.html#package-ref">package
-                    <span>7</span>
-</a></li>
-                <li><a href="/tags.html#ubuntu-ref">ubuntu
+                <li><a href="/tags.html#linux-ref">linux
                     <span>1</span>
+</a></li>
+                <li><a href="/tags.html#optimus-kernel-ref">optimus kernel
+                    <span>8</span>
+</a></li>
+                <li><a href="/tags.html#performance-ref">performance
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#scheduler-ref">scheduler
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#story-ref">story
+                    <span>5</span>
 </a></li>
             </ul>
 

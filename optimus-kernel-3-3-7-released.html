@@ -6,8 +6,8 @@
         <meta name="author" content="Salih Emin" />
         <meta name="copyright" content="Salih Emin" />
 
-<meta name="keywords" content="features, release, screencasting, screenshots, story, News, " />
-        <title>Screenshot of CaptureMe caught in action  · Utappia
+<meta name="keywords" content="Optimus Kernel, download, kernel log, package, release, Utappia Projects, " />
+        <title>Optimus Kernel 3.3.7 released  · Utappia
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -62,40 +62,113 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="./screenshot-of-captureme-caught-in-action.html"> Screenshot of CaptureMe caught in action  </a></h1>
+    <h1><a href="./optimus-kernel-3-3-7-released.html"> Optimus Kernel 3.3.7 released  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <html><body><p><img alt="Gnome-screenshot_on_Ubuntu" src="/images/Gnome-screenshot_on_Ubuntu.png" style="width: 320px; height: auto;"/></p>
-<p>We love screenshots. Who doesn't ? So we are uploading some fresh screenshots of the latest CaptureMe caught in step-by-step action.</p>
-<p>Now that you have downloaded the CaptureMe in a <strong>tar.gz</strong> file and then you have extracted it in your preferred extraction place. You just need to double-click the "<strong>CaptureMe</strong>" file and press "<strong>Run</strong>"</p>
-<p><img alt="Screenshot 1" src="/images/screen1.jpg" style="width: 320px; height: auto;"/></p>
-<p>Then you will be asked if you would like to record the video "<strong>withsound</strong>" or with "<strong>no sound</strong>". If you choose <strong>with sound,</strong>your microphone will be reserved as a sound recording device.</p>
-<p><img alt="Screenshot 2" src="/images/screen2.jpg" style="width: 630px; height: auto;"/></p>
-<p>After you make your selection and press "OK", your "mouse point" will be turned into a cross shape. If you click on your Desktop, your recording will be from your entire screen. If you click on a window then the recording will be just from that window.</p>
-<p><img alt="Screenshot 2a" src="/images/screen2-a.jpg" style="width: 416px; height: auto;"/></p>
-<p>After you click on your Desktop (<u><em>full screen recording mode</em></u>), or on a window (<u><em>partial window recording mode</em></u>) you will be presented with a "recording termination window". You can minimize this windows until you feel that you want to finish the screencasting.</p>
-<p><img alt="Screenshot 3" src="/images/screen3.jpg" style="width: 580px; height: auto;"/></p>
-<p>After you have finished your recording just click on the minimized window of CaptureMe.</p>
-<p><img alt="Screenshot 4" src="/images/screen4.jpg" style="width: 158px; height: auto;"/></p>
-<p>On the unminimized window of CaptureMe, just click "OK" to stop the recording.</p>
-<p><img alt="Screenshot 5" src="/images/screen5.jpg" style="width: 538px; height: auto;"/></p>
-<p>Then you will be presented with the final window of completion which informs you that your recording has been saved in your <code>HOME</code> folder </p>
-<p><img alt="Screenshot 6" src="/images/screen6.jpg" style="width: 538px; height: auto;"/></p>
-<p>Now open your HOME folder and you will find the recorded video with a name like "CaptureMe_<em>DATE_TIME</em>.avi"</p>
-<p><img alt="Screenshot 7" src="/images/screen7.jpg" style="width: 567px; height: auto;"/></p>
-<p>Now you can use your favorite video editing application to edit the video and remove any parts you don't like !</p></body></html>
+            <html><body><p>You can download the latest version of Optimus Kernel which is based on the following recipes :</p>
+<ul>
+<li>Linux <strong>3.3.7</strong><em>(if you have </em>proprietary graphic card drivers installed in your system <em>you may need to reinstall them after the installation of the new kernel release)</em></li>
+<li>Ubuntu/Debian patchsets</li>
+<li>BFS and BFQ patches</li>
+<li>In-house optimizations</li>
+</ul>
+<p><strong>Go Grab your Packages from the <a href="http://optimus-linux.blogspot.com/p/download.html">Download Page&gt;&gt;&gt;&gt;&gt;</a></strong></p>
+<p><strong>Optimus Change log</strong> :
+- Rebuild and synced with 3.3.7 vanilla Linux kernel (for what is included please read the kernel log on website)&lt;
+- Enabled Control Group support.
+- Used full CK patchset prepared by Con Colivas instead of just applying BFS patch.
+- Patched with AppArmor 2.4 compatibility patch due to stupid AppArmor messages and delay during boot.</p>
+<p><strong>Kernel Change log</strong>:</p>
+<ul>
+<li>crypto: mv_cesa requires on CRYPTO_HASH to build  </li>
+<li>virtio: console: tell host of open ports after resume from
+s3/s4  </li>
+<li>target: Fix SPC-2 RELEASE bug for multi-session iSCSI client
+setups  </li>
+<li>cdc_ether: Ignore bogus union descriptor for RNDIS
+devices  </li>
+<li>ASoC: cs42l73: Sync digital mixer kcontrols to allow for
+0dB  </li>
+<li>kmemleak: Fix the kmemleak tracking of the percpu areas with
+!SMP  </li>
+<li>hugetlb: prevent BUG_ON in hugetlb_fault() -&gt;
+hugetlb_cow()  </li>
+<li>arch/tile: apply commit 74fca9da0 to the compat signal
+handling as well  </li>
+<li>cifs: fix revalidation test in cifs_llseek()  </li>
+<li>cdc_ether: add Novatel USB551L device IDs for
+FLAG_WWAN  </li>
+<li>OMAPDSS: VENC: fix NULL pointer dereference in DSS2 VENC
+sysfs debug attr on OMAP4  </li>
+<li>ALSA: HDA: Lessen CPU usage when waiting for chip to
+respond  </li>
+<li>sparc64: Do not clobber %g2 in
+xcall_fetch_glob_regs().  </li>
+<li>ext4: avoid deadlock on sync-mounted FS w/o journal  </li>
+<li>compat: Fix RT signal mask corruption via sigprocmask  </li>
+<li>dl2k: Clean up rio_ioctl  </li>
+<li>MD: Add del_timer_sync to mddev_suspend (fix nasty
+panic)  </li>
+<li>media: marvell-cam: fix an ARM build error  </li>
+<li>jffs2: Fix lock acquisition order bug in gc path  </li>
+<li>media: rc: Postpone ISR registration  </li>
+<li>ASoC: wm8994: Fix AIF2ADC power down  </li>
+<li>ALSA: echoaudio: Remove incorrect part of assertion  </li>
+<li>media: dvb_frontend: fix a regression with DVB-S
+zig-zag  </li>
+<li>namespaces, pid_ns: fix leakage on fork() failure  </li>
+<li>dm mpath: check if scsi_dh module already loaded before
+trying to load  </li>
+<li>usbnet: fix skb traversing races during unlink(v2)  </li>
+<li>target: Drop incorrect se_lun_acl release for dynamic -&gt;
+explict ACL conversion  </li>
+<li>target: Fix bug in handling of FILEIO + block_device resize
+ops  </li>
+<li>mm: nobootmem: fix sign extend problem in
+__free_pages_memory()  </li>
+<li>ARM: prevent VM_GROWSDOWN mmaps extending below
+FIRST_USER_ADDRESS  </li>
+<li>Avoid beyond bounds copy while caching ACL  </li>
+<li>Avoid reading past buffer when calling GETACL  </li>
+<li>init: don't try mounting device as nfs root unless type fully
+matches  </li>
+<li>memcg: free spare array to avoid memory leak  </li>
+<li>media: s5p-fimc: Fix locking in subdev set_crop op  </li>
+<li>ALSA: hda/realtek - Add missing CD-input pin for MSI-7350
+mobo  </li>
+<li>ALSA: hda/idt - Fix power-map for speaker-pins with some HP
+laptops  </li>
+<li>percpu: pcpu_embed_first_chunk() should free unused parts
+after all allocs are complete  </li>
+<li>i2c-eg20t: change timeout value 50msec to 1000msec  </li>
+<li>spi-topcliff-pch: Modify pci-bus number dynamically to get
+DMA device info  </li>
+<li>spi-topcliff-pch: Fix issue for transmitting over
+4KByte  </li>
+<li>spi-topcliff-pch: supports a spi mode setup and bit order
+setup by IO control  </li>
+<li>spi-topcliff-pch: add recovery processing in case wait-event
+timeout  </li>
+<li>e1000: Prevent reset task killing itself.  </li>
+<li>ARM: 7417/1: vfp: ensure preemption is disabled when enabling
+VFP access  </li>
+<li>mtd: fix oops in dataflash driver  </li>
+<li>tcp: do_tcp_sendpages() must try to push data out on oom
+conditions  </li>
+<li></li>
+</ul></body></html>
             <aside>
             <hr/>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="./captureme-v2-3-available-for-download.html" title="Previous: CaptureMe v2.3 available for download">CaptureMe v2.3 available for download</a></li>
+                <li class="previous_article">« <a href="./iqunix-12-04-video-review.html" title="Previous: iQunix 12.04 video review">iQunix 12.04 video review</a></li>
  
-                <li class="next_article"><a href="./the-story-behind-captureme.html" title="Next: The story behind CaptureMe">The story behind CaptureMe</a> »</li>
+                <li class="next_article"><a href="./new-course-new-oportunities.html" title="Next: New course, new oportunities...">New course, new oportunities...</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -104,25 +177,25 @@
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-03-27T10:11:00+03:00">Μάρ 27, 2012</time>
+            <time pubdate="pubdate" datetime="2012-06-01T11:02:00+03:00">Ιούν 1, 2012</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#News-ref">News</a> 
+            <a class="category-link" href="/categories.html#Utappia-Projects-ref">Utappia Projects</a> 
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#features-ref">features
-                    <span>5</span>
+                <li><a href="/tags.html#download-ref">download
+                    <span>12</span>
+</a></li>
+                <li><a href="/tags.html#kernel-log-ref">kernel log
+                    <span>6</span>
+</a></li>
+                <li><a href="/tags.html#Optimus-Kernel-ref">Optimus Kernel
+                    <span>8</span>
+</a></li>
+                <li><a href="/tags.html#package-ref">package
+                    <span>7</span>
 </a></li>
                 <li><a href="/tags.html#release-ref">release
                     <span>14</span>
-</a></li>
-                <li><a href="/tags.html#screencasting-ref">screencasting
-                    <span>3</span>
-</a></li>
-                <li><a href="/tags.html#screenshots-ref">screenshots
-                    <span>4</span>
-</a></li>
-                <li><a href="/tags.html#story-ref">story
-                    <span>5</span>
 </a></li>
             </ul>
 

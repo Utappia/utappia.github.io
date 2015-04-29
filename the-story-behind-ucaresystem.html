@@ -6,8 +6,8 @@
         <meta name="author" content="Salih Emin" />
         <meta name="copyright" content="Salih Emin" />
 
-<meta name="keywords" content="features, release, screencasting, screenshots, story, News, " />
-        <title>Screenshot of CaptureMe caught in action  · Utappia
+<meta name="keywords" content="uCareSystem, story, Utappia Projects, " />
+        <title>The story behind uCareSystem  · Utappia
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -62,40 +62,55 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="./screenshot-of-captureme-caught-in-action.html"> Screenshot of CaptureMe caught in action  </a></h1>
+    <h1><a href="./the-story-behind-ucaresystem.html"> The story behind uCareSystem  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <html><body><p><img alt="Gnome-screenshot_on_Ubuntu" src="/images/Gnome-screenshot_on_Ubuntu.png" style="width: 320px; height: auto;"/></p>
-<p>We love screenshots. Who doesn't ? So we are uploading some fresh screenshots of the latest CaptureMe caught in step-by-step action.</p>
-<p>Now that you have downloaded the CaptureMe in a <strong>tar.gz</strong> file and then you have extracted it in your preferred extraction place. You just need to double-click the "<strong>CaptureMe</strong>" file and press "<strong>Run</strong>"</p>
-<p><img alt="Screenshot 1" src="/images/screen1.jpg" style="width: 320px; height: auto;"/></p>
-<p>Then you will be asked if you would like to record the video "<strong>withsound</strong>" or with "<strong>no sound</strong>". If you choose <strong>with sound,</strong>your microphone will be reserved as a sound recording device.</p>
-<p><img alt="Screenshot 2" src="/images/screen2.jpg" style="width: 630px; height: auto;"/></p>
-<p>After you make your selection and press "OK", your "mouse point" will be turned into a cross shape. If you click on your Desktop, your recording will be from your entire screen. If you click on a window then the recording will be just from that window.</p>
-<p><img alt="Screenshot 2a" src="/images/screen2-a.jpg" style="width: 416px; height: auto;"/></p>
-<p>After you click on your Desktop (<u><em>full screen recording mode</em></u>), or on a window (<u><em>partial window recording mode</em></u>) you will be presented with a "recording termination window". You can minimize this windows until you feel that you want to finish the screencasting.</p>
-<p><img alt="Screenshot 3" src="/images/screen3.jpg" style="width: 580px; height: auto;"/></p>
-<p>After you have finished your recording just click on the minimized window of CaptureMe.</p>
-<p><img alt="Screenshot 4" src="/images/screen4.jpg" style="width: 158px; height: auto;"/></p>
-<p>On the unminimized window of CaptureMe, just click "OK" to stop the recording.</p>
-<p><img alt="Screenshot 5" src="/images/screen5.jpg" style="width: 538px; height: auto;"/></p>
-<p>Then you will be presented with the final window of completion which informs you that your recording has been saved in your <code>HOME</code> folder </p>
-<p><img alt="Screenshot 6" src="/images/screen6.jpg" style="width: 538px; height: auto;"/></p>
-<p>Now open your HOME folder and you will find the recorded video with a name like "CaptureMe_<em>DATE_TIME</em>.avi"</p>
-<p><img alt="Screenshot 7" src="/images/screen7.jpg" style="width: 567px; height: auto;"/></p>
-<p>Now you can use your favorite video editing application to edit the video and remove any parts you don't like !</p></body></html>
+            <html><body><p><img alt="storyteller" src="/images/Millais_Boyhood_of_Raleigh.jpg" style="width: 512px; height: auto;"/></p>
+<blockquote>
+<p><em>The Boyhood of Raleigh</em> by Sir John Everett Millais, oil on canvas, 1870. A seafarer tells the young Sir Walter Raleigh and his brother the story of what happened out at sea <a href="http://en.wikipedia.org/wiki/File%3AMillais_Boyhood_of_Raleigh.jpg">Image source: Wikipedia.org</a></p>
+</blockquote>
+<p>Most software are created for business purposes. But some software are created to solve real life problems. This is the story behind uCareSystem...</p>
+<p>Any user who has ever used Ubuntu or any Debian derivative knows that the best way to have their system in a good shape and secure, must use the Update Manger to regularly check for any system and software updates.
+But that's one part of the procedure where most users usually stop.</p>
+<ul>
+<li>What about the packages that where downloaded for update reasons and now they are not needed and they reserve free space ?</li>
+<li>What about packages that where installed to satisfy dependencies for some packages and that are no more needed ?</li>
+<li>What about packages and configuration files which are not required by any other package upon your system ?</li>
+<li>What about the stored archives in your cache for packages that are no longer in the repositories or that have a newer version in the repositories ?</li>
+</ul>
+<p>Well, unfortunately the Update Manger doesn't deal with the above problems and do not provide any means to resolve them. Please read for more information at <a href="http://ucaresystem.blogspot.com/2012/03/comparison-ubuntu-update-manager-and.html">Comparison of uCareSystem and Update Manager&gt;&gt;&gt;</a></p>
+<p>On the other hand, Linux and open source community in general, has created some wonderful tools and so we didn't have to reinvent the
+wheel.</p>
+<p>What we needed for the software, was already out there. The only thing that was missing was just to pick them and add them to a software in such way that it would do what it was intended to.</p>
+<p>This tools are :</p>
+<ul>
+<li>Synaptic Package Manager</li>
+<li>DebOrphan</li>
+<li>Apt-Get command line tools</li>
+<li>Cache Drop</li>
+<li>Zenity</li>
+<li>Bash Script</li>
+</ul>
+<p>And that was it !</p>
+<p>The first code of the application was released in <code>19-02-2009</code> under the <strong>"2Click Update"</strong> name !. At first it was a "primitive" bash script with no user interface and it was used just for personal needs. One day, I shared the app with some friends and got some useful feedback. This feedback has over the next months shaped the overall transformation of <a href="https://launchpad.net/2clickupdate">2Click Update</a> which has been tremendous:</p>
+<ul>
+<li>Received many features that were not found in the first releases</li>
+<li>Translated to over 20 Languages by community contributions</li>
+<li>Downloaded over 20.000 times</li>
+</ul>
+<p>On these foundations we will continue under a new name, "uCareSystem" pointing out that a user should care about system health.</p></body></html>
             <aside>
             <hr/>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="./captureme-v2-3-available-for-download.html" title="Previous: CaptureMe v2.3 available for download">CaptureMe v2.3 available for download</a></li>
+                <li class="previous_article">« <a href="./the-story-behind-iqunix.html" title="Previous: The story behind iQunix">The story behind iQunix</a></li>
  
-                <li class="next_article"><a href="./the-story-behind-captureme.html" title="Next: The story behind CaptureMe">The story behind CaptureMe</a> »</li>
+                <li class="next_article"><a href="./optimus-kernel-3-2-12-released.html" title="Next: Optimus Kernel 3.2.12 released">Optimus Kernel 3.2.12 released</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -104,25 +119,16 @@
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-03-27T10:11:00+03:00">Μάρ 27, 2012</time>
+            <time pubdate="pubdate" datetime="2012-03-27T17:10:00+03:00">Μάρ 27, 2012</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#News-ref">News</a> 
+            <a class="category-link" href="/categories.html#Utappia-Projects-ref">Utappia Projects</a> 
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#features-ref">features
-                    <span>5</span>
-</a></li>
-                <li><a href="/tags.html#release-ref">release
-                    <span>14</span>
-</a></li>
-                <li><a href="/tags.html#screencasting-ref">screencasting
-                    <span>3</span>
-</a></li>
-                <li><a href="/tags.html#screenshots-ref">screenshots
-                    <span>4</span>
-</a></li>
                 <li><a href="/tags.html#story-ref">story
                     <span>5</span>
+</a></li>
+                <li><a href="/tags.html#uCareSystem-ref">uCareSystem
+                    <span>4</span>
 </a></li>
             </ul>
 

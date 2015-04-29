@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Salih Emin" />
+        <meta name="copyright" content="Salih Emin" />
+
+<meta name="keywords" content="Optimus Kernel, download, kernel log, package, release, Optimus Kernel, " />
+        <title>Optimus Kernel 3.2.16 released  · Utappia
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link href="http://utappia.org/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Utappia - Full Atom Feed" />
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-62296099-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Utappia</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="./optimus-kernel-3-2-16-released.html"> Optimus Kernel 3.2.16 released  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <html><body><p>You can download the latest version of Optimus Kernel which is based on the following recipes :</p>
+<ul>
+<li>Linux <strong>3.2.16</strong></li>
+<li>Ubuntu/Debian patchsets</li>
+<li>BFS and BFQ patches</li>
+<li>In-house optimizations</li>
+</ul>
+<p><strong>Go Grab your Packages from the <a href="http://optimus-linux.blogspot.com/p/download.html">Download Page &gt;&gt;&gt;&gt;&gt;</a></strong></p>
+<p><strong>Optimus Change log</strong>:</p>
+<ul>
+<li>Rebuild and synced with 3.2.14 vanilla Linux kernel (for what is included please read the kernel log on website) </li>
+<li>Removed Industrial I/O drivers which are not needed for the avarege Joe out there  </li>
+<li>Removed Virtualisation drivers (VIRT_DRIVERS)  </li>
+<li>Removed support for JFS, XFS, GFS2, OCFS2, NILFS2  </li>
+<li>Removed KGDB (KGDB)  </li>
+<li>Removed TOMOYO Linux Support (SECURITY_TOMOYO)  </li>
+<li>Removed EVM support (EVM)</li>
+</ul>
+<p><strong>Kernel Change log</strong> :</p>
+<ul>
+<li>drm/radeon: fix load detect on rn50 with hardcoded...  </li>
+<li>drm/radeon: disable MSI on RV515  </li>
+<li>drm/radeon/kms: fix the regression of DVI connector...  </li>
+<li>futex: Do not leak robust list to unprivileged process  </li>
+<li>Bluetooth: Add support for BCM20702A0 [0a5c:21e3]  </li>
+<li>Bluetooth: Add Atheros maryann PIDVID support  </li>
+<li>Bluetooth: Adding USB device 13d3:3375 as an Atheros...  </li>
+<li>spi-topcliff-pch: Support new device LAPIS Semiconducto...  </li>
+<li>spi-topcliff-pch: fix -Wuninitialized warning  </li>
+<li>pch_dma: Support new device LAPIS Semiconductor ML7831 IOH  </li>
+<li>pch_gbe: memory corruption calling pch_gbe_validate_opt...  </li>
+<li>pch_gbe: Do not abort probe on bad MAC  </li>
+<li>security: fix compile error in commoncap.c  </li>
+<li>ACPICA: Fix to allow region arguments to reference...  </li>
+<li>usb: gadget: pch_udc: Reduce redundant interrupt  </li>
+<li>usb: gadget: pch_udc: Fix usb/gadget/pch_udc: Fix ether...  </li>
+<li>usb: gadget: pch_udc: Fix USB suspend issue  </li>
+<li>usb: gadget: pch_udc: Fix wrong return value  </li>
+<li>usb: gadget: pch_udc: Fix disconnect issue  </li>
+<li>gpio: Add missing spin_lock_init in gpio-pch driver  </li>
+<li>pch_gpio: Support new device LAPIS Semiconductor ML7831 IOH  </li>
+<li>Bluetooth: hci_core: fix NULL-pointer dereference at...  </li>
+<li>xhci: Fix register save/restore order.  </li>
+<li>ath9k: fix max noise floor threshold  </li>
+<li>fcaps: clear the same personality flags as suid when...  </li>
+<li>serial: PL011: move interrupt clearing  </li>
+<li>serial: PL011: clear pending interrupts  </li>
+<li>fix tlb flushing for page table pages  </li>
+<li>xHCI: Correct the #define XHCI_LEGACY_DISABLE_SMI  </li>
+<li>xHCI: add XHCI_RESET_ON_RESUME quirk for VIA xHCI host  </li>
+<li>USB: fix bug of device descriptor got from superspeed...  </li>
+<li>xhci: Restore event ring dequeue pointer on resume.  </li>
+<li>xhci: Don't write zeroed pointers to xHC registers.  </li>
+<li>xhci: don't re-enable IE constantly  </li>
+<li>USB: don't ignore suspend errors for root hubs  </li>
+<li>USB: don't clear urb-&gt;dev in scatter-gather library  </li>
+<li>USB: sierra: add support for Sierra Wireless MC7710  </li>
+<li>USB: ftdi_sio: fix race condition in TIOCMIWAIT, and...  </li>
+<li>USB: ftdi_sio: fix status line change handling for...  </li>
+<li>USB: option: re-add NOVATELWIRELESS_PRODUCT_HSPA_HIGHSP...  </li>
+<li>USB: pl2303: fix DTR/RTS being raised on baud rate...  </li>
+<li>USB: serial: fix race between probe and open  </li>
+<li>pch_uart: Fix MSI setting issue  </li>
+<li>nohz: Fix stale jiffies update in tick_nohz_restart()  </li>
+<li>video:uvesafb: Fix oops that uvesafb try to execute...  </li>
+<li>perf hists: Catch and handle out-of-date hist entry...  </li>
+<li>cciss: Fix scsi tape io with more than 255 scatter...  </li>
+<li>cciss: Initialize scsi host max_sectors for tape drive...  </li>
+<li>sparc64: Fix bootup crash on sun4v.  </li>
+<li>sparc64: Eliminate obsolete __handle_softirq() function  </li>
+<li>tty: serial: altera_uart: Check for NULL platform_data...  </li>
+<li>staging: iio: hmc5843: Fix crash in probe function.  </li>
+<li>hugetlb: fix race condition in hugetlb_fault()  </li>
+<li>drivers/rtc/rtc-pl031.c: enable clock on all ST variants  </li>
+<li>ia64: fix futex_atomic_cmpxchg_inatomic()  </li>
+<li>ext4: address scalability issue by removing extent...  </li>
+<li>Bluetooth: hci_ldisc: fix NULL-pointer dereference...  </li>
+<li>Bluetooth: uart-ldisc: Fix memory leak  </li>
+<li>md/bitmap: prevent bitmap_daemon_work running while...  </li>
+<li>ARM: 7384/1: ThumbEE: Disable userspace TEEHBR access...  </li>
+<li>ARM: 7379/1: DT: fix atags_to_fdt() second call site  </li>
+<li>rtlwifi: Add missing DMA buffer unmapping for PCI drivers  </li>
+<li>drm/i915: make rc6 module parameter read-only  </li>
+<li>drm/i915: properly compute dp dithering for user-create...  </li>
+<li>drm/radeon: only add the mm i2c bus if the hw_i2c modul...  </li>
+<li>drm/i915/ringbuffer: Exclude last 2 cachlines of ring...  </li>
+<li>drm/radeon/kms: fix DVO setup on some r4xx chips  </li>
+<li>drm/i915: mask transcoder select bits before setting...</li>
+</ul></body></html>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="./no-network-connection-a-weird-problem.html" title="Previous: No network connection, a weird problem...">No network connection, a weird problem...</a></li>
+ 
+                <li class="next_article"><a href="./optimus-kernel-3-3-4-released.html" title="Next: Optimus Kernel 3.3.4 released">Optimus Kernel 3.3.4 released</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2012-04-26T13:08:00+03:00">Απρ 26, 2012</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Optimus-Kernel-ref">Optimus Kernel</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#download-ref">download
+                    <span>12</span>
+</a></li>
+                <li><a href="/tags.html#kernel-log-ref">kernel log
+                    <span>6</span>
+</a></li>
+                <li><a href="/tags.html#Optimus-Kernel-ref">Optimus Kernel
+                    <span>8</span>
+</a></li>
+                <li><a href="/tags.html#package-ref">package
+                    <span>7</span>
+</a></li>
+                <li><a href="/tags.html#release-ref">release
+                    <span>14</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="images/cc4.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Utappia.org website</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"><a href="https://www.linkedin.com/in/salihemin" target="_blank">Salih Emin</a></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>
