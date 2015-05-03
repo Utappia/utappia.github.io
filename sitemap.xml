@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://utappia.org/</loc>
-<lastmod>2015-05-01T01:39:29-00:00</lastmod>
+<lastmod>2015-05-04T02:47:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/archives.html</loc>
-<lastmod>2015-05-01T01:39:29-00:00</lastmod>
+<lastmod>2015-05-04T02:47:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/tags.html</loc>
-<lastmod>2015-05-01T01:39:29-00:00</lastmod>
+<lastmod>2015-05-04T02:47:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/categories.html</loc>
-<lastmod>2015-05-01T01:39:29-00:00</lastmod>
+<lastmod>2015-05-04T02:47:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/pages/downloads.html</loc>
-<lastmod>2015-04-30T20:31:00+03:00</lastmod>
+<lastmod>2015-05-03T19:05:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
@@ -258,6 +258,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://utappia.org/iqunix-os-clean-fast-and-simple-os.html</loc>
 <lastmod>2012-03-22T14:32:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/captureme-download.html</loc>
+<lastmod>2012-02-22T20:31:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/iQunix-download.html</loc>
+<lastmod>2012-02-22T20:31:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/optimuskernel-download.html</loc>
+<lastmod>2012-02-22T20:31:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/ucaresystem-download.html</loc>
+<lastmod>2012-02-22T20:31:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
