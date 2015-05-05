@@ -98,45 +98,45 @@
 <p>We will use the <code>git bundle</code> utility inside our local repository and also <code>git merge</code> to deploy our bundled repo.</p>
 <p><em><code>git bundle</code> turns a repository into a single file that retains the versioning information of the entire project.</em></p>
 <p>Here are a list of options that are available:</p>
-<div class="highlight"><pre><span class="s1">'git bundle'</span> <span class="nb">create</span> <span class="o">&lt;</span><span class="nb">name</span><span class="na">-of-the-bundle</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">git</span><span class="na">-rev-list-args</span><span class="o">&gt;</span>
-<span class="s1">'git bundle'</span> <span class="nx">verify</span> <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span>
-<span class="s1">'git bundle'</span> <span class="nx">unbundle</span> <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span> <span class="err">[</span><span class="o">&lt;</span><span class="nx">refname</span><span class="o">&gt;</span><span class="nx">...</span><span class="cp">]</span>
+<div class="highlight"><pre>'git bundle' create &lt;name-of-the-bundle&gt; &lt;git-rev-list-args&gt;
+'git bundle' verify &lt;file&gt;
+'git bundle' unbundle &lt;file&gt; [&lt;refname&gt;...]
 </pre></div>
 <h2 id="create-a-bundle">Create a bundle</h2>
 <p>While you are inside a repo run:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">bundle</span> <span class="n">create</span> <span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span> <span class="n">master</span><span class="err">`</span>
+<div class="highlight"><pre>git bundle create ../myrepo.bundle master`
 </pre></div>
 <p>It should print out something like this:</p>
-<div class="highlight"><pre><span class="n">Counting</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">43</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">2</span> <span class="n">threads</span><span class="p">.</span>
-<span class="n">Compressing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">39</span><span class="o">/</span><span class="mi">39</span><span class="p">),</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">Writing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">43</span><span class="o">/</span><span class="mi">43</span><span class="p">),</span> <span class="mf">54.44</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mi">0</span> <span class="n">bytes</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">Total</span> <span class="mi">43</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">8</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre>Counting objects: 43, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (43/43), 54.44 KiB | 0 bytes/s, done.
+Total 43 (delta 8), reused 0 (delta 0)
 </pre></div>
 <p>This will create the bundle outside (one folder above) the repo and name it <code>myrepo.bundle</code>. When we created the file It was like we where just pushing our master branch to a remote, except it’s contained in a file instead of a remote repository. </p>
 <h2 id="verify-the-bundle">Verify the bundle</h2>
 <p>Before we move our bundle its a good idea to verify its content and check that the bundle file is valid and relevant to the current repository.</p>
 <p>While you are inside a repo run:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">bundle</span> <span class="n">verify</span> <span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span><span class="err">`</span>
+<div class="highlight"><pre>git bundle verify ../myrepo.bundle`
 </pre></div>
 <p>It should print out something like this:</p>
-<div class="highlight"><pre><span class="n">The</span> <span class="n">bundle</span> <span class="n">contains</span> <span class="n">this</span> <span class="n">ref</span><span class="o">:</span>
-<span class="mi">230</span><span class="n">b04bdd3367b2db73</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
-<span class="n">The</span> <span class="n">bundle</span> <span class="n">records</span> <span class="n">a</span> <span class="n">complete</span> <span class="n">history</span><span class="p">.</span>
-<span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span> <span class="n">is</span> <span class="n">okay</span>
+<div class="highlight"><pre>The bundle contains this ref:
+230b04bdd3367b2db73 refs/heads/master
+The bundle records a complete history.
+../myrepo.bundle is okay
 </pre></div>
 <h2 id="deploy-the-bundle">Deploy the bundle</h2>
 <p>Assuming that you have the <code>myrepo.bundle</code> file in <code>/home/user</code> and you have created a folder <code>newrepo</code> and initialized a git repository inside it. Here is a generic procedure:</p>
-<div class="highlight"><pre><span class="n">mkdir</span> <span class="n">newrepo</span>
-<span class="n">cd</span> <span class="n">newrepo</span>
-<span class="n">git</span> <span class="n">init</span>
-<span class="n">git</span> <span class="n">bundle</span> <span class="n">unbundle</span> <span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span>
+<div class="highlight"><pre>mkdir newrepo
+cd newrepo
+git init
+git bundle unbundle ../myrepo.bundle
 </pre></div>
 <p>the last command will inform you with the <code>HEAD</code> of you repo</p>
-<div class="highlight"><pre><span class="n">f7243ba54eb7de4b76a0</span> <span class="n">HEAD</span>
+<div class="highlight"><pre>f7243ba54eb7de4b76a0 HEAD
 </pre></div>
 <p>Now you can merge the contents of <code>myrepo.bubdle</code> file with the one that you initialized inside the <code>newrepo</code> folder:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">merge</span> <span class="n">f7243b</span>
+<div class="highlight"><pre>git merge f7243b
 </pre></div>
 <p>Alternative procedures are also available, so please follow the links provided on the <em>References</em> section</p>
 <h1 id="results-and-discussion">Results and discussion</h1>
@@ -162,7 +162,7 @@
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Απρ 27, 2015</time>
+            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
  
             <h4>Last Updated</h4>
             <div class="last_updated">2015-04-27 12:58:00+03:00</div>
