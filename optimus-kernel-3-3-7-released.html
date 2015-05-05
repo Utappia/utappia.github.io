@@ -79,7 +79,7 @@
 <li>BFS and BFQ patches</li>
 <li>In-house optimizations</li>
 </ul>
-<p><strong>Go Grab your Packages from the <a href="http://optimus-linux.blogspot.com/p/download.html">Download Page&gt;&gt;&gt;&gt;&gt;</a></strong></p>
+<p><strong>Go Grab your Packages from the <a href="./pages/downloads.html">Download Page&gt;&gt;&gt;&gt;&gt;</a></strong></p>
 <p><strong>Optimus Change log</strong> :
 - Rebuild and synced with 3.3.7 vanilla Linux kernel (for what is included please read the kernel log on website)&lt;
 - Enabled Control Group support.
@@ -87,82 +87,81 @@
 - Patched with AppArmor 2.4 compatibility patch due to stupid AppArmor messages and delay during boot.</p>
 <p><strong>Kernel Change log</strong>:</p>
 <ul>
-<li>crypto: mv_cesa requires on CRYPTO_HASH to build  </li>
+<li>crypto: mv_cesa requires on CRYPTO_HASH to build</li>
 <li>virtio: console: tell host of open ports after resume from
-s3/s4  </li>
+s3/s4</li>
 <li>target: Fix SPC-2 RELEASE bug for multi-session iSCSI client
-setups  </li>
+setups</li>
 <li>cdc_ether: Ignore bogus union descriptor for RNDIS
-devices  </li>
+devices</li>
 <li>ASoC: cs42l73: Sync digital mixer kcontrols to allow for
-0dB  </li>
+0dB</li>
 <li>kmemleak: Fix the kmemleak tracking of the percpu areas with
-!SMP  </li>
+!SMP</li>
 <li>hugetlb: prevent BUG_ON in hugetlb_fault() -&gt;
-hugetlb_cow()  </li>
+hugetlb_cow()</li>
 <li>arch/tile: apply commit 74fca9da0 to the compat signal
-handling as well  </li>
-<li>cifs: fix revalidation test in cifs_llseek()  </li>
+handling as well</li>
+<li>cifs: fix revalidation test in cifs_llseek()</li>
 <li>cdc_ether: add Novatel USB551L device IDs for
-FLAG_WWAN  </li>
+FLAG_WWAN</li>
 <li>OMAPDSS: VENC: fix NULL pointer dereference in DSS2 VENC
-sysfs debug attr on OMAP4  </li>
+sysfs debug attr on OMAP4</li>
 <li>ALSA: HDA: Lessen CPU usage when waiting for chip to
-respond  </li>
+respond</li>
 <li>sparc64: Do not clobber %g2 in
-xcall_fetch_glob_regs().  </li>
-<li>ext4: avoid deadlock on sync-mounted FS w/o journal  </li>
-<li>compat: Fix RT signal mask corruption via sigprocmask  </li>
-<li>dl2k: Clean up rio_ioctl  </li>
+xcall_fetch_glob_regs().</li>
+<li>ext4: avoid deadlock on sync-mounted FS w/o journal</li>
+<li>compat: Fix RT signal mask corruption via sigprocmask</li>
+<li>dl2k: Clean up rio_ioctl</li>
 <li>MD: Add del_timer_sync to mddev_suspend (fix nasty
-panic)  </li>
-<li>media: marvell-cam: fix an ARM build error  </li>
-<li>jffs2: Fix lock acquisition order bug in gc path  </li>
-<li>media: rc: Postpone ISR registration  </li>
-<li>ASoC: wm8994: Fix AIF2ADC power down  </li>
-<li>ALSA: echoaudio: Remove incorrect part of assertion  </li>
+panic)</li>
+<li>media: marvell-cam: fix an ARM build error</li>
+<li>jffs2: Fix lock acquisition order bug in gc path</li>
+<li>media: rc: Postpone ISR registration</li>
+<li>ASoC: wm8994: Fix AIF2ADC power down</li>
+<li>ALSA: echoaudio: Remove incorrect part of assertion</li>
 <li>media: dvb_frontend: fix a regression with DVB-S
-zig-zag  </li>
-<li>namespaces, pid_ns: fix leakage on fork() failure  </li>
+zig-zag</li>
+<li>namespaces, pid_ns: fix leakage on fork() failure</li>
 <li>dm mpath: check if scsi_dh module already loaded before
-trying to load  </li>
-<li>usbnet: fix skb traversing races during unlink(v2)  </li>
+trying to load</li>
+<li>usbnet: fix skb traversing races during unlink(v2)</li>
 <li>target: Drop incorrect se_lun_acl release for dynamic -&gt;
-explict ACL conversion  </li>
+explict ACL conversion</li>
 <li>target: Fix bug in handling of FILEIO + block_device resize
-ops  </li>
+ops</li>
 <li>mm: nobootmem: fix sign extend problem in
-__free_pages_memory()  </li>
+__free_pages_memory()</li>
 <li>ARM: prevent VM_GROWSDOWN mmaps extending below
-FIRST_USER_ADDRESS  </li>
-<li>Avoid beyond bounds copy while caching ACL  </li>
-<li>Avoid reading past buffer when calling GETACL  </li>
+FIRST_USER_ADDRESS</li>
+<li>Avoid beyond bounds copy while caching ACL</li>
+<li>Avoid reading past buffer when calling GETACL</li>
 <li>init: don't try mounting device as nfs root unless type fully
-matches  </li>
-<li>memcg: free spare array to avoid memory leak  </li>
-<li>media: s5p-fimc: Fix locking in subdev set_crop op  </li>
+matches</li>
+<li>memcg: free spare array to avoid memory leak</li>
+<li>media: s5p-fimc: Fix locking in subdev set_crop op</li>
 <li>ALSA: hda/realtek - Add missing CD-input pin for MSI-7350
-mobo  </li>
+mobo</li>
 <li>ALSA: hda/idt - Fix power-map for speaker-pins with some HP
-laptops  </li>
+laptops</li>
 <li>percpu: pcpu_embed_first_chunk() should free unused parts
-after all allocs are complete  </li>
-<li>i2c-eg20t: change timeout value 50msec to 1000msec  </li>
+after all allocs are complete</li>
+<li>i2c-eg20t: change timeout value 50msec to 1000msec</li>
 <li>spi-topcliff-pch: Modify pci-bus number dynamically to get
-DMA device info  </li>
+DMA device info</li>
 <li>spi-topcliff-pch: Fix issue for transmitting over
-4KByte  </li>
+4KByte</li>
 <li>spi-topcliff-pch: supports a spi mode setup and bit order
-setup by IO control  </li>
+setup by IO control</li>
 <li>spi-topcliff-pch: add recovery processing in case wait-event
-timeout  </li>
-<li>e1000: Prevent reset task killing itself.  </li>
+timeout</li>
+<li>e1000: Prevent reset task killing itself.</li>
 <li>ARM: 7417/1: vfp: ensure preemption is disabled when enabling
-VFP access  </li>
-<li>mtd: fix oops in dataflash driver  </li>
+VFP access</li>
+<li>mtd: fix oops in dataflash driver</li>
 <li>tcp: do_tcp_sendpages() must try to push data out on oom
-conditions  </li>
-<li></li>
+conditions</li>
 </ul></body></html>
             <aside>
             <hr/>
@@ -180,7 +179,7 @@ conditions  </li>
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-06-01T11:02:00+03:00">Jun 1, 2012</time>
+            <time pubdate="pubdate" datetime="2012-06-01T11:02:00+03:00">Ιούν 1, 2012</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#Utappia-Projects-ref">Utappia Projects</a> 
             <h4>Tags</h4>

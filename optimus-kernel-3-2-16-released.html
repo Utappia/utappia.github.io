@@ -79,86 +79,86 @@
 <li>BFS and BFQ patches</li>
 <li>In-house optimizations</li>
 </ul>
-<p><strong>Go Grab your Packages from the <a href="http://optimus-linux.blogspot.com/p/download.html">Download Page &gt;&gt;&gt;&gt;&gt;</a></strong></p>
+<p><strong>Go Grab your Packages from the <a href="./pages/downloads.html">Download Page &gt;&gt;&gt;&gt;&gt;</a></strong></p>
 <p><strong>Optimus Change log</strong>:</p>
 <ul>
 <li>Rebuild and synced with 3.2.14 vanilla Linux kernel (for what is included please read the kernel log on website) </li>
-<li>Removed Industrial I/O drivers which are not needed for the avarege Joe out there  </li>
-<li>Removed Virtualisation drivers (VIRT_DRIVERS)  </li>
-<li>Removed support for JFS, XFS, GFS2, OCFS2, NILFS2  </li>
-<li>Removed KGDB (KGDB)  </li>
-<li>Removed TOMOYO Linux Support (SECURITY_TOMOYO)  </li>
+<li>Removed Industrial I/O drivers which are not needed for the avarege Joe out there</li>
+<li>Removed Virtualisation drivers (VIRT_DRIVERS)</li>
+<li>Removed support for JFS, XFS, GFS2, OCFS2, NILFS2</li>
+<li>Removed KGDB (KGDB)</li>
+<li>Removed TOMOYO Linux Support (SECURITY_TOMOYO)</li>
 <li>Removed EVM support (EVM)</li>
 </ul>
 <p><strong>Kernel Change log</strong> :</p>
 <ul>
-<li>drm/radeon: fix load detect on rn50 with hardcoded...  </li>
-<li>drm/radeon: disable MSI on RV515  </li>
-<li>drm/radeon/kms: fix the regression of DVI connector...  </li>
-<li>futex: Do not leak robust list to unprivileged process  </li>
-<li>Bluetooth: Add support for BCM20702A0 0a5c:21e3  </li>
-<li>Bluetooth: Add Atheros maryann PIDVID support  </li>
-<li>Bluetooth: Adding USB device 13d3:3375 as an Atheros...  </li>
-<li>spi-topcliff-pch: Support new device LAPIS Semiconducto...  </li>
-<li>spi-topcliff-pch: fix -Wuninitialized warning  </li>
-<li>pch_dma: Support new device LAPIS Semiconductor ML7831 IOH  </li>
-<li>pch_gbe: memory corruption calling pch_gbe_validate_opt...  </li>
-<li>pch_gbe: Do not abort probe on bad MAC  </li>
-<li>security: fix compile error in commoncap.c  </li>
-<li>ACPICA: Fix to allow region arguments to reference...  </li>
-<li>usb: gadget: pch_udc: Reduce redundant interrupt  </li>
-<li>usb: gadget: pch_udc: Fix usb/gadget/pch_udc: Fix ether...  </li>
-<li>usb: gadget: pch_udc: Fix USB suspend issue  </li>
-<li>usb: gadget: pch_udc: Fix wrong return value  </li>
-<li>usb: gadget: pch_udc: Fix disconnect issue  </li>
-<li>gpio: Add missing spin_lock_init in gpio-pch driver  </li>
-<li>pch_gpio: Support new device LAPIS Semiconductor ML7831 IOH  </li>
-<li>Bluetooth: hci_core: fix NULL-pointer dereference at...  </li>
-<li>xhci: Fix register save/restore order.  </li>
-<li>ath9k: fix max noise floor threshold  </li>
-<li>fcaps: clear the same personality flags as suid when...  </li>
-<li>serial: PL011: move interrupt clearing  </li>
-<li>serial: PL011: clear pending interrupts  </li>
-<li>fix tlb flushing for page table pages  </li>
-<li>xHCI: Correct the #define XHCI_LEGACY_DISABLE_SMI  </li>
-<li>xHCI: add XHCI_RESET_ON_RESUME quirk for VIA xHCI host  </li>
-<li>USB: fix bug of device descriptor got from superspeed...  </li>
-<li>xhci: Restore event ring dequeue pointer on resume.  </li>
-<li>xhci: Don't write zeroed pointers to xHC registers.  </li>
-<li>xhci: don't re-enable IE constantly  </li>
-<li>USB: don't ignore suspend errors for root hubs  </li>
-<li>USB: don't clear urb-&gt;dev in scatter-gather library  </li>
-<li>USB: sierra: add support for Sierra Wireless MC7710  </li>
-<li>USB: ftdi_sio: fix race condition in TIOCMIWAIT, and...  </li>
-<li>USB: ftdi_sio: fix status line change handling for...  </li>
-<li>USB: option: re-add NOVATELWIRELESS_PRODUCT_HSPA_HIGHSP...  </li>
-<li>USB: pl2303: fix DTR/RTS being raised on baud rate...  </li>
-<li>USB: serial: fix race between probe and open  </li>
-<li>pch_uart: Fix MSI setting issue  </li>
-<li>nohz: Fix stale jiffies update in tick_nohz_restart()  </li>
-<li>video:uvesafb: Fix oops that uvesafb try to execute...  </li>
-<li>perf hists: Catch and handle out-of-date hist entry...  </li>
-<li>cciss: Fix scsi tape io with more than 255 scatter...  </li>
-<li>cciss: Initialize scsi host max_sectors for tape drive...  </li>
-<li>sparc64: Fix bootup crash on sun4v.  </li>
-<li>sparc64: Eliminate obsolete __handle_softirq() function  </li>
-<li>tty: serial: altera_uart: Check for NULL platform_data...  </li>
-<li>staging: iio: hmc5843: Fix crash in probe function.  </li>
-<li>hugetlb: fix race condition in hugetlb_fault()  </li>
-<li>drivers/rtc/rtc-pl031.c: enable clock on all ST variants  </li>
-<li>ia64: fix futex_atomic_cmpxchg_inatomic()  </li>
-<li>ext4: address scalability issue by removing extent...  </li>
-<li>Bluetooth: hci_ldisc: fix NULL-pointer dereference...  </li>
-<li>Bluetooth: uart-ldisc: Fix memory leak  </li>
-<li>md/bitmap: prevent bitmap_daemon_work running while...  </li>
-<li>ARM: 7384/1: ThumbEE: Disable userspace TEEHBR access...  </li>
-<li>ARM: 7379/1: DT: fix atags_to_fdt() second call site  </li>
-<li>rtlwifi: Add missing DMA buffer unmapping for PCI drivers  </li>
-<li>drm/i915: make rc6 module parameter read-only  </li>
-<li>drm/i915: properly compute dp dithering for user-create...  </li>
-<li>drm/radeon: only add the mm i2c bus if the hw_i2c modul...  </li>
-<li>drm/i915/ringbuffer: Exclude last 2 cachlines of ring...  </li>
-<li>drm/radeon/kms: fix DVO setup on some r4xx chips  </li>
+<li>drm/radeon: fix load detect on rn50 with hardcoded...</li>
+<li>drm/radeon: disable MSI on RV515</li>
+<li>drm/radeon/kms: fix the regression of DVI connector...</li>
+<li>futex: Do not leak robust list to unprivileged process</li>
+<li>Bluetooth: Add support for BCM20702A0 0a5c:21e3</li>
+<li>Bluetooth: Add Atheros maryann PIDVID support</li>
+<li>Bluetooth: Adding USB device 13d3:3375 as an Atheros...</li>
+<li>spi-topcliff-pch: Support new device LAPIS Semiconducto...</li>
+<li>spi-topcliff-pch: fix -Wuninitialized warning</li>
+<li>pch_dma: Support new device LAPIS Semiconductor ML7831 IOH</li>
+<li>pch_gbe: memory corruption calling pch_gbe_validate_opt...</li>
+<li>pch_gbe: Do not abort probe on bad MAC</li>
+<li>security: fix compile error in commoncap.c</li>
+<li>ACPICA: Fix to allow region arguments to reference...</li>
+<li>usb: gadget: pch_udc: Reduce redundant interrupt</li>
+<li>usb: gadget: pch_udc: Fix usb/gadget/pch_udc: Fix ether...</li>
+<li>usb: gadget: pch_udc: Fix USB suspend issue</li>
+<li>usb: gadget: pch_udc: Fix wrong return value</li>
+<li>usb: gadget: pch_udc: Fix disconnect issue</li>
+<li>gpio: Add missing spin_lock_init in gpio-pch driver</li>
+<li>pch_gpio: Support new device LAPIS Semiconductor ML7831 IOH</li>
+<li>Bluetooth: hci_core: fix NULL-pointer dereference at...</li>
+<li>xhci: Fix register save/restore order.</li>
+<li>ath9k: fix max noise floor threshold</li>
+<li>fcaps: clear the same personality flags as suid when...</li>
+<li>serial: PL011: move interrupt clearing</li>
+<li>serial: PL011: clear pending interrupts</li>
+<li>fix tlb flushing for page table pages</li>
+<li>xHCI: Correct the #define XHCI_LEGACY_DISABLE_SMI</li>
+<li>xHCI: add XHCI_RESET_ON_RESUME quirk for VIA xHCI host</li>
+<li>USB: fix bug of device descriptor got from superspeed...</li>
+<li>xhci: Restore event ring dequeue pointer on resume.</li>
+<li>xhci: Don't write zeroed pointers to xHC registers.</li>
+<li>xhci: don't re-enable IE constantly</li>
+<li>USB: don't ignore suspend errors for root hubs</li>
+<li>USB: don't clear urb-&gt;dev in scatter-gather library</li>
+<li>USB: sierra: add support for Sierra Wireless MC7710</li>
+<li>USB: ftdi_sio: fix race condition in TIOCMIWAIT, and...</li>
+<li>USB: ftdi_sio: fix status line change handling for...</li>
+<li>USB: option: re-add NOVATELWIRELESS_PRODUCT_HSPA_HIGHSP...</li>
+<li>USB: pl2303: fix DTR/RTS being raised on baud rate...</li>
+<li>USB: serial: fix race between probe and open</li>
+<li>pch_uart: Fix MSI setting issue</li>
+<li>nohz: Fix stale jiffies update in tick_nohz_restart()</li>
+<li>video:uvesafb: Fix oops that uvesafb try to execute...</li>
+<li>perf hists: Catch and handle out-of-date hist entry...</li>
+<li>cciss: Fix scsi tape io with more than 255 scatter...</li>
+<li>cciss: Initialize scsi host max_sectors for tape drive...</li>
+<li>sparc64: Fix bootup crash on sun4v.</li>
+<li>sparc64: Eliminate obsolete __handle_softirq() function</li>
+<li>tty: serial: altera_uart: Check for NULL platform_data...</li>
+<li>staging: iio: hmc5843: Fix crash in probe function.</li>
+<li>hugetlb: fix race condition in hugetlb_fault()</li>
+<li>drivers/rtc/rtc-pl031.c: enable clock on all ST variants</li>
+<li>ia64: fix futex_atomic_cmpxchg_inatomic()</li>
+<li>ext4: address scalability issue by removing extent...</li>
+<li>Bluetooth: hci_ldisc: fix NULL-pointer dereference...</li>
+<li>Bluetooth: uart-ldisc: Fix memory leak</li>
+<li>md/bitmap: prevent bitmap_daemon_work running while...</li>
+<li>ARM: 7384/1: ThumbEE: Disable userspace TEEHBR access...</li>
+<li>ARM: 7379/1: DT: fix atags_to_fdt() second call site</li>
+<li>rtlwifi: Add missing DMA buffer unmapping for PCI drivers</li>
+<li>drm/i915: make rc6 module parameter read-only</li>
+<li>drm/i915: properly compute dp dithering for user-create...</li>
+<li>drm/radeon: only add the mm i2c bus if the hw_i2c modul...</li>
+<li>drm/i915/ringbuffer: Exclude last 2 cachlines of ring...</li>
+<li>drm/radeon/kms: fix DVO setup on some r4xx chips</li>
 <li>drm/i915: mask transcoder select bits before setting...</li>
 </ul></body></html>
             <aside>
@@ -177,7 +177,7 @@
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-04-26T13:08:00+03:00">Apr 26, 2012</time>
+            <time pubdate="pubdate" datetime="2012-04-26T13:08:00+03:00">Απρ 26, 2012</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#Utappia-Projects-ref">Utappia Projects</a> 
             <h4>Tags</h4>

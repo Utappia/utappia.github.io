@@ -79,7 +79,7 @@
 <li>BFS and BFQ patches</li>
 <li>In-house optimizations</li>
 </ul>
-<p><strong>Go Grab your Packages from the <a href="http://optimus-linux.blogspot.com/p/download.html">Download Page ----</a></strong></p>
+<p><strong>Go Grab your Packages from the <a href="./pages/downloads.html">Download Page ----</a></strong></p>
 <p><strong>Optimus Change log</strong>:
 - Rebuild and synced with 3.2.14 vanilla Linux kernel (for what is included please read the kernel log on website)
 - All configuration options are now reverted to default and starting from scratch
@@ -103,153 +103,153 @@
 - Reverted to -Os gcc optimizasions</p>
 <p><strong>Kernel Change log</strong>:</p>
 <ul>
-<li>ASPM: Fix pcie devices with non-pcie children  </li>
-<li>serial: sh-sci: fix a race of DMA submit_tx on transfer  </li>
-<li>nfsd: don't allow zero length strings in cache_parse()  </li>
-<li>rtc: Provide flag for rtc devices that don't support UIE  </li>
-<li>compat: use sys_sendfile64() implementation for sendfil...  </li>
-<li>x86, tls: Off by one limit check  </li>
-<li>x86, tsc: Skip refined tsc calibration on systems with...  </li>
-<li>lockd: fix arg parsing for grace_period and timeout.  </li>
-<li>xfrm: Access the replay notify functions via the regist...  </li>
-<li>sky2: override for PCI legacy power management  </li>
-<li>Remove printk from rds_sendmsg  </li>
-<li>net: fix napi_reuse_skb() skb reserve  </li>
-<li>net: fix a potential rcu_read_lock() imbalance in rt6_f...  </li>
-<li>net: bpf_jit: fix BPF_S_LDX_B_MSH compilation  </li>
-<li>ipv6: fix incorrent ipv6 ipsec packet fragment  </li>
-<li>Fix pppol2tp getsockname()  </li>
-<li>drm/i915: suspend fbdev device around suspend/hibernate  </li>
-<li>Bluetooth: btusb: fix bInterval for high/super speed...  </li>
-<li>module: Remove module size limit  </li>
-<li>NFSv4.1: Fix layoutcommit error handling  </li>
-<li>NFSv4: Fix two infinite loops in the mount code  </li>
-<li>slub: Do not hold slub_lock when calling sysfs_slab_add()  </li>
-<li>xfs: Fix oops on IO error during xlog_recover_process_i...  </li>
-<li>backlight: fix typo in tosa_lcd.c  </li>
-<li>dm thin: fix stacked bi_next usage  </li>
-<li>dm persistent data: fix btree rebalancing after remove  </li>
-<li>dm exception store: fix init error path  </li>
-<li>dm crypt: add missing error handling  </li>
-<li>dm crypt: fix mempool deadlock  </li>
-<li>gpio/davinci: fix enabling unbanked GPIO IRQs  </li>
-<li>gpio/davinci: fix oops on unbanked gpio irq request  </li>
-<li>gpio/omap: fix _set_gpio_irqenable implementation  </li>
-<li>udf: Fix deadlock in udf_release_file()  </li>
-<li>ARM: tegra: select required CPU and L2 errata options  </li>
-<li>vfs: fix d_ancestor() case in d_materialize_unique  </li>
-<li>ext4: check for zero length extent  </li>
-<li>ext4: fix race between sync and completed io work  </li>
-<li>ext4: fix race between unwritten extent conversion...  </li>
-<li>ext4: ignore EXT4_INODE_JOURNAL_DATA flag with delalloc  </li>
-<li>jbd2: clear BH_Delay &amp; BH_Unwritten in journal_unmap_buffer  </li>
-<li>PM / Hibernate: Enable usermodehelpers in hibernate...  </li>
-<li>NFSv4: Rate limit the state manager warning messages  </li>
-<li>mxl111sf: fix error on stream stop in mxl111sf_ep6_stre...  </li>
-<li>pvrusb2: fix 7MHz &amp; 8MHz DVB-T tuner support for HVR190...  </li>
-<li>fix signedness error in i2c_read_demod_bytes()  </li>
-<li>hwmon: (fam15h_power) Correct sign extension of running...  </li>
-<li>protect poll() in entries that may go away  </li>
-<li>iommu/amd: Fix section warning for prealloc_protection_...  </li>
-<li>use d_set_d_op() API to set dentry ops in...  </li>
-<li>x86-32: Fix endless loop when processing signals for...  </li>
-<li>e1000e: Avoid wrong check on TX hang  </li>
-<li>usbnet: don't clear urb--dev in tx_complete  </li>
-<li>usbnet: increase URB reference count before usb_unlink_urb  </li>
-<li>SUNRPC: We must not use list_for_each_entry_safe()...  </li>
-<li>UBI: fix eraseblock picking criteria  </li>
-<li>UBI: fix error handling in ubi_scan()  </li>
-<li>CIFS: Fix a spurious error in cifs_push_posix_locks  </li>
-<li>cifs: fix issue mounting of DFS ROOT when redirecting...  </li>
-<li>CIFS: Respect negotiated MaxMpxCount  </li>
-<li>xfs: fix inode lookup race  </li>
-<li>NFSv4: Return the delegation if the server returns...  </li>
-<li>NFS: Properly handle the case where the delegation...  </li>
-<li>KVM: x86: fix missing checks in syscall emulation  </li>
-<li>KVM: x86: extend "struct x86_emulate_ops" with "get_cpuid"  </li>
-<li>firewire: ohci: fix too-early completion of IR multicha...  </li>
-<li>pata_legacy: correctly mask recovery field for HT6560B  </li>
-<li>HID: add more hotkeys in Asus AIO keyboards  </li>
-<li>HID: add extra hotkeys in Asus AIO keyboards  </li>
-<li>Bluetooth: Add AR30XX device ID on Asus laptops  </li>
-<li>target: Fix 16-bit target ports for SET TARGET PORT...  </li>
-<li>target: prevent NULL pointer dereference in target_repo...  </li>
-<li>target: fix use after free in target_report_luns  </li>
-<li>target: Don't set WBUS16 or SYNC bits in INQUIRY response  </li>
-<li>drm/radeon/kms: add connector quirk for Fujitsu D3003...  </li>
-<li>drm/radeon/kms: fix analog load detection on DVI-I...  </li>
-<li>drm/radeon: Restrict offset for legacy hardware cursor.  </li>
-<li>drm/i915: Only clear the GPU domains upon a successful...  </li>
-<li>md: fix clearing of the 'changed' flags for the bad...  </li>
-<li>md/raid1,raid10: avoid deadlock during resync/recovery.  </li>
-<li>md: don't set md arrays to readonly on shutdown.  </li>
-<li>md/bitmap: ensure to load bitmap when creating via...  </li>
-<li>tcm_fc: Fix fc_exch memory leak in ft_send_resp_status  </li>
-<li>udlfb: remove sysfs framebuffer device with USB .discon...  </li>
-<li>usb gadget: fix a section mismatch when compiling g_ffs...  </li>
-<li>ALSA: hda - fix printing of high HDMI sample rates  </li>
-<li>iscsi-target: Fix dynamic -- explict NodeACL pointer...  </li>
-<li>iscsi-target: Fix iscsit_alloc_buffs() failure cases  </li>
-<li>tcm_loop: Set residual field for SCSI commands  </li>
-<li>ASoC: pxa-ssp: atomically set stream active masks  </li>
-<li>ASoC: fsl: p1022ds: tell the WM8776 codec driver that...  </li>
-<li>hugetlbfs: avoid taking i_mutex from hugetlbfs_read()  </li>
-<li>bootmem/sparsemem: remove limit constraint in alloc_boo...  </li>
-<li>PM / Domains: Fix handling of wakeup devices during...  </li>
-<li>TPM: Zero buffer whole after copying to userspace  </li>
-<li>mm: thp: fix pmd_bad() triggering in code paths holding...  </li>
-<li>x86/ioapic: Add register level checks to detect bogus...  </li>
-<li>ima: fix Kconfig dependencies  </li>
-<li>IB/iser: Post initial receive buffers before sending...  </li>
+<li>ASPM: Fix pcie devices with non-pcie children</li>
+<li>serial: sh-sci: fix a race of DMA submit_tx on transfer</li>
+<li>nfsd: don't allow zero length strings in cache_parse()</li>
+<li>rtc: Provide flag for rtc devices that don't support UIE</li>
+<li>compat: use sys_sendfile64() implementation for sendfil...</li>
+<li>x86, tls: Off by one limit check</li>
+<li>x86, tsc: Skip refined tsc calibration on systems with...</li>
+<li>lockd: fix arg parsing for grace_period and timeout.</li>
+<li>xfrm: Access the replay notify functions via the regist...</li>
+<li>sky2: override for PCI legacy power management</li>
+<li>Remove printk from rds_sendmsg</li>
+<li>net: fix napi_reuse_skb() skb reserve</li>
+<li>net: fix a potential rcu_read_lock() imbalance in rt6_f...</li>
+<li>net: bpf_jit: fix BPF_S_LDX_B_MSH compilation</li>
+<li>ipv6: fix incorrent ipv6 ipsec packet fragment</li>
+<li>Fix pppol2tp getsockname()</li>
+<li>drm/i915: suspend fbdev device around suspend/hibernate</li>
+<li>Bluetooth: btusb: fix bInterval for high/super speed...</li>
+<li>module: Remove module size limit</li>
+<li>NFSv4.1: Fix layoutcommit error handling</li>
+<li>NFSv4: Fix two infinite loops in the mount code</li>
+<li>slub: Do not hold slub_lock when calling sysfs_slab_add()</li>
+<li>xfs: Fix oops on IO error during xlog_recover_process_i...</li>
+<li>backlight: fix typo in tosa_lcd.c</li>
+<li>dm thin: fix stacked bi_next usage</li>
+<li>dm persistent data: fix btree rebalancing after remove</li>
+<li>dm exception store: fix init error path</li>
+<li>dm crypt: add missing error handling</li>
+<li>dm crypt: fix mempool deadlock</li>
+<li>gpio/davinci: fix enabling unbanked GPIO IRQs</li>
+<li>gpio/davinci: fix oops on unbanked gpio irq request</li>
+<li>gpio/omap: fix _set_gpio_irqenable implementation</li>
+<li>udf: Fix deadlock in udf_release_file()</li>
+<li>ARM: tegra: select required CPU and L2 errata options</li>
+<li>vfs: fix d_ancestor() case in d_materialize_unique</li>
+<li>ext4: check for zero length extent</li>
+<li>ext4: fix race between sync and completed io work</li>
+<li>ext4: fix race between unwritten extent conversion...</li>
+<li>ext4: ignore EXT4_INODE_JOURNAL_DATA flag with delalloc</li>
+<li>jbd2: clear BH_Delay &amp; BH_Unwritten in journal_unmap_buffer</li>
+<li>PM / Hibernate: Enable usermodehelpers in hibernate...</li>
+<li>NFSv4: Rate limit the state manager warning messages</li>
+<li>mxl111sf: fix error on stream stop in mxl111sf_ep6_stre...</li>
+<li>pvrusb2: fix 7MHz &amp; 8MHz DVB-T tuner support for HVR190...</li>
+<li>fix signedness error in i2c_read_demod_bytes()</li>
+<li>hwmon: (fam15h_power) Correct sign extension of running...</li>
+<li>protect poll() in entries that may go away</li>
+<li>iommu/amd: Fix section warning for prealloc_protection_...</li>
+<li>use d_set_d_op() API to set dentry ops in...</li>
+<li>x86-32: Fix endless loop when processing signals for...</li>
+<li>e1000e: Avoid wrong check on TX hang</li>
+<li>usbnet: don't clear urb--dev in tx_complete</li>
+<li>usbnet: increase URB reference count before usb_unlink_urb</li>
+<li>SUNRPC: We must not use list_for_each_entry_safe()...</li>
+<li>UBI: fix eraseblock picking criteria</li>
+<li>UBI: fix error handling in ubi_scan()</li>
+<li>CIFS: Fix a spurious error in cifs_push_posix_locks</li>
+<li>cifs: fix issue mounting of DFS ROOT when redirecting...</li>
+<li>CIFS: Respect negotiated MaxMpxCount</li>
+<li>xfs: fix inode lookup race</li>
+<li>NFSv4: Return the delegation if the server returns...</li>
+<li>NFS: Properly handle the case where the delegation...</li>
+<li>KVM: x86: fix missing checks in syscall emulation</li>
+<li>KVM: x86: extend "struct x86_emulate_ops" with "get_cpuid"</li>
+<li>firewire: ohci: fix too-early completion of IR multicha...</li>
+<li>pata_legacy: correctly mask recovery field for HT6560B</li>
+<li>HID: add more hotkeys in Asus AIO keyboards</li>
+<li>HID: add extra hotkeys in Asus AIO keyboards</li>
+<li>Bluetooth: Add AR30XX device ID on Asus laptops</li>
+<li>target: Fix 16-bit target ports for SET TARGET PORT...</li>
+<li>target: prevent NULL pointer dereference in target_repo...</li>
+<li>target: fix use after free in target_report_luns</li>
+<li>target: Don't set WBUS16 or SYNC bits in INQUIRY response</li>
+<li>drm/radeon/kms: add connector quirk for Fujitsu D3003...</li>
+<li>drm/radeon/kms: fix analog load detection on DVI-I...</li>
+<li>drm/radeon: Restrict offset for legacy hardware cursor.</li>
+<li>drm/i915: Only clear the GPU domains upon a successful...</li>
+<li>md: fix clearing of the 'changed' flags for the bad...</li>
+<li>md/raid1,raid10: avoid deadlock during resync/recovery.</li>
+<li>md: don't set md arrays to readonly on shutdown.</li>
+<li>md/bitmap: ensure to load bitmap when creating via...</li>
+<li>tcm_fc: Fix fc_exch memory leak in ft_send_resp_status</li>
+<li>udlfb: remove sysfs framebuffer device with USB .discon...</li>
+<li>usb gadget: fix a section mismatch when compiling g_ffs...</li>
+<li>ALSA: hda - fix printing of high HDMI sample rates</li>
+<li>iscsi-target: Fix dynamic -- explict NodeACL pointer...</li>
+<li>iscsi-target: Fix iscsit_alloc_buffs() failure cases</li>
+<li>tcm_loop: Set residual field for SCSI commands</li>
+<li>ASoC: pxa-ssp: atomically set stream active masks</li>
+<li>ASoC: fsl: p1022ds: tell the WM8776 codec driver that...</li>
+<li>hugetlbfs: avoid taking i_mutex from hugetlbfs_read()</li>
+<li>bootmem/sparsemem: remove limit constraint in alloc_boo...</li>
+<li>PM / Domains: Fix handling of wakeup devices during...</li>
+<li>TPM: Zero buffer whole after copying to userspace</li>
+<li>mm: thp: fix pmd_bad() triggering in code paths holding...</li>
+<li>x86/ioapic: Add register level checks to detect bogus...</li>
+<li>ima: fix Kconfig dependencies</li>
+<li>IB/iser: Post initial receive buffers before sending...</li>
 <li>rtnetlink: Fix VF IFLA policy</li>
-<li>p54spi: Release GPIO lines and IRQ on error in p54spi_probe  </li>
-<li>Disable the alarm in the hardware (v2)  </li>
-<li>genirq: Fix incorrect check for forced IRQ thread handler  </li>
-<li>genirq: Fix long-term regression in genirq irq_set_irq_...  </li>
-<li>uevent: send events in correct order according to seqnu...  </li>
-<li>ntp: Fix integer overflow when setting time  </li>
-<li>math: Introduce div64_long  </li>
-<li>iwlwifi: always monitor for stuck queues  </li>
-<li>rtlwifi: rtl8192ce: Fix loss of receive performance  </li>
-<li>rtlwifi: rtl8192c: Prevent sleeping from invalid contex...  </li>
-<li>rtlwifi: Handle previous allocation failures when freei...  </li>
-<li>rtlwifi: rtl8192c_common: rtl8192de: Check for allocati...  </li>
-<li>rt2x00: Add support for D-Link DWA-127 to rt2800usb.  </li>
-<li>USB: serial: mos7840: Fixed MCS7820 device attach problem  </li>
-<li>usb: cp210x: Update to support CP2105 and multiple...  </li>
-<li>usb-serial: Add support for the Sealevel SeaLINK+8...  </li>
-<li>USB: qcserial: don't grab QMI port on Gobi 1000 devices  </li>
-<li>USB: qcserial: add several new serial devices  </li>
-<li>USB: ums_realtek: do not use stack memory for DMA in...  </li>
-<li>usb: Fix build error due to dma_mask is not at pdev_arc...  </li>
-<li>usb: fsl_udc_core: Fix scheduling while atomic dump...  </li>
-<li>cdc-wdm: Don't clear WDM_READ unless entire read buffer...  </li>
-<li>cdc-wdm: Fix more races on the read path  </li>
-<li>USB: serial: fix console error reporting  </li>
-<li>TTY: Wrong unicode value copied in con_set_unimap()  </li>
-<li>tty: moxa: fix bit test in moxa_start()  </li>
-<li>sysfs: Fix memory leak in sysfs_sd_setsecdata().  </li>
-<li>futex: Cover all PI opcodes with cmpxchg enabled check  </li>
-<li>USB: gadget: Make g_hid device class conform to spec.  </li>
-<li>usb: gadgetfs: return number of bytes on ep0 read request  </li>
-<li>usb: renesas_usbhs: bugfix: add .release function to...  </li>
-<li>usb: musb: Reselect index reg in interrupt context  </li>
-<li>usb: dwc3: use proper function for setting endpoint...  </li>
-<li>usb: dwc3: fix bogus test in dwc3_gadget_start_isoc  </li>
-<li>staging: r8712u: Fix regression in signal level after...  </li>
-<li>staging: r8712u: Fix regression introduced by commit...  </li>
-<li>staging: r8712u: Add missing initialization and remove...  </li>
-<li>powerpc/usb: fix bug of kernel hang when initializing usb  </li>
-<li>USB: ftdi_sio: new PID: LUMEL PD12  </li>
-<li>USB: ftdi_sio: add support for FT-X series devices  </li>
-<li>USB: ftdi_sio: new PID: Distortec JTAG-lock-pick  </li>
-<li>USB: Microchip VID mislabeled as Hornby VID in ftdi_sio.  </li>
-<li>USB: ftdi_sio: add support for BeagleBone rev A5+  </li>
-<li>USB: ftdi_sio: fix problem when the manufacture is...  </li>
-<li>staging: zcache: avoid AB-BA deadlock condition  </li>
-<li>USB: option: add ZTE MF820D  </li>
-<li>USB: option: make interface blacklist work again  </li>
-<li>USB: option driver: adding support for Telit CC864...  </li>
+<li>p54spi: Release GPIO lines and IRQ on error in p54spi_probe</li>
+<li>Disable the alarm in the hardware (v2)</li>
+<li>genirq: Fix incorrect check for forced IRQ thread handler</li>
+<li>genirq: Fix long-term regression in genirq irq_set_irq_...</li>
+<li>uevent: send events in correct order according to seqnu...</li>
+<li>ntp: Fix integer overflow when setting time</li>
+<li>math: Introduce div64_long</li>
+<li>iwlwifi: always monitor for stuck queues</li>
+<li>rtlwifi: rtl8192ce: Fix loss of receive performance</li>
+<li>rtlwifi: rtl8192c: Prevent sleeping from invalid contex...</li>
+<li>rtlwifi: Handle previous allocation failures when freei...</li>
+<li>rtlwifi: rtl8192c_common: rtl8192de: Check for allocati...</li>
+<li>rt2x00: Add support for D-Link DWA-127 to rt2800usb.</li>
+<li>USB: serial: mos7840: Fixed MCS7820 device attach problem</li>
+<li>usb: cp210x: Update to support CP2105 and multiple...</li>
+<li>usb-serial: Add support for the Sealevel SeaLINK+8...</li>
+<li>USB: qcserial: don't grab QMI port on Gobi 1000 devices</li>
+<li>USB: qcserial: add several new serial devices</li>
+<li>USB: ums_realtek: do not use stack memory for DMA in...</li>
+<li>usb: Fix build error due to dma_mask is not at pdev_arc...</li>
+<li>usb: fsl_udc_core: Fix scheduling while atomic dump...</li>
+<li>cdc-wdm: Don't clear WDM_READ unless entire read buffer...</li>
+<li>cdc-wdm: Fix more races on the read path</li>
+<li>USB: serial: fix console error reporting</li>
+<li>TTY: Wrong unicode value copied in con_set_unimap()</li>
+<li>tty: moxa: fix bit test in moxa_start()</li>
+<li>sysfs: Fix memory leak in sysfs_sd_setsecdata().</li>
+<li>futex: Cover all PI opcodes with cmpxchg enabled check</li>
+<li>USB: gadget: Make g_hid device class conform to spec.</li>
+<li>usb: gadgetfs: return number of bytes on ep0 read request</li>
+<li>usb: renesas_usbhs: bugfix: add .release function to...</li>
+<li>usb: musb: Reselect index reg in interrupt context</li>
+<li>usb: dwc3: use proper function for setting endpoint...</li>
+<li>usb: dwc3: fix bogus test in dwc3_gadget_start_isoc</li>
+<li>staging: r8712u: Fix regression in signal level after...</li>
+<li>staging: r8712u: Fix regression introduced by commit...</li>
+<li>staging: r8712u: Add missing initialization and remove...</li>
+<li>powerpc/usb: fix bug of kernel hang when initializing usb</li>
+<li>USB: ftdi_sio: new PID: LUMEL PD12</li>
+<li>USB: ftdi_sio: add support for FT-X series devices</li>
+<li>USB: ftdi_sio: new PID: Distortec JTAG-lock-pick</li>
+<li>USB: Microchip VID mislabeled as Hornby VID in ftdi_sio.</li>
+<li>USB: ftdi_sio: add support for BeagleBone rev A5+</li>
+<li>USB: ftdi_sio: fix problem when the manufacture is...</li>
+<li>staging: zcache: avoid AB-BA deadlock condition</li>
+<li>USB: option: add ZTE MF820D</li>
+<li>USB: option: make interface blacklist work again</li>
+<li>USB: option driver: adding support for Telit CC864...</li>
 <li>USB: option: Add MediaTek MT6276M modem&amp;app interfaces</li>
 </ul>
 <p><a href="https://lkml.org/lkml/2012/4/2/331">credits</a></p></body></html>
@@ -269,7 +269,7 @@
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-04-05T08:18:00+03:00">Apr 5, 2012</time>
+            <time pubdate="pubdate" datetime="2012-04-05T08:18:00+03:00">Απρ 5, 2012</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#Utappia-Projects-ref">Utappia Projects</a> 
             <h4>Tags</h4>
