@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://utappia.org/</loc>
-<lastmod>2015-05-06T13:29:12-00:00</lastmod>
+<lastmod>2015-05-07T01:12:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/archives.html</loc>
-<lastmod>2015-05-06T13:29:12-00:00</lastmod>
+<lastmod>2015-05-07T01:12:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/tags.html</loc>
-<lastmod>2015-05-06T13:29:12-00:00</lastmod>
+<lastmod>2015-05-07T01:12:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/categories.html</loc>
-<lastmod>2015-05-06T13:29:12-00:00</lastmod>
+<lastmod>2015-05-07T01:12:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://utappia.org/pages/downloads.html</loc>
 <lastmod>2015-05-03T19:05:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.3</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/pages/feedback.html</loc>
+<lastmod>2015-05-06T13:30:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
