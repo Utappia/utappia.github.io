@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://utappia.org/</loc>
-<lastmod>2015-05-06T03:13:07-00:00</lastmod>
+<lastmod>2015-05-06T13:29:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/archives.html</loc>
-<lastmod>2015-05-06T03:13:07-00:00</lastmod>
+<lastmod>2015-05-06T13:29:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/tags.html</loc>
-<lastmod>2015-05-06T03:13:07-00:00</lastmod>
+<lastmod>2015-05-06T13:29:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/categories.html</loc>
-<lastmod>2015-05-06T03:13:07-00:00</lastmod>
+<lastmod>2015-05-06T13:29:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,253 +41,253 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://utappia.org/read-me-now.html</loc>
 <lastmod>2015-04-29T20:41:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/git-bundle-backup.html</loc>
 <lastmod>2015-04-27T12:58:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/github-change-url.html</loc>
 <lastmod>2015-04-25T22:43:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/markdown.html</loc>
 <lastmod>2015-04-25T20:31:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/pelican-tips.html</loc>
 <lastmod>2015-04-25T20:12:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/hello-world.html</loc>
 <lastmod>2015-04-25T17:51:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/ucaresystem-and-ucaresystem-core-v1-0-released.html</loc>
 <lastmod>2012-08-24T16:21:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimus-kernel-3-2-0-29-released.html</loc>
 <lastmod>2012-08-15T00:06:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/new-course-new-oportunities.html</loc>
 <lastmod>2012-08-13T16:42:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimus-kernel-3-3-7-released.html</loc>
 <lastmod>2012-06-01T11:02:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/iqunix-12-04-video-review.html</loc>
 <lastmod>2012-05-29T13:40:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/iqunix-12-04-released-new-course-and-new-plans.html</loc>
 <lastmod>2012-05-22T18:29:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimus-kernel-3-3-4-released.html</loc>
 <lastmod>2012-05-04T09:31:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimus-kernel-3-2-16-released.html</loc>
 <lastmod>2012-04-26T13:08:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/no-network-connection-a-weird-problem.html</loc>
 <lastmod>2012-04-18T14:22:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/iqunix-10-10v1-end-of-life-reached-on-april-10.html</loc>
 <lastmod>2012-04-12T13:08:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimus-kernel-3-2-14-released.html</loc>
 <lastmod>2012-04-05T08:18:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/linux-v3-3-1-and-v3-2-14-are-released.html</loc>
 <lastmod>2012-04-03T11:37:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/must-have-aliases-for-system-maintenance.html</loc>
 <lastmod>2012-04-02T13:49:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimus-kernel-3-2-12-released.html</loc>
 <lastmod>2012-03-29T15:17:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/the-story-behind-ucaresystem.html</loc>
 <lastmod>2012-03-27T17:10:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/the-story-behind-iqunix.html</loc>
 <lastmod>2012-03-27T13:32:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/the-story-behind-optimus-kernel.html</loc>
 <lastmod>2012-03-27T13:00:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/the-story-behind-captureme.html</loc>
 <lastmod>2012-03-27T12:30:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/screenshot-of-captureme-caught-in-action.html</loc>
 <lastmod>2012-03-27T10:11:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/captureme-v2-3-available-for-download.html</loc>
 <lastmod>2012-03-26T20:58:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/some-fresh-screenshot-of-ucaresystem-caught-in-action.html</loc>
 <lastmod>2012-03-26T20:28:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/comparison-ubuntu-update-manager-and-ucaresystem.html</loc>
 <lastmod>2012-03-26T14:00:00+03:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/bfs-bfq-optimized-linux-kernel-packages-ready-for-install.html</loc>
 <lastmod>2012-03-22T15:01:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html</loc>
 <lastmod>2012-03-22T14:55:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/interview-with-frostbite-media-on-iqunix-os.html</loc>
 <lastmod>2012-03-22T14:40:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/iqunix-os-clean-fast-and-simple-os.html</loc>
 <lastmod>2012-03-22T14:32:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/captureme-download.html</loc>
 <lastmod>2012-02-22T20:31:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/iQunix-download.html</loc>
 <lastmod>2012-02-22T20:31:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/optimuskernel-download.html</loc>
 <lastmod>2012-02-22T20:31:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/ucaresystem-download.html</loc>
 <lastmod>2012-02-22T20:31:00+02:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 </urlset>

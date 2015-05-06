@@ -76,22 +76,22 @@
 <p>In computing, alias is a command in various command line interpreters (shells) such as Unix shells, 4DOS/4NT and Windows PowerShell, which enables a replacement of a word by another string. This way a long line of command can be replaced by simple human-understandable words.</p>
 <p>The file that incorporates all the aliases can be found either in home users folder <code>.bashrc</code> or <code>.bash_aliases</code> or in a system wide used folder <code>/etc/bashrc</code> or <code>/etc/bash.bashrc</code></p>
 <p>The general synax of adding aliases is by adding lines in the following manner:</p>
-<div class="highlight"><pre><span class="n">alias</span> <span class="n">NICKNAME</span><span class="o">=</span><span class="err">'</span><span class="n">full</span> <span class="n">command</span> <span class="n">here</span><span class="err">'</span>
+<div class="highlight"><pre>alias NICKNAME='full command here'
 </pre></div>
 <p>Where the <code>NICKNAME</code> is a word/name that you will remember and invoke the 'full command here' part of the aliases.</p>
 <p>So for system maintenance purposes we will add some useful aliases. Open a terminal window and type :</p>
-<div class="highlight"><pre><span class="n">gedit</span> <span class="p">.</span><span class="n">bashrc</span>
+<div class="highlight"><pre>gedit .bashrc
 </pre></div>
 <p>This will open the Gedit Editor so that we can add the following lines at the end of the file </p>
-<div class="highlight"><pre><span class="n">alias</span> <span class="n">Update</span><span class="o">=</span><span class="err">'</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span><span class="err">'</span>
-<span class="n">alias</span> <span class="n">Upgrade</span><span class="o">=</span><span class="err">'</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span><span class="err">'</span>
-<span class="n">alias</span> <span class="n">Install</span><span class="o">=</span><span class="err">'</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span><span class="err">'</span>
-<span class="n">alias</span> <span class="n">Clean</span><span class="o">=</span><span class="err">'</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoremove</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">autoclean</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">clean</span><span class="err">'</span>
-<span class="n">alias</span> <span class="n">Editaliases</span><span class="o">=</span><span class="err">'</span><span class="n">gedit</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span><span class="err">'</span>
+<div class="highlight"><pre>alias Update='sudo apt-get update'
+alias Upgrade='sudo apt-get upgrade'
+alias Install='sudo apt-get install'
+alias Clean='sudo apt-get autoremove &amp;&amp; sudo apt-get autoclean &amp;&amp; sudo apt-get clean'
+alias Editaliases='gedit ~/.bashrc'
 </pre></div>
 <p>Save and close the terminal. You may need to logout and login back or type <code>bash</code> and hit enter to make the changes take effect.</p>
 <p>This way you can just type:</p>
-<div class="highlight"><pre><span class="n">Install</span> <span class="n">vlc</span>
+<div class="highlight"><pre>Install vlc
 </pre></div>
 <p>to install the vlc software.</p>
 <p>Some notes for the above aliases:</p>
@@ -102,11 +102,11 @@
 <p>You can add as many aliases as you can remember to make your life easier in the command line world.</p>
 <p>A quick last tip:</p>
 <p>If you want to install a software that comes with a bunch of packages (.deb) you can add the following alias to avoid typing all the names of the packages:</p>
-<div class="highlight"><pre><span class="n">alias</span> <span class="n">Multinstall</span><span class="o">=</span><span class="err">'</span><span class="n">sudo</span> <span class="n">dpkg</span> <span class="o">-</span><span class="n">i</span> <span class="o">*</span><span class="p">.</span><span class="n">deb</span><span class="err">'</span>
+<div class="highlight"><pre>alias Multinstall='sudo dpkg -i *.deb'
 </pre></div>
 <p>For example you have download <a href="./pages/downloads.html">Optimus Kernel</a> and you see that it comes
 with multiple ".deb" files. What you need to do is delete any package that you don't need from the folder and then type:</p>
-<div class="highlight"><pre><span class="n">Multinstall</span>
+<div class="highlight"><pre>Multinstall
 </pre></div></body></html>
             <aside>
             <hr/>
@@ -131,7 +131,7 @@ with multiple ".deb" files. What you need to do is delete any package that you d
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-04-02T13:49:00+03:00">Απρ 2, 2012</time>
+            <time pubdate="pubdate" datetime="2012-04-02T13:49:00+03:00">Apr 2, 2012</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#Maintenance-ref">Maintenance</a> 
             <h4>Tags</h4>
