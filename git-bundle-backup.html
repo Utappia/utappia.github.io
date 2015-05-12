@@ -2,43 +2,51 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Salih Emin" />
         <meta name="copyright" content="Salih Emin" />
 
         <meta name="description" content="How to create a backup of your local repository as a bundle
 " />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
 <meta name="keywords" content="git, bundle, backup, deploy, Repository, " />
+
+<meta property="og:title" content="Create a backup or a bundle of your git repository "/>
+<meta property="og:url" content="./git-bundle-backup.html" />
+<meta property="og:description" content="How to create a backup of your local repository as a bundle" />
+<meta property="og:site_name" content="Utappia" />
+<meta property="og:article:author" content="Salih Emin" />
+<meta property="og:article:published_time" content="2015-04-27T12:58:00+03:00" />
+<meta property="" content="2015-04-27T12:58:00+03:00" />
+<meta name="twitter:title" content="Create a backup or a bundle of your git repository ">
+<meta name="twitter:description" content="How to create a backup of your local repository as a bundle">
+
         <title>Create a backup or a bundle of your git repository  · Utappia
 </title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
         <link href="http://utappia.org/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Utappia - Full Atom Feed" />
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-62475496-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-62475496-1', 'auto');
+    ga('send', 'pageview');
+</script>
     </head>
     <body>
         <div id="content-sans-footer">
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container">
+                <div class="container-fluid">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -65,7 +73,7 @@
                 <div class="span10">
 <article>
 <div class="row-fluid">
-    <header class="page_header span10 offset2">
+    <header class="page-header span10 offset2">
     <h1><a href="./git-bundle-backup.html"> Create a backup or a bundle of your git repository  </a></h1>
     </header>
 </div>
@@ -91,6 +99,7 @@
     </div>
     <div class="span8 article-content">
 
+            
             <html><body>
 <h1 id="introduction">Introduction</h1>
 <p><em>Keeping a backup or moving around a local repository while retaining its entire versioning information can be achieved with the current utilities of git.</em></p>
@@ -99,45 +108,45 @@
 <p>We will use the <code>git bundle</code> utility inside our local repository and also <code>git merge</code> to deploy our bundled repo.</p>
 <p><em><code>git bundle</code> turns a repository into a single file that retains the versioning information of the entire project.</em></p>
 <p>Here are a list of options that are available:</p>
-<div class="highlight"><pre><span class="s1">'git bundle'</span> <span class="nb">create</span> <span class="o">&lt;</span><span class="nb">name</span><span class="na">-of-the-bundle</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">git</span><span class="na">-rev-list-args</span><span class="o">&gt;</span>
-<span class="s1">'git bundle'</span> <span class="nx">verify</span> <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span>
-<span class="s1">'git bundle'</span> <span class="nx">unbundle</span> <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span> <span class="err">[</span><span class="o">&lt;</span><span class="nx">refname</span><span class="o">&gt;</span><span class="nx">...</span><span class="cp">]</span>
+<div class="highlight"><pre>'git bundle' create &lt;name-of-the-bundle&gt; &lt;git-rev-list-args&gt;
+'git bundle' verify &lt;file&gt;
+'git bundle' unbundle &lt;file&gt; [&lt;refname&gt;...]
 </pre></div>
 <h2 id="create-a-bundle">Create a bundle</h2>
 <p>While you are inside a repo run:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">bundle</span> <span class="n">create</span> <span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span> <span class="n">master</span><span class="err">`</span>
+<div class="highlight"><pre>git bundle create ../myrepo.bundle master`
 </pre></div>
 <p>It should print out something like this:</p>
-<div class="highlight"><pre><span class="n">Counting</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">43</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">2</span> <span class="n">threads</span><span class="p">.</span>
-<span class="n">Compressing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">39</span><span class="o">/</span><span class="mi">39</span><span class="p">),</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">Writing</span> <span class="n">objects</span><span class="o">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">43</span><span class="o">/</span><span class="mi">43</span><span class="p">),</span> <span class="mf">54.44</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mi">0</span> <span class="n">bytes</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">Total</span> <span class="mi">43</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">8</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre>Counting objects: 43, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (43/43), 54.44 KiB | 0 bytes/s, done.
+Total 43 (delta 8), reused 0 (delta 0)
 </pre></div>
 <p>This will create the bundle outside (one folder above) the repo and name it <code>myrepo.bundle</code>. When we created the file It was like we where just pushing our master branch to a remote, except it’s contained in a file instead of a remote repository. </p>
 <h2 id="verify-the-bundle">Verify the bundle</h2>
 <p>Before we move our bundle its a good idea to verify its content and check that the bundle file is valid and relevant to the current repository.</p>
 <p>While you are inside a repo run:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">bundle</span> <span class="n">verify</span> <span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span><span class="err">`</span>
+<div class="highlight"><pre>git bundle verify ../myrepo.bundle`
 </pre></div>
 <p>It should print out something like this:</p>
-<div class="highlight"><pre><span class="n">The</span> <span class="n">bundle</span> <span class="n">contains</span> <span class="n">this</span> <span class="n">ref</span><span class="o">:</span>
-<span class="mi">230</span><span class="n">b04bdd3367b2db73</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
-<span class="n">The</span> <span class="n">bundle</span> <span class="n">records</span> <span class="n">a</span> <span class="n">complete</span> <span class="n">history</span><span class="p">.</span>
-<span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span> <span class="n">is</span> <span class="n">okay</span>
+<div class="highlight"><pre>The bundle contains this ref:
+230b04bdd3367b2db73 refs/heads/master
+The bundle records a complete history.
+../myrepo.bundle is okay
 </pre></div>
 <h2 id="deploy-the-bundle">Deploy the bundle</h2>
 <p>Assuming that you have the <code>myrepo.bundle</code> file in <code>/home/user</code> and you have created a folder <code>newrepo</code> and initialized a git repository inside it. Here is a generic procedure:</p>
-<div class="highlight"><pre><span class="n">mkdir</span> <span class="n">newrepo</span>
-<span class="n">cd</span> <span class="n">newrepo</span>
-<span class="n">git</span> <span class="n">init</span>
-<span class="n">git</span> <span class="n">bundle</span> <span class="n">unbundle</span> <span class="p">..</span><span class="o">/</span><span class="n">myrepo</span><span class="p">.</span><span class="n">bundle</span>
+<div class="highlight"><pre>mkdir newrepo
+cd newrepo
+git init
+git bundle unbundle ../myrepo.bundle
 </pre></div>
 <p>the last command will inform you with the <code>HEAD</code> of you repo</p>
-<div class="highlight"><pre><span class="n">f7243ba54eb7de4b76a0</span> <span class="n">HEAD</span>
+<div class="highlight"><pre>f7243ba54eb7de4b76a0 HEAD
 </pre></div>
 <p>Now you can merge the contents of <code>myrepo.bubdle</code> file with the one that you initialized inside the <code>newrepo</code> folder:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">merge</span> <span class="n">f7243b</span>
+<div class="highlight"><pre>git merge f7243b
 </pre></div>
 <p>Alternative procedures are also available, so please follow the links provided on the <em>References</em> section</p>
 <h1 id="results-and-discussion">Results and discussion</h1>
@@ -147,76 +156,72 @@
 <li>Ryan Hodson, Git Tips &amp; Tricks : <a href="http://rypress.com/tutorials/git/tips-and-tricks">rypress.com</a></li>
 <li>Scott Chacon and Ben Straub, Pro Git : <a href="http://git-scm.com/docs/git-bundle">git-scm.com</a></li>
 </ol></body></html>
-            <aside>
-            <hr/>
-<!--This is a comment. Share articles section-->
-<section>
+            <section>
     <p id="post-share-links">
-        Share on:
-        <a href="https://sharetodiaspora.github.io/?title=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository&url=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Diaspora">Diaspora*</a>
-        ❄
-        <a href="http://twitter.com/home?status=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository%20http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Twitter">Twitter</a>
-        ❄
-        <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Facebook">Facebook</a>
-        ❄
-        <a href="https://plus.google.com/share?url=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Google Plus">Google+</a>
-        ❄
-        <a href="mailto:?subject=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository&amp;body=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share via Email">Email</a>
+    Share on:
+    <a href="http://twitter.com/home?status=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository%20http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository&amp;body=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
-<!--This is a comment.Share articles section-->
-<!--This is a comment. Added related articles section-->
-    		<ul>
-		<h3>You may also want to check the related articles:</h3>
-        	<li><a href="./github-change-url.html">Changing a local git repo's remote URL</a></li>
-		</ul>
-<!--This is a comment. End of related articles section-->            
-	<nav>
-            <ul class="articles_timeline">
- 
-                <li class="previous_article">« <a href="./github-change-url.html" title="Previous: Changing a local git repo's remote URL">Changing a local git repo's remote URL</a></li>
- 
-                <li class="next_article"><a href="./read-me-now.html" title="Next: READ ME NOW">READ ME NOW</a> »</li>
-            </ul>
-            </nav>
-            </aside>
+
+            
+            <hr/>
+<section>
+    <h2>Related Posts</h2>
+<ul class="related-posts-list">
+<li><a href="./github-change-url.html" title="Changing a local git repo&#39;s remote URL">Changing a local git repo's remote URL</a></li>
+</ul>
+<hr />
+</section>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
- 
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Απρ 27, 2015</time>
- 
-            <h4>Last Updated</h4>
-            <div class="last_updated">2015-04-27 12:58:00+03:00</div>
+            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
+
+<h4>Last Updated</h4>
+<time datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
+
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#Repository-ref">Repository</a> 
+            <a class="category-link" href="./categories.html#repository-ref">Repository</a>
             <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#backup-ref">backup
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#backup-ref">backup
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#bundle-ref">bundle
+                <li><a href="./tags.html#bundle-ref">bundle
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#deploy-ref">deploy
+                <li><a href="./tags.html#deploy-ref">deploy
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#git-ref">git
+                <li><a href="./tags.html#git-ref">git
                     <span>2</span>
 </a></li>
             </ul>
-
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-                <form action="http://utappia.us10.list-manage.com/subscribe/post?u=43b8fcc4811e0e42e65177af1&amp;id=5759f75729" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <h4>Get Notified</h4>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your email" required>
-                    <div class="clear"><input type="submit" value="click to subdcribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </form>
-            </div>
-
-            <!--End mc_embed_signup-->
+<h4>Contact</h4>
+    <a href="https://plus.google.com/+Salihemin" title="My Google-Plus Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    <a href="https://twitter.com/cerebrux" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://github.com/cerebrux" title="My Github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://www.linkedin.com/in/salihemin" title="My linkedin Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc-embed-signup">
+<form action="http://utappia.us10.list-manage.com/subscribe/post?u=43b8fcc4811e0e42e65177af1&amp;id=5759f75729" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<h4>Get Notified</h4>
+<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your email" required>
+<div class="clear"><input type="submit" value="click to subdcribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+<!--End mc_embed_signup-->
         </div>
         </section>
 </div>
@@ -225,6 +230,7 @@
                 <div class="span1"></div>
             </div>
         </div>
+        <div id="push"></div>
     </div>
 <footer>
 <div id="footer">
@@ -234,7 +240,7 @@
     </ul>
 </div>
 </footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
@@ -242,5 +248,8 @@
             }
         </script>
 
+    
     </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
