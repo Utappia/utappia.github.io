@@ -133,6 +133,7 @@ td.code {
 }
 div.highlight {
     margin-bottom: 20px;
+    box-shadow: 6px 10px 6px rgb(136, 136, 136);
 }
 /* Tags */
 .list-of-tags {
