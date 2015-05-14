@@ -26,6 +26,8 @@
 
         <title>Create a backup or a bundle of your git repository  · Utappia
 </title>
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
@@ -108,13 +110,13 @@
 <p>We will use the <code>git bundle</code> utility inside our local repository and also <code>git merge</code> to deploy our bundled repo.</p>
 <p><em><code>git bundle</code> turns a repository into a single file that retains the versioning information of the entire project.</em></p>
 <p>Here are a list of options that are available:</p>
-<div class="highlight"><pre>'git bundle' create &lt;name-of-the-bundle&gt; &lt;git-rev-list-args&gt;
-'git bundle' verify &lt;file&gt;
-'git bundle' unbundle &lt;file&gt; [&lt;refname&gt;...]
+<div class="highlight"><pre>git bundle create &lt;name-of-the-bundle&gt; &lt;git-rev-list-args&gt;
+git bundle verify &lt;file&gt;
+git bundle unbundle &lt;file&gt; [&lt;refname&gt;...]
 </pre></div>
 <h2 id="create-a-bundle">Create a bundle</h2>
 <p>While you are inside a repo run:</p>
-<div class="highlight"><pre>git bundle create ../myrepo.bundle master`
+<div class="highlight"><pre>git bundle create ../myrepo.bundle master
 </pre></div>
 <p>It should print out something like this:</p>
 <div class="highlight"><pre>Counting objects: 43, done.
@@ -127,7 +129,7 @@ Total 43 (delta 8), reused 0 (delta 0)
 <h2 id="verify-the-bundle">Verify the bundle</h2>
 <p>Before we move our bundle its a good idea to verify its content and check that the bundle file is valid and relevant to the current repository.</p>
 <p>While you are inside a repo run:</p>
-<div class="highlight"><pre>git bundle verify ../myrepo.bundle`
+<div class="highlight"><pre>git bundle verify ../myrepo.bundle
 </pre></div>
 <p>It should print out something like this:</p>
 <div class="highlight"><pre>The bundle contains this ref:
@@ -182,10 +184,10 @@ git bundle unbundle ../myrepo.bundle
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
+            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Απρ 27, 2015</time>
 
 <h4>Last Updated</h4>
-<time datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
+<time datetime="2015-04-27T12:58:00+03:00">Απρ 27, 2015</time>
 
             <h4>Category</h4>
             <a class="category-link" href="./categories.html#repository-ref">Repository</a>
