@@ -7,24 +7,24 @@
         <meta name="author" content="Salih Emin" />
         <meta name="copyright" content="Salih Emin" />
 
-        <meta name="description" content="How to create a backup of your local repository as a bundle
+        <meta name="description" content="Introduction to diy home server
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="git, bundle, backup, deploy, Repository, " />
+<meta name="keywords" content="DIY, single-board computer, server, Server Roles, " />
 
-<meta property="og:title" content="Create a backup or a bundle of your git repository "/>
-<meta property="og:url" content="./git-bundle-backup.html" />
-<meta property="og:description" content="How to create a backup of your local repository as a bundle" />
+<meta property="og:title" content="Introduction to DIY Home Server "/>
+<meta property="og:url" content="./introduction-to-die-home-server.html" />
+<meta property="og:description" content="Introduction to diy home server" />
 <meta property="og:site_name" content="Utappia" />
 <meta property="og:article:author" content="Salih Emin" />
-<meta property="og:article:published_time" content="2015-04-27T12:58:00+03:00" />
-<meta property="" content="2015-04-27T12:58:00+03:00" />
-<meta name="twitter:title" content="Create a backup or a bundle of your git repository ">
-<meta name="twitter:description" content="How to create a backup of your local repository as a bundle">
+<meta property="og:article:published_time" content="2015-05-17T13:45:00+03:00" />
+<meta property="" content="2015-05-17T22:45:00+03:00" />
+<meta name="twitter:title" content="Introduction to DIY Home Server ">
+<meta name="twitter:description" content="Introduction to diy home server">
 
-        <title>Create a backup or a bundle of your git repository  · Utappia
+        <title>Introduction to DIY Home Server  · Utappia
 </title>
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
@@ -76,7 +76,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./git-bundle-backup.html"> Create a backup or a bundle of your git repository  </a></h1>
+    <h1><a href="./introduction-to-die-home-server.html"> Introduction to DIY Home Server  </a></h1>
     </header>
 </div>
 
@@ -86,11 +86,13 @@
         <h4>Contents</h4>
         <div class="toc">
 <ul>
+<li><a href="#abstract">Abstract</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#materials-and-methods">Materials and Methods</a><ul>
-<li><a href="#create-a-bundle">Create a bundle</a></li>
-<li><a href="#verify-the-bundle">Verify the bundle</a></li>
-<li><a href="#deploy-the-bundle">Deploy the bundle</a></li>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#network">Network</a></li>
+<li><a href="#operating-system">Operating System</a></li>
+<li><a href="#clients">Clients</a></li>
 </ul>
 </li>
 <li><a href="#results-and-discussion">Results and discussion</a></li>
@@ -103,107 +105,105 @@
 
             
             <html><body>
+<p><img alt="Introduction to diy home server" src="/images/intro-diy-home-server-office-coffie-phone-laptop1280.jpg" style="width: 1280px; height: auto;" title="Image "/></p>
+<h1 id="abstract">Abstract</h1>
+<p>A home server can be extremely useful for managing your personal data like backing up your files, streaming your music, photos and videos and accessing locally installed services like webmail, webeditor, calendar, notes, contacts, finances and many more.</p>
+<p>This is an introductory article for a series of articles for building, deploying, securing, maintaining, troubleshooting and administering your home server or any server in general.</p>
 <h1 id="introduction">Introduction</h1>
-<p><em>Keeping a backup or moving around a local repository while retaining its entire versioning information can be achieved with the current utilities of git.</em></p>
-<p>Bundles are a great way to backup entire Git repositories. They also let you share changes without a network connection.</p>
+<p>A server, either external (hosted on 3rd party providers) or internal (in your home) is a computer dedicated to run an instance of an application (software) capable of accepting requests from the client (your PC, smartphone/tablet, TV etc.) and giving responses accordingly. Servers can run on any computer including dedicated computers, which individually are also often referred to as "the server". Note that in theory, any computerized process that shares a resource to one or more client processes is a server.</p>
 <h1 id="materials-and-methods">Materials and Methods</h1>
-<p>We will use the <code>git bundle</code> utility inside our local repository and also <code>git merge</code> to deploy our bundled repo.</p>
-<p><em><code>git bundle</code> turns a repository into a single file that retains the versioning information of the entire project.</em></p>
-<p>Here are a list of options that are available:</p>
-<div class="highlight"><pre>git bundle create &lt;name-of-the-bundle&gt; &lt;git-rev-list-args&gt;
-git bundle verify &lt;file&gt;
-git bundle unbundle &lt;file&gt; [&lt;refname&gt;...]
-</pre></div>
-<h2 id="create-a-bundle">Create a bundle</h2>
-<p>While you are inside a repo run:</p>
-<div class="highlight"><pre>git bundle create ../myrepo.bundle master
-</pre></div>
-<p>It should print out something like this:</p>
-<div class="highlight"><pre>Counting objects: 43, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (39/39), done.
-Writing objects: 100% (43/43), 54.44 KiB | 0 bytes/s, done.
-Total 43 (delta 8), reused 0 (delta 0)
-</pre></div>
-<p>This will create the bundle outside (one folder above) the repo and name it <code>myrepo.bundle</code>. When we created the file It was like we where just pushing our master branch to a remote, except it’s contained in a file instead of a remote repository. </p>
-<h2 id="verify-the-bundle">Verify the bundle</h2>
-<p>Before we move our bundle its a good idea to verify its content and check that the bundle file is valid and relevant to the current repository.</p>
-<p>While you are inside a repo run:</p>
-<div class="highlight"><pre>git bundle verify ../myrepo.bundle
-</pre></div>
-<p>It should print out something like this:</p>
-<div class="highlight"><pre>The bundle contains this ref:
-230b04bdd3367b2db73 refs/heads/master
-The bundle records a complete history.
-../myrepo.bundle is okay
-</pre></div>
-<h2 id="deploy-the-bundle">Deploy the bundle</h2>
-<p>Assuming that you have the <code>myrepo.bundle</code> file in <code>/home/user</code> and you have created a folder <code>newrepo</code> and initialized a git repository inside it. Here is a generic procedure:</p>
-<div class="highlight"><pre>mkdir newrepo
-cd newrepo
-git init
-git bundle unbundle ../myrepo.bundle
-</pre></div>
-<p>the last command will inform you with the <code>HEAD</code> of you repo</p>
-<div class="highlight"><pre>f7243ba54eb7de4b76a0 HEAD
-</pre></div>
-<p>Now you can merge the contents of <code>myrepo.bubdle</code> file with the one that you initialized inside the <code>newrepo</code> folder:</p>
-<div class="highlight"><pre>git merge f7243b
-</pre></div>
-<p>Alternative procedures are also available, so please follow the links provided on the <em>References</em> section</p>
+<p>Before we get started, I would suggest that you should get a member of your family (kids, brother/sister, grandma? ) or a friend involved to the DIY Home Server project because it will be more fun and entertaining than to work alino on the project.</p>
+<p>To be able to build a home server we need to understand some terms:</p>
+<ul>
+<li>Hardware</li>
+<li>Network</li>
+<li>Operating System</li>
+<li>Clients</li>
+</ul>
+<h2 id="hardware">Hardware</h2>
+<p>The computer that will take the role of a home server could be any spare computer lying around. Unfortunately though this would mean that the this computer will have to be 24/7 powered on, could be loud and the consumption of electricity would make it not viable for the role. That is why I suggest avoid using common computers for home server role but instead buying a credit card-sized single-board computer like:</p>
+<ul>
+<li><a href="http://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;index=aps&amp;keywords=Rasberry%20Pi&amp;linkCode=ur2&amp;tag=cerebrux-20&amp;linkId=Y53AW6WZE6WEUBAU">Raspberry Pi</a></li>
+<li><a href="http://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;index=aps&amp;keywords=Banana%20pi&amp;linkCode=ur2&amp;tag=cerebrux-20&amp;linkId=7IFXR2M65XPZK2C7">Banana Pi</a></li>
+<li><a href="http://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;index=aps&amp;keywords=BeagleBoard&amp;linkCode=ur2&amp;tag=cerebrux-20&amp;linkId=QUBALY3PAUTFU7FF">BeagleBoard</a></li>
+<li><a href="http://amzn.to/1Afsivz">Cubieboard</a></li>
+<li><a href="http://amzn.to/1ILmoUu">Odroid</a></li>
+</ul>
+<p>This type of computers are low on power consumption, silent and generally provide more "value for money". The total <strong>return of investment</strong> exceeds the one that will be provided by a common computer.</p>
+<h2 id="network">Network</h2>
+<p>The network is the "glue" that connects our server with the various clients (as mentioned earlier).</p>
+<p>The network is consisted of</p>
+<ul>
+<li>Router</li>
+<li>Cables</li>
+<li>IP assignments</li>
+</ul>
+<p>Our router is actually a mini internet/dhcp server and its role is to provide Internet connection, IP addresses and data/requests deliverance, among other things through the cables to the the clients and vice versa.</p>
+<h2 id="operating-system">Operating System</h2>
+<p>There are specialized free (as in beer and freedom of speech) operating systems for the server role that are compatible with the single-board computers that I mentioned earlier. Most popular among them are:</p>
+<ul>
+<li>Ubuntu</li>
+<li>Debian</li>
+<li>Arch Linux</li>
+<li>openSUSE</li>
+</ul>
+<p>Personally I prefer Ubuntu because of their predefined development cycle and the <a href="https://wiki.ubuntu.com/LTS">5 years of support</a> on software updates.</p>
+<p>You should choose the one that you are comfortable administering as this will be installed on the server for years to come.</p>
+<h2 id="clients">Clients</h2>
+<p>Clients are any devices that connect and exchange information with our home server. The kind of exchange depends on the types of services that the server provides and the capabilities of the device that request those services. A home server usually provides:</p>
+<ul>
+<li>Centralized storage</li>
+<li>Media serving</li>
+<li>Information (calendar, contacts etc.)</li>
+<li>E-mail</li>
+<li>Security monitoring</li>
+<li>P2P file sharing</li>
+</ul>
 <h1 id="results-and-discussion">Results and discussion</h1>
-<p>As you can see once you create the bundle file you can easily move it to another folder on the same or an other machine. Assume you want to transfer the history from a repository R1 on machine A to another repository R2 on machine B. For whatever reason, direct connection between A and B is not allowed, but we can move data from A to B via some mechanism (USB flash drive, email, etc..). This way we can update R2 with development made on the branch master in R1.</p>
+<p>Now that we've discussed the core terms of building a home intranet, we should be able to create a draft plan of the parts that we will need to succeed in our project.</p>
+<p>I should mention that building a home server not only pays off but it is fun and educative. So stay tuned for the next article either by subscribing to newsletter or following me at social nets.</p>
 <h1 id="references">References</h1>
 <ol>
-<li>Ryan Hodson, Git Tips &amp; Tricks : <a href="http://rypress.com/tutorials/git/tips-and-tricks">rypress.com</a></li>
-<li>Scott Chacon and Ben Straub, Pro Git : <a href="http://git-scm.com/docs/git-bundle">git-scm.com</a></li>
+<li>Server definition : <a href="http://en.wikipedia.org/wiki/Server_%28computing%29">wikipedia</a></li>
+<li>Home Server : <a href="http://en.wikipedia.org/wiki/Home_server">wikipedia</a></li>
+<li>Intranet definition: <a href="http://en.wikipedia.org/wiki/Intranet">wikipedia</a></li>
 </ol></body></html>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository%20http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=Introduction%20to%20DIY%20Home%20Server%20http%3A//utappia.org/introduction-to-die-home-server.html" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/introduction-to-die-home-server.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/introduction-to-die-home-server.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=Create%20a%20backup%20or%20a%20bundle%20of%20your%20git%20repository&amp;body=http%3A//utappia.org/git-bundle-backup.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Introduction%20to%20DIY%20Home%20Server&amp;body=http%3A//utappia.org/introduction-to-die-home-server.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
             
             <hr/>
-<section>
-    <h2>Related Posts</h2>
-<ul class="related-posts-list">
-<li><a href="./github-change-url.html" title="Changing a local git repo&#39;s remote URL">Changing a local git repo's remote URL</a></li>
-</ul>
-<hr />
-</section>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
+            <time pubdate="pubdate" datetime="2015-05-17T13:45:00+03:00">May 17, 2015</time>
 
 <h4>Last Updated</h4>
-<time datetime="2015-04-27T12:58:00+03:00">Apr 27, 2015</time>
+<time datetime="2015-05-17T22:45:00+03:00">May 17, 2015</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#repository-ref">Repository</a>
+            <a class="category-link" href="./categories.html#server-roles-ref">Server Roles</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#backup-ref">backup
+                <li><a href="./tags.html#diy-ref">DIY
                     <span>1</span>
 </a></li>
-                <li><a href="./tags.html#bundle-ref">bundle
+                <li><a href="./tags.html#server-ref">server
                     <span>1</span>
 </a></li>
-                <li><a href="./tags.html#deploy-ref">deploy
+                <li><a href="./tags.html#single-board-computer-ref">single-board computer
                     <span>1</span>
-</a></li>
-                <li><a href="./tags.html#git-ref">git
-                    <span>2</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
