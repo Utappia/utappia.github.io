@@ -7,23 +7,23 @@
         <meta name="author" content="drpaneas" />
         <meta name="copyright" content="drpaneas" />
 
-        <meta name="description" content="Here is how to run and use unigine heaven to benchmark your graphics card.
+        <meta name="description" content="In this guide we will see how to install Cuda toolkit on Ubuntu
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="unigine heaven, ubuntu, Tuning - Optimization - Benchmarking, " />
+<meta name="keywords" content="cuda, gpu, install, nvidia, ubuntu, Deployment, " />
 
-<meta property="og:title" content="How to run Unigine Heaven 3.0 in Ubuntu 64bit "/>
-<meta property="og:url" content="./how-to-run-unigine-heaven-3-0-in-ubuntu-12-04-64bit.html" />
-<meta property="og:description" content="Here is how to run and use unigine heaven to benchmark your graphics card." />
+<meta property="og:title" content="How to install CUDA Toolkit on Ubuntu "/>
+<meta property="og:url" content="./how-to-install-cuda-toolkit-on-ubuntu.html" />
+<meta property="og:description" content="In this guide we will see how to install Cuda toolkit on Ubuntu" />
 <meta property="og:site_name" content="Utappia" />
 <meta property="og:article:author" content="drpaneas" />
-<meta property="og:article:published_time" content="2012-08-22T16:46:00+03:00" />
-<meta name="twitter:title" content="How to run Unigine Heaven 3.0 in Ubuntu 64bit ">
-<meta name="twitter:description" content="Here is how to run and use unigine heaven to benchmark your graphics card.">
+<meta property="og:article:published_time" content="2013-02-14T14:45:00+02:00" />
+<meta name="twitter:title" content="How to install CUDA Toolkit on Ubuntu ">
+<meta name="twitter:description" content="In this guide we will see how to install Cuda toolkit on Ubuntu">
 
-        <title>How to run Unigine Heaven 3.0 in Ubuntu 64bit  · Utappia
+        <title>How to install CUDA Toolkit on Ubuntu  · Utappia
 </title>
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
@@ -75,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./how-to-run-unigine-heaven-3-0-in-ubuntu-12-04-64bit.html"> How to run Unigine Heaven 3.0 in Ubuntu 64bit  </a></h1>
+    <h1><a href="./how-to-install-cuda-toolkit-on-ubuntu.html"> How to install CUDA Toolkit on Ubuntu  </a></h1>
     </header>
 </div>
 
@@ -88,11 +88,11 @@
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#materials-and-methods">Materials and Methods</a><ul>
-<li><a href="#hardware-requirements">Hardware Requirements:</a></li>
-<li><a href="#download-unigine-heaven-30">Download Unigine Heaven 3.0</a></li>
-<li><a href="#install-unigine-30">Install Unigine 3.0</a></li>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#installation">Installation</a></li>
 </ul>
 </li>
+<li><a href="#results-and-discussion">Results and discussion</a></li>
 </ul>
 </div>
         </nav>
@@ -102,95 +102,86 @@
             
             <html><body>
 <h1 id="abstract">Abstract</h1>
-<p>Unigine Heaven 3.0 is the latest version of what is probably the most
-popular graphics card benchmark series in Linux. In this article you will learn how to install and use it under Ubuntu</p>
+<p>The NVIDIA CUDA Toolkit provides a comprehensive development environment for C and C++ developers building GPU-accelerated applications. The CUDA Toolkit includes a compiler for NVIDIA GPUs, math libraries, and tools for debugging and optimizing the performance of your applications. You’ll also find programming guides, user manuals, API reference, and other documentation to help you get started quickly accelerating your application with GPUs</p>
 <h1 id="introduction">Introduction</h1>
-<p>Unigine Heaven is designed to measure
-your PCs gaming performance and makes extensive use of all
-the new features in OpenGL including tessellation, compute shaders and
-multi-threading. Trusted by gamers worldwide to give accurate and
-unbiased results, we believe that Unigine Heaven is the best way to
-consistently and reliably test your graphics card under game-like loads.</p>
-<ul>
-<li>Heavy GPU load, extreme hardware stability test.</li>
-<li>Support of DirectX 9, DirectX 10, DirectX 11 and OpenGL 4.0.</li>
-<li>Comprehensive use of hardware tessellation technology (3 presets).</li>
-<li>Advanced ambient occlusion.</li>
-<li>Dynamic global illumination.</li>
-<li>Volumetric cumulonimbus clouds of high physical fidelity.</li>
-<li>Simulation of day-night shift and changing light conditions.</li>
-<li>Dynamic sky with light scattering.</li>
-<li>Interactive experience with fly/walk-through modes.</li>
-<li>Support of NVIDIA SLI and ATI CrossFire technologies.</li>
-<li>Stereo 3D modes:<ul>
-<li>Anaglyph</li>
-<li>Separate images</li>
-<li>3D Vision</li>
-<li>3D Surround</li>
-<li>iZ3D</li>
-</ul>
-</li>
-<li>Support of multi-monitor configurations.</li>
-<li>Based on the latest, most advanced version version of powerful
-    <a href="http://unigine.com/product/unigine/">UNIGINE engine</a>.</li>
-</ul>
-<p>Tessellation feature <strong>REQUIRES</strong> both video card with DirectX 11
-support and MS Windows Vista/7 or Linux!</p>
+<p>This guide is based upon Ubuntu LTS, but same principles apply in
+also to more recent versions of Ubuntu as well. Let's start</p>
 <h1 id="materials-and-methods">Materials and Methods</h1>
-<h3 id="hardware-requirements">Hardware Requirements:</h3>
-<p>To run Unigine you need at least:</p>
+<h3 id="hardware">Hardware</h3>
+<p>You must have a nVIDIA GPU that supports CUDA, otherwise you can't
+program in CUDA code. Here's a <a href="https://developer.nvidia.com/cuda-gpus">list</a> with the CUDA supported GPU models.</p>
+<h3 id="installation">Installation</h3>
+<p><strong>1- NVIDIA Proprietary drivers</strong></p>
+<p>Either use our <a href="https://github.com/ubuntuxtreme/Nvidia-installer">nVIDIA installer script</a> or use Jockey (Additional Drivers) or just pick the driver you want from the NVIDIA
+official <a href="http://www.nvidia.com/object/unix.html">website</a>.</p>
+<p><strong>2- Download CUDA Toolkit 5.0 for Ubuntu</strong></p>
+<p>I used the Ubuntu 11.10 32bit version (it's the latest version so far).
+So please<a href="https://developer.nvidia.com/cuda-downloads">dowload</a>.</p>
+<p><strong>3- Fix the libglut.so error</strong></p>
+<p>There will be an error when you'll try to install the CUDA 5.0 examples.
+The driver is trying to find the libglut.so file and it doesn't look for
+other versions, such as so.1, so.2 etc.</p>
+<p>First confirm that you have a libglut file</p>
+<div class="highlight"><pre>sudo find /usr -name libglut\*
+</pre></div>
+<p>if it does so, symlink that file to libglut.so</p>
 <ul>
-<li>GPU:<ul>
-<li>ATI Radeon HD 2xxx and higher</li>
-<li>NVIDIA GeForce 7xxx and higher</li>
-<li>Intel HD 3000 and higher</li>
+<li>for 64bit</li>
 </ul>
-</li>
-<li>Video memory: 512 Mb</li>
-<li>Disk space: 500 Mb</li>
+<div class="highlight"><pre>sudo ln -s /usr/lib/x86_64-linux-gnu/libglut.so.3 /usr/lib/libglut.so
+</pre></div>
+<ul>
+<li>for 32bit</li>
 </ul>
-<h3 id="download-unigine-heaven-30">Download Unigine Heaven 3.0</h3>
-<p>To obtain a copy of Unigine Heaven 3.0 Basic Edition, please launch your
-favorite browser (Firefox, Chrome, Opera, IE) and go to their <a href="http://unigine.com/products/heaven/download/">official
-website</a>.</p>
-<p>There are three different version including Windows,
-Linux and Mac OS X operating systems. To download the benchmark, please
-select one of the three available links: Guru3D, TPU and Torrent. If you
-ask me, I prefer the torrent link because it's the fastest way provided
-there, so let me help you and give you the link: <a href="http://unigine.com/download/torrents/Unigine_Heaven-3.0.run.torrent">Download
-Unigine Heaven 3.0</a></p>
-<p>Transmission app will automatically launch itself as being Ubuntu's
-default torrent client. Please apply and accept the rules in order to
-download the benchmark.</p>
-<p>Transmission stores downloaded files into /home/username/Downloads/  --
-same location for Firefox's downloads.</p>
-<h3 id="install-unigine-30">Install Unigine 3.0</h3>
-<p>First of browse into your Downloads folder and locate the
-<strong>Unigine_Heaven-3.0.run</strong> file.</p>
-<p><strong>Right click</strong> and select <strong>properties</strong>. Go to the <strong>second Tab</strong>
-(<strong>Permissions</strong>) and tick the  "Allow
-executing file as program" checkbox. Close the file and then double click on it to run it.</p>
-<p>Click "<strong>Run</strong>".</p>
-<p>A new small window will pop up, extracting the Unigine Heaven 3.0 into
-your hard disk. Afterwards press Return (meaning Enter) to close the
-window.</p>
-<p>As you can see a new folder Unigine-Heaven-3.0 has been created.</p>
-<p>Inside, there are <strong>3 folders</strong> and <strong>1 file</strong> called heaven. Just <strong>change the permissions to heaven file</strong> (please make it executable (like you did before). Right
-click and select properties. Go to the second Tab (Permissions) and tick
-the '<strong>Allow executing file as program</strong>" checkbox. Close the file and
-double click on it.).</p>
-<p>Hopefully you will be able to launch the benchmark with no problems. Let
-us know if this method works for you.</p></body></html>
+<div class="highlight"><pre>sudo ln -s /usr/lib/i386-linux-gnu/libglut.so.3 /usr/lib/libglut.so
+</pre></div>
+<p><strong>4- Install the CUDA Toolkit and Samples</strong></p>
+<p>Press CTRL+ALT+F1 to open a shell -- yeah, we're going to do this in old
+CLI way, but there's no need to afraid the black and white terminal.</p>
+<p><strong>5- Shutdown the all the graphics</strong></p>
+<p>Ubuntu uses lightdm, so you need to stop this service.</p>
+<div class="highlight"><pre>sudo service lightdm stop
+</pre></div>
+<p><strong>6- Run the installer</strong></p>
+<p>Go to (cd) to the directory you have the CUDA installer (a file with *.run extension) and type the following:</p>
+<div class="highlight"><pre>sudo chmod +x *.run
+sudo ./*.run
+</pre></div>
+<p>Accept the Licence and Install only the CUDA 5 Toolkit and the Samples.
+DO NOT INSTALL the drivers because we have already done that.</p>
+<p><strong>7- Enable the nvcc compiler</strong></p>
+<p>In order to compile CUDA code you have to use the nvcc compile. In that
+so you have to tweak some enviroment variables into your home bashrc
+file.</p>
+<ul>
+<li>32 bit systems  </li>
+</ul>
+<div class="highlight"><pre><span class="x">export PATH=</span><span class="p">$</span><span class="nv">PATH</span><span class="x">:/usr/local/cuda-5.0/bin export LD_LIBRARY_PATH=/usr/local/cuda-5.0/lib</span>
+</pre></div>
+<ul>
+<li>64 bit systems  </li>
+</ul>
+<div class="highlight"><pre><span class="x">export PATH=</span><span class="p">$</span><span class="nv">PATH</span><span class="x">:/usr/local/cuda-5.0/bin</span>
+<span class="x">export LD_LIBRARY_PATH=/usr/local/cuda-5.0/lib64:/lib`</span>
+</pre></div>
+<p>If you want to compile a CUDA file (*.cu extension) you can use the
+following command:</p>
+<div class="highlight"><pre>nvcc -o file file.cu
+./file
+</pre></div>
+<p>or use the <a href="http://docs.nvidia.com/cuda/nsight-eclipse-edition-getting-started-guide/index.html">NSight Eclipse Edition</a>.</p>
+<h1 id="results-and-discussion">Results and discussion</h1>
+<p>I hope this guide is helpful for anyone starting to create  GPU-accelerated applications</p></body></html>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=How%20to%20run%20Unigine%20Heaven%203.0%20in%20Ubuntu%2064bit%20http%3A//utappia.org/how-to-run-unigine-heaven-3-0-in-ubuntu-12-04-64bit.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=How%20to%20install%20CUDA%20Toolkit%20on%20Ubuntu%20http%3A//utappia.org/how-to-install-cuda-toolkit-on-ubuntu.html" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/how-to-run-unigine-heaven-3-0-in-ubuntu-12-04-64bit.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/how-to-install-cuda-toolkit-on-ubuntu.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//utappia.org/how-to-run-unigine-heaven-3-0-in-ubuntu-12-04-64bit.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/how-to-install-cuda-toolkit-on-ubuntu.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=How%20to%20run%20Unigine%20Heaven%203.0%20in%20Ubuntu%2064bit&amp;body=http%3A//utappia.org/how-to-run-unigine-heaven-3-0-in-ubuntu-12-04-64bit.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=How%20to%20install%20CUDA%20Toolkit%20on%20Ubuntu&amp;body=http%3A//utappia.org/how-to-install-cuda-toolkit-on-ubuntu.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
@@ -201,8 +192,8 @@ us know if this method works for you.</p></body></html>
 <ul class="related-posts-list">
 <li><a href="./bfs-bfq-optimized-linux-kernel-packages-ready-for-install.html" title="BFS – BFQ optimized linux kernel packages ready for install">BFS – BFQ optimized linux kernel packages ready for install</a></li>
 <li><a href="./how-to-install-ubuntu-12-04-using-windows-7-or-8.html" title="How to install Ubuntu 12.04 using Windows 8">How to install Ubuntu 12.04 using Windows 8</a></li>
+<li><a href="./how-to-install-ubuntu-on-macbook-air-2011-mid.html" title="How to install Ubuntu on Macbook Air 2011 mid">How to install Ubuntu on Macbook Air 2011 mid</a></li>
 <li><a href="./how-to-change-desktop-environment-in-ubuntu.html" title="How to change Desktop Environments in Ubuntu">How to change Desktop Environments in Ubuntu</a></li>
-<li><a href="./how-to-install-cuda-toolkit-on-ubuntu.html" title="How to install CUDA Toolkit on Ubuntu">How to install CUDA Toolkit on Ubuntu</a></li>
 <li><a href="./askubuntu-find-answer-to-your-questions-from-terminal.html" title="AskUbuntu from Terminal- Find the best answer to your questions from terminal">AskUbuntu from Terminal- Find the best answer to your questions from terminal</a></li>
 </ul>
 <hr />
@@ -211,16 +202,25 @@ us know if this method works for you.</p></body></html>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-08-22T16:46:00+03:00">Aug 22, 2012</time>
+            <time pubdate="pubdate" datetime="2013-02-14T14:45:00+02:00">Feb 14, 2013</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#tuning-optimization-benchmarking-ref">Tuning - Optimization - Benchmarking</a>
+            <a class="category-link" href="./categories.html#deployment-ref">Deployment</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#cuda-ref">cuda
+                    <span>1</span>
+</a></li>
+                <li><a href="./tags.html#gpu-ref">gpu
+                    <span>1</span>
+</a></li>
+                <li><a href="./tags.html#install-ref">install
+                    <span>3</span>
+</a></li>
+                <li><a href="./tags.html#nvidia-ref">nvidia
+                    <span>1</span>
+</a></li>
                 <li><a href="./tags.html#ubuntu-ref">ubuntu
                     <span>7</span>
-</a></li>
-                <li><a href="./tags.html#unigine-heaven-ref">unigine heaven
-                    <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="drpaneas" />
+        <meta name="copyright" content="drpaneas" />
+
+        <meta name="description" content="In this article we will present you how to install OGRE SDK
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="sdk, ogre, Deployment, " />
+
+<meta property="og:title" content="How to install OGRE SDK from source "/>
+<meta property="og:url" content="./how-to-install-ogre-sdk-from-source.html" />
+<meta property="og:description" content="In this article we will present you how to install OGRE SDK" />
+<meta property="og:site_name" content="Utappia" />
+<meta property="og:article:author" content="drpaneas" />
+<meta property="og:article:published_time" content="2012-09-29T02:42:00+03:00" />
+<meta name="twitter:title" content="How to install OGRE SDK from source ">
+<meta name="twitter:description" content="In this article we will present you how to install OGRE SDK">
+
+        <title>How to install OGRE SDK from source  · Utappia
+</title>
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+        <link href="http://utappia.org/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Utappia - Full Atom Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-62475496-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Utappia</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/downloads.html">Downloads</a></li>
+                            <li ><a href="./pages/feedback.html">Feedback</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./how-to-install-ogre-sdk-from-source.html"> How to install OGRE SDK from source  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#materials-and-methods">Materials and Methods</a></li>
+<li><a href="#results-and-discussion">Results and discussion</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+
+            
+            <html><body>
+<h1 id="abstract">Abstract</h1>
+<p>In this article we will present you how to install OGRE SDK, compiling it from source. Even though we are aware that compiling is not recommended in Ubuntu, in this particular program is vital to do so.</p>
+<h1 id="introduction">Introduction</h1>
+<p>OGRE (<strong>O</strong>bject-Oriented <strong>G</strong>raphics <strong>R</strong>endering <strong>E</strong>ngine) is a
+scene-oriented, flexible 3D engine written in C++ designed to make it
+easier and more intuitive for developers to produce applications
+utilizing hardware-accelerated 3D graphics. The class library abstracts
+all the details of using the underlying system libraries like Direct3D
+and OpenGL and provides an interface based on world objects and other
+intuitive classes.</p>
+<p><strong>What can it do?</strong></p>
+<p>Lots of things! See the features page for an up-to-date list of the
+current features. Also, take a look at the <a href="http://www.ogre3d.org/gallery">screenshots page</a> to see for yourself the kinds of eye candy OGRE can pump out.</p>
+<p><strong>Is OGRE a Game Engine?</strong></p>
+<p>No. OGRE can be (and indeed has been) used to make games, but OGRE is
+deliberately designed to provide just a world-class graphics solution;
+for other features like sound, networking, AI, collision, physics etc,
+you will need to integrate it with other libraries, something several
+frameworks have done, and we have a collision / physics reference
+integration library as an example in our distribution.</p>
+<p>For more information <a href="http://www.ogre3d.org/about">click here</a>.</p>
+<h1 id="materials-and-methods">Materials and Methods</h1>
+<p><strong>1. Install Depedencies</strong></p>
+<p>As stated before, we are going to use the compile method instead of
+apt-get. Thus, you need you have installed all the necessary programs to
+do the job.</p>
+<div class="highlight"><pre>sudo apt-get install build-essential automake libtool
+</pre></div>
+<p>Next, you need to install the libraries required for OGRE. Compile-wise,
+you need the <strong>*.-dev</strong> packages. Type:</p>
+<div class="highlight"><pre>sudo apt-get install libfreetype6-dev libfreeimage-dev libzzip-dev libxrandr-dev libxaw7-dev freeglut3-dev libgl1-mesa-dev libglu1-mesa-dev libxt-dev libpng12-dev libglew1.6-dev
+</pre></div>
+<p><strong>2. Download OGRE SDK Source</strong></p>
+<p>First off you need to understand what version you would like to install.
+Personally, as being a beginner to OGRE I recommend you to install the
+stable branch. Here's a brief explanation of what there is available to
+the public.</p>
+<p><strong>Development (default) branch</strong>: this is the latest development
+version where all the new features are being added. This is fine if you
+want to see the very latest features, but it is inherently the <strong>least
+stable</strong> version, and there may be interface-breaking changes going on
+here. Only use the trunk if you are confident in your ability to handle
+the odd problem.</p>
+<p><strong>Maintenance branches</strong>: these are branches where the API is
+stable within a major version. Only bugfixes are applied to these
+branches, and no interface-breaking changes. Only one maintenance branch
+is actively maintained, representing the current stable version, but
+others may be present from previous stables. The maintenance branches
+are named after the stable major version, such as ‘v1-6′ or ‘v1-7′.  The
+latest of these is the best branch to use if you want to keep up with
+the latest fixes, but need a stable development platform.[/tab]</p>
+<p>Download OGRE's Maintenance stable version ogre3d.</p>
+<ul>
+<li><a href="http://www.ogre3d.org/download/source">OGRE Source</a></li>
+</ul>
+<p><strong>3. Compile OGRE SDK</strong></p>
+<p>Once you have extracted OGRE into /home dir, then go in that folder in
+terminal way. Pay attention that in the following example, I have
+downloaded OGRE 1.8.1 version, thus the name scheme applying is
+ogre_src_v1-8-1.</p>
+<div class="highlight"><pre>cd ogre_src_v1-8-1/
+</pre></div>
+<p>Create an empty directory, called "Build" and get inside:</p>
+<div class="highlight"><pre>mkdir Build
+cd Build
+</pre></div>
+<p>Trigger cmake, passing path to Ogre source directory in order to create
+a regular makefile. Ogre uses cmake instead of ./configure:</p>
+<div class="highlight"><pre>cmake ..
+</pre></div>
+<p>Normally you can just run 'make' but if you have multiple cores, you can
+decrease your compile time by doing this:</p>
+<div class="highlight"><pre>make -j`getconf _NPROCESSORS_ONLN`
+</pre></div>
+<p>Once compilation is successful, you can install into the system (by
+default, /usr/local):</p>
+<div class="highlight"><pre>sudo make install
+</pre></div>
+<p>Otherwise, you can cmake and build OGRE using IDE, such as CodeBlocks,
+KDevelop or Eclipse. However, I like more using the terminal and gedit,
+rather than IDEs.</p>
+<p>Code blocks is a well-known IDE for programming. If you want to
+build OGRE through Code::Blocks then setup your cmake parameters
+properly.</p>
+<div class="highlight"><pre>cmake -G "CodeBlocks - Unix Makefiles" ..
+</pre></div>
+<p>More information about Building project with Codeblocks can be found
+<a href="http://www.ogre3d.org/tikiwiki/tiki-index.php?page=Setting+Up+An+Application+-+CodeBlocks+-+Linux">here</a></p>
+<p>Kdevelop4 is very nice, easy-to-use and modern IDE. After getting
+source, just open Kdevelop and click "Project -&gt; Open/Import
+Project..." and show path to code (~/ogre_src_v1-8-1). You will have
+to choose build folder (eg /home/drpaneas/ogre_src_v1-8-1/build). Then
+wait a little bit for KDevelop to load and index the project files.</p>
+<p>For building click on button "Build Selection". For running click
+"Execute". Running first time "Launch Configurations" will pop up. You
+have to set executable file by selecting "ogre_src_v1-8-1", clicking
+"+" icon and choosing under (Launch Configuration) Executable
+"/home/drpaneas/ogre_src_v1-8-1/build/bin/SampleBrowser_d" as
+"Project Target".Then Run it (Shift+F9).</p>
+<p>More information <a href="http://www.ogre3d.org/tikiwiki/tiki-index.php?page=Setting+Up+An+Application">here</a>...</p>
+<p>Select "C/C++ / Makefile project with existing code" as project
+type. In "Existing code location", click browse, and again,select
+openmw's folder.
+Also select "Linux GCC" as toolchain, then click "Finish". Now right-click on your project, and select "Properties". Go to "C/C++ build", uncheck "use default build command", and specify your command, likemake -j 4 -C ${ProjDirPath}../build</p>
+<p>That's it. Now you are able to launch the SampleBrowser, located at
+/Build/bin/ directory at your OGRE project.</p>
+<h1 id="results-and-discussion">Results and discussion</h1>
+<p>When you launch SampleBrowser for the very first time, it asks you to
+choose your Renderer. Being in Linux and native in Ubuntu, you have no
+choice but select OpenGL Rendering Subsystem; then click Accept.</p>
+<p>This is the menu of SampleBrowser. In there you can configure your
+settings and test any sample project that comes with OGRE SDK by
+default. Also, bare in mind that you are able to see the source code of
+any of these samples.</p>
+<p><a href="http://www.ogre3d.org/tikiwiki/tiki-index.php?page=Home">OGRE
+Wiki</a></p></body></html>
+            <section>
+    <p id="post-share-links">
+    Share on:
+    <a href="http://twitter.com/home?status=How%20to%20install%20OGRE%20SDK%20from%20source%20http%3A//utappia.org/how-to-install-ogre-sdk-from-source.html" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/how-to-install-ogre-sdk-from-source.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/how-to-install-ogre-sdk-from-source.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=How%20to%20install%20OGRE%20SDK%20from%20source&amp;body=http%3A//utappia.org/how-to-install-ogre-sdk-from-source.html" target="_blank" title="Share via Email">Email</a>
+    </p>
+</section>
+
+            
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2012-09-29T02:42:00+03:00">Sep 29, 2012</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#deployment-ref">Deployment</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#ogre-ref">ogre
+                    <span>1</span>
+</a></li>
+                <li><a href="./tags.html#sdk-ref">sdk
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://plus.google.com/+Salihemin" title="My Google-Plus Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    <a href="https://twitter.com/cerebrux" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://github.com/cerebrux" title="My Github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://www.linkedin.com/in/salihemin" title="My linkedin Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc-embed-signup">
+<form action="http://utappia.us10.list-manage.com/subscribe/post?u=43b8fcc4811e0e42e65177af1&amp;id=5759f75729" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<h4>Get Notified</h4>
+<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your email" required>
+<div class="clear"><input type="submit" value="click to subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/cc4.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Utappia.org website</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"><a href="https://www.linkedin.com/in/salihemin" target="_blank">Salih Emin</a></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
+</html>
