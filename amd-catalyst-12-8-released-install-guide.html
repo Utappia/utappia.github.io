@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="drpaneas" />
+        <meta name="copyright" content="drpaneas" />
+
+        <meta name="description" content="Here we will see how to install, upgrade and uninstall the AMD drivers
+" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content="amd, drivers, ppa, Maintenance, " />
+
+<meta property="og:title" content="AMD Catalyst 12.8 Released - Install Guide "/>
+<meta property="og:url" content="./amd-catalyst-12-8-released-install-guide.html" />
+<meta property="og:description" content="Here we will see how to install, upgrade and uninstall the AMD drivers" />
+<meta property="og:site_name" content="Utappia" />
+<meta property="og:article:author" content="drpaneas" />
+<meta property="og:article:published_time" content="2012-08-16T19:34:00+03:00" />
+<meta name="twitter:title" content="AMD Catalyst 12.8 Released - Install Guide ">
+<meta name="twitter:description" content="Here we will see how to install, upgrade and uninstall the AMD drivers">
+
+        <title>AMD Catalyst 12.8 Released - Install Guide  · Utappia
+</title>
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
+        <link href="http://utappia.org/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Utappia - Full Atom Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-62475496-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Utappia</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/downloads.html">Downloads</a></li>
+                            <li ><a href="./pages/feedback.html">Feedback</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="./amd-catalyst-12-8-released-install-guide.html"> AMD Catalyst 12.8 Released - Install Guide  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#materias-and-methods">Materias and Methods</a><ul>
+<li><a href="#the-easy-way-xorg-edgers-ppa-for-catalyst">The easy way: Xorg-Edgers PPA for Catalyst</a><ul>
+<li><a href="#ppa-installation">PPA Installation</a></li>
+<li><a href="#ppa-uninstallation">PPA Uninstallation</a></li>
+</ul>
+</li>
+<li><a href="#the-hard-manual-way">The hard (manual) way</a><ul>
+<li><a href="#binary-installation">Binary Installation</a></li>
+<li><a href="#binary-upgrade">Binary Upgrade</a></li>
+<li><a href="#binary-uninstall">Binary Uninstall</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+
+            
+            <html><body>
+<p><img alt="AMD drivers Install Guide" src="/images/amdcatalyst.jpg" style="width: 800px; height: auto;" title="How to install, upgrade and uninstall the AMD drivers"/></p>
+<h1 id="abstract">Abstract</h1>
+<p>Actually the Catalyst driver was released yesterday (15/8/12) but the
+official link was broken, although many users find out the mispelling
+and download the driver without problem -- currently the link is fixed.</p>
+<h1 id="introduction">Introduction</h1>
+<p>There are two ways to install the AMD drivers:</p>
+<ul>
+<li>Easy Way with Xorg-Edgers</li>
+<li>Hard way (Manual) from binaries</li>
+</ul>
+<p>Also, there are two ways to uninstall them if you need so:</p>
+<ul>
+<li>PPA purge if you used Xorg-Edgers</li>
+<li>Purge Autoremove if you used the manual way</li>
+</ul>
+<h1 id="materias-and-methods">Materias and Methods</h1>
+<p>Here we will see how to install, upgrade and uninstall the AMD drivers</p>
+<h2 id="the-easy-way-xorg-edgers-ppa-for-catalyst">The easy way: Xorg-Edgers PPA for Catalyst</h2>
+<p>Do you want to install a PPA once, then stay back and relax for life? If
+so, then follow the easy path that most Ubuntu users do. </p>
+<p>Xorg-Edgers offers you bleeding-edge drivers directly from upstream git, but in case
+of AMD Catalyst they always provide the latest stable AMD release, since
+AMD is not giving beta drivers in public (in contrast to NVIDIA). </p>
+<p>If you go to Xorg-Edgers Lauchpad profile, you will see the
+2:8.980-0ubuntu1\~xedgers\~precise1 is already available. Additionally,
+these guys are so crazy that they even provide the driver for the Ubuntu
+12.10 Alpha 3 release via fglrx 2:8.980-0ubuntu1\~xedgers\~quantal1.</p>
+<h3 id="ppa-installation">PPA Installation</h3>
+<p>Anyway, add the PPA into your source and update/upgrade your packages.
+If you had already add Xorg-Edgers into your Ubuntu, there is no need to
+do it again. Just update your system and reboot.</p>
+<div class="highlight"><pre>sudo add-apt-repository ppa:xorg-edgers/ppa
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install fglrx-installer
+</pre></div>
+<h3 id="ppa-uninstallation">PPA Uninstallation</h3>
+<p>In case you want to upgrade Ubuntu up to a new version (eg from Ubuntu
+12.04 upgrade into Ubuntu 12.10) you have to remove this PPA or strange
+things will happen and maybe render unstable the whole system. So before
+you upgrade to the newer Ubuntu distro, please act wise and remove it..</p>
+<div class="highlight"><pre>sudo apt-get install ppa-purge
+sudo ppa-purge ppa:xorg-edgers/ppa
+</pre></div>
+<p>So far, we have covered the easy method and now you should be able to
+install and remove them properly. You can stop reading now and reboot your PC. Have fun!</p>
+<h2 id="the-hard-manual-way">The hard (manual) way</h2>
+<p>First you will need to download the driver</p>
+<p>Click to download the drivers for 64/32 bit (the package contains both the 32-bit and 64-bit driver.).</p>
+<ul>
+<li><a href="http://www2.ati.com/drivers/linux/amd-driver-installer-12-8-x86.x86_64.zip">Download 32/64bit</a></li>
+</ul>
+<p>If you install the AMD Catalyst for the first time then follow the following procedure</p>
+<h3 id="binary-installation">Binary Installation</h3>
+<p>Install prerequisite packages</p>
+<div class="highlight"><pre>sudo apt-get install build-essential cdbs dh-make dkms
+sudo apt-get install execstack dh-modaliases fakeroot libqtgui4
+</pre></div>
+<p>If you are 64 bit, install these too</p>
+<div class="highlight"><pre>sudo apt-get install ia32-libs ia32-libs-multiarch:i386
+sudo apt-get install lib32gcc1 libc6-i386
+cd /usr ; sudo ln -svT lib /usr/lib64
+</pre></div>
+<p>Now go into your Downloads folder (I suppose you have already download the driver), make the package executable, create and install deb packages</p>
+<div class="highlight"><pre>cd Downloads
+chmod +x amd-driver-installer-8.982-x86.x86_64.run
+sudo sh ./amd-driver-installer-8.982-x86.x86_64.run --buildpkg Ubuntu/precise
+sudo dpkg -i fglrx*.deb
+</pre></div>
+<p>Now enable new settings</p>
+<div class="highlight"><pre>sudo aticonfig --initial -f
+</pre></div>
+<h3 id="binary-upgrade">Binary Upgrade</h3>
+<p>If you are to Upgrade from AMD Catalyst 12.6 to 12.8 then follow the following procedure:</p>
+<p>Go into your Downloads folder (I suppose you have already download the driver), make the package executable, create deb packages, force overwrite the older packages with the new ones</p>
+<div class="highlight"><pre>cd Downloads
+chmod +x amd-driver-installer-8.982-x86.x86_64.run
+sudo sh ./amd-driver-installer-8.982-x86.x86_64.run --buildpkg Ubuntu/precise
+sudo dpkg --force-overwrite -i *.deb
+</pre></div>
+<p>Now reboot you PC.</p>
+<h3 id="binary-uninstall">Binary Uninstall</h3>
+<p>If want to unistall them</p>
+<div class="highlight"><pre>sudo apt-get --purge autoremove fglrx fglrx_* fglrx-amdcccle* fglrx-dev*
+</pre></div></body></html>
+            <section>
+    <p id="post-share-links">
+    Share on:
+    <a href="http://twitter.com/home?status=AMD%20Catalyst%2012.8%20Released%20-%20Install%20Guide%20http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share on Twitter">Twitter</a>
+    ❄
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share on Google Plus">Google+</a>
+    ❄
+    <a href="mailto:?subject=AMD%20Catalyst%2012.8%20Released%20-%20Install%20Guide&amp;body=http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share via Email">Email</a>
+    </p>
+</section>
+
+            
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2012-08-16T19:34:00+03:00">Aug 16, 2012</time>
+            <h4>Category</h4>
+            <a class="category-link" href="./categories.html#maintenance-ref">Maintenance</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="./tags.html#amd-ref">amd
+                    <span>1</span>
+</a></li>
+                <li><a href="./tags.html#drivers-ref">drivers
+                    <span>1</span>
+</a></li>
+                <li><a href="./tags.html#ppa-ref">ppa
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="https://plus.google.com/+Salihemin" title="My Google-Plus Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-google-plus sidebar-social-links"></i></a>
+    <a href="https://twitter.com/cerebrux" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="https://github.com/cerebrux" title="My Github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="https://www.linkedin.com/in/salihemin" title="My linkedin Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-linkedin sidebar-social-links"></i></a>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc-embed-signup">
+<form action="http://utappia.us10.list-manage.com/subscribe/post?u=43b8fcc4811e0e42e65177af1&amp;id=5759f75729" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<h4>Get Notified</h4>
+<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your email" required>
+<div class="clear"><input type="submit" value="click to subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/cc4.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Utappia.org website</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"><a href="https://www.linkedin.com/in/salihemin" target="_blank">Salih Emin</a></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
+</html>
