@@ -7,23 +7,23 @@
         <meta name="author" content="drpaneas" />
         <meta name="copyright" content="drpaneas" />
 
-        <meta name="description" content="Here we will see how to install, upgrade and uninstall the AMD drivers
+        <meta name="description" content="This is our all in one Nvidia Driver installer script for Ubuntu
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="amd, drivers, Maintenance, " />
+<meta name="keywords" content="nvidia, drivers, script, bash, Utappia Projects, " />
 
-<meta property="og:title" content="AMD Catalyst 12.9 released - Install Guide (updated) "/>
-<meta property="og:url" content="./amd-catalyst-12-9-install-guide-ubuntu.html" />
-<meta property="og:description" content="Here we will see how to install, upgrade and uninstall the AMD drivers" />
+<meta property="og:title" content="NVIDIA Drivers installer script "/>
+<meta property="og:url" content="./nvidia-drivers-installer-script.html" />
+<meta property="og:description" content="This is our all in one Nvidia Driver installer script for Ubuntu" />
 <meta property="og:site_name" content="Utappia" />
 <meta property="og:article:author" content="drpaneas" />
-<meta property="og:article:published_time" content="2012-09-14T18:39:00+03:00" />
-<meta name="twitter:title" content="AMD Catalyst 12.9 released - Install Guide (updated) ">
-<meta name="twitter:description" content="Here we will see how to install, upgrade and uninstall the AMD drivers">
+<meta property="og:article:published_time" content="2012-08-22T14:40:00+03:00" />
+<meta name="twitter:title" content="NVIDIA Drivers installer script ">
+<meta name="twitter:description" content="This is our all in one Nvidia Driver installer script for Ubuntu">
 
-        <title>AMD Catalyst 12.9 released - Install Guide (updated)  · Utappia
+        <title>NVIDIA Drivers installer script  · Utappia
 </title>
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
@@ -75,108 +75,63 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./amd-catalyst-12-9-install-guide-ubuntu.html"> AMD Catalyst 12.9 released - Install Guide (updated)  </a></h1>
+    <h1><a href="./nvidia-drivers-installer-script.html"> NVIDIA Drivers installer script  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
-    <div class="span2 table-of-content">
-        <nav>
-        <h4>Contents</h4>
-        <div class="toc">
-<ul>
-<li><a href="#abstract">Abstract</a></li>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#materials-and-methods">Materials and Methods</a><ul>
-<li><a href="#binary-installation">Binary Installation</a></li>
-<li><a href="#binary-upgrade">Binary Upgrade</a></li>
-<li><a href="#binary-uninstall">Binary Uninstall</a></li>
-</ul>
-</li>
-</ul>
-</div>
-        </nav>
-    </div>
-    <div class="span8 article-content">
+        <div class="span8 offset2 article-content">
 
             
-            <html><body>
-<p><img alt="AMD drivers Install Guide" src="/images/amdcatalyst.jpg" style="width: 800px; height: auto;" title="How to install, upgrade and uninstall the AMD drivers"/></p>
-<h1 id="abstract">Abstract</h1>
-<p>The latest AMD Catalyst 12.9 was released yesterday (13/9/12) . The most
-significant change here is that Catalyst 9 improves your <a href="http://www.amd.com/us/products/embedded/graphics-processors/Pages/embedded-display-graphics.aspx">embedded Radeongraphics</a>.</p>
-<p>For example if you're using a netbook with an AMD CPU, then you have
-better support for its embedded IGPU, like E6760, E6460 etc.</p>
-<p>Last but not least, the AMD hasn't updated their website, thus this link
-is located under embedded graphics, not PC Desktop. Hopefully they will
-update their website during the next 24 hours.</p>
-<h1 id="introduction">Introduction</h1>
-<p>Here is the changlog from the new version of the driver</p>
-<p><strong>Changelog</strong></p>
+            <html><body><p><img alt="Nvidia drivers Installer script" src="/images/linux_bash_shell_script_moto.jpg" style="width: 800px; height: auto;" title="Nvidia drivers Installer script"/></p>
+<p>With the thousands of commands available for the command line user, how
+can you remember them all? </p>
+<p>The answer is, you don't. The real power of the computer is its ability to do the work for you. To get it to do
+that, we use the power of the shell to automate things.</p>
+<p>Our nVIDIA Installer script is a collections of commands that are stored
+in a file. The shell can read this file and act on the commands as if
+they were typed at the keyboard.</p>
+<p>Please notice that our script works only with Ubuntu. No other Linux
+distributions are supported.</p>
 <ul>
-<li>Fix startx failure on PowerXpress A+A platforms  </li>
-<li>Fix performance downgrade with 3DMarkVantage  </li>
-<li>Fix startx failure on some specific ASICs  </li>
-<li>Fix PowerPlay settings not persistent after reboot  </li>
-<li>Fix problem that the hardware information is shown twice in AMD CCC:LE for Power Saving mode of PowerXpress A+A  </li>
-<li>Fix severe corruption when switch between multiple X servers  </li>
-<li>Fix cursor disappear when open AMD CCC:LE with specific steps  </li>
-<li>Fix suspend/resume hang on PowerXpress A+A in Power-Saving mode  </li>
-<li>Fix system hang after panning  </li>
-<li>Fix system font change after enable Xinerama  </li>
-<li>Fix X crash when run 32bit AMD CCC:LE on 64bit system  </li>
-<li>Fix the issue that monitor goes into sleep for some ASICs after kill X</li>
+<li><a href="https://github.com/ubuntuxtreme/Nvidia-installer/tarball/master">Download our Installer Script</a></li>
 </ul>
-<h1 id="materials-and-methods">Materials and Methods</h1>
-<p>Click to download the drivers for 64/32 bit (the package contains both the 32-bit and 64-bit driver.).</p>
+<p>After you download the tar.gz file just right click and unzip it. The executable is the <strong>nvidia_installer.sh</strong></p>
+<h3 id="how-to-use-nvidia-installer">How to use Nvidia Installer</h3>
+<ol>
+<li>Just open a terminal (Ctrl + T)</li>
+<li>type <strong>sudo -i</strong></li>
+<li>hit enter and provide your password to become admin</li>
+<li>"drag n' drop" the <strong>nvidia_installer.sh</strong> executable to the terminal</li>
+<li>hit enter to run the script</li>
+</ol>
+<p>The Nvidia installer script will do the following things: </p>
 <ul>
-<li><a href="http://www2.ati.com/drivers/linux/amd-driver-installer-12-9-x86.x86_64.zip">Download 32/64bit</a></li>
+<li>Remove opensource drivers (if any)</li>
+<li>Remove nvidia proprietary drivers (if any) </li>
+<li>Blacklist and remove modules (if any)</li>
+<li>Remove X-Swat PPA</li>
+<li>Update</li>
+<li>Upgrade</li>
+<li>Install nvidia latest proprietary from Xorg-edgers PPA</li>
+<li>Checks for sources integrity bug</li>
+<li>Reboots your PC</li>
 </ul>
-<p>Currently you can't install this driver using Xorg-Edgers PPA because the repository has not been updated yet.
-You have to built it by you own following the hard(manual) way.</p>
-<p>If you install the AMD Catalyst for the first time then follow the following procedure</p>
-<h3 id="binary-installation">Binary Installation</h3>
-<p>Install prerequisite packages</p>
-<div class="highlight"><pre>sudo apt-get install build-essential cdbs dh-make dkms
-sudo apt-get install execstack dh-modaliases fakeroot libqtgui4
+<p>Try it ;)</p>
+<p>If you want to hack the code, just clone the repository</p>
+<div class="highlight"><pre>git clone git://github.com/ubuntuxtreme/Nvidia-installer.git
 </pre></div>
-<p>If you are 64 bit, install these too</p>
-<div class="highlight"><pre>sudo apt-get install ia32-libs ia32-libs-multiarch:i386
-sudo apt-get install lib32gcc1 libc6-i386
-cd /usr ; sudo ln -svT lib /usr/lib64
-</pre></div>
-<p>Now go into your Downloads folder (I suppose you have already download the driver), make the package executable, create and install deb packages</p>
-<div class="highlight"><pre>cd Downloads
-chmod +x amd-driver-installer-8.982-x86.x86_64.run
-sudo sh ./amd-driver-installer-8.982-x86.x86_64.run --buildpkg Ubuntu/precise
-sudo dpkg -i fglrx*.deb
-</pre></div>
-<p>Now enable new settings</p>
-<div class="highlight"><pre>sudo aticonfig --initial -f
-</pre></div>
-<h3 id="binary-upgrade">Binary Upgrade</h3>
-<p>If you are to Upgrade from AMD Catalyst 12.6 to 12.8 then follow the following procedure:</p>
-<p>Go into your Downloads folder (I suppose you have already download the driver), make the package executable, create deb packages, force overwrite the older packages with the new ones</p>
-<div class="highlight"><pre>cd Downloads
-chmod +x amd-driver-installer-8.982-x86.x86_64.run
-sudo sh ./amd-driver-installer-8.982-x86.x86_64.run --buildpkg Ubuntu/precise
-sudo dpkg --force-overwrite -i *.deb
-</pre></div>
-<p>Now reboot you PC.</p>
-<h3 id="binary-uninstall">Binary Uninstall</h3>
-<p>If want to unistall them</p>
-<div class="highlight"><pre>sudo apt-get --purge autoremove fglrx fglrx_* fglrx-amdcccle* fglrx-dev*
-</pre></div></body></html>
+<p>If you have any issues please report them here: <a href="https://github.com/ubuntuxtreme/Nvidia-installer/issues">Report Issues for Nvidia Installer Script</a></p></body></html>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=AMD%20Catalyst%2012.9%20released%20-%20Install%20Guide%20%28updated%29%20http%3A//utappia.org/amd-catalyst-12-9-install-guide-ubuntu.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=NVIDIA%20Drivers%20installer%20script%20http%3A//utappia.org/nvidia-drivers-installer-script.html" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/amd-catalyst-12-9-install-guide-ubuntu.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/nvidia-drivers-installer-script.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//utappia.org/amd-catalyst-12-9-install-guide-ubuntu.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/nvidia-drivers-installer-script.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=AMD%20Catalyst%2012.9%20released%20-%20Install%20Guide%20%28updated%29&amp;body=http%3A//utappia.org/amd-catalyst-12-9-install-guide-ubuntu.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=NVIDIA%20Drivers%20installer%20script&amp;body=http%3A//utappia.org/nvidia-drivers-installer-script.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
@@ -185,9 +140,11 @@ sudo dpkg --force-overwrite -i *.deb
 <section>
     <h2>Related Posts</h2>
 <ul class="related-posts-list">
+<li><a href="./must-have-aliases-for-system-maintenance.html" title="Must have aliases for system maintenance">Must have aliases for system maintenance</a></li>
 <li><a href="./how-to-install-or-upgrade-nvidia-video-drivers.html" title="How to install or upgrade Nvidia Video Drivers">How to install or upgrade Nvidia Video Drivers</a></li>
-<li><a href="./amd-catalyst-12-8-released-install-guide.html" title="AMD Catalyst 12.8 Released - Install Guide">AMD Catalyst 12.8 Released - Install Guide</a></li>
-<li><a href="./nvidia-drivers-installer-script.html" title="NVIDIA Drivers installer script">NVIDIA Drivers installer script</a></li>
+<li><a href="./amd-catalyst-12-9-install-guide-ubuntu.html" title="AMD Catalyst 12.9 released - Install Guide (updated)">AMD Catalyst 12.9 released - Install Guide (updated)</a></li>
+<li><a href="./how-to-install-cuda-toolkit-on-ubuntu.html" title="How to install CUDA Toolkit on Ubuntu">How to install CUDA Toolkit on Ubuntu</a></li>
+<li><a href="./askubuntu-find-answer-to-your-questions-from-terminal.html" title="AskUbuntu from Terminal- Find the best answer to your questions from terminal">AskUbuntu from Terminal- Find the best answer to your questions from terminal</a></li>
 </ul>
 <hr />
 </section>
@@ -195,16 +152,22 @@ sudo dpkg --force-overwrite -i *.deb
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-09-14T18:39:00+03:00">Sep 14, 2012</time>
+            <time pubdate="pubdate" datetime="2012-08-22T14:40:00+03:00">Aug 22, 2012</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#maintenance-ref">Maintenance</a>
+            <a class="category-link" href="./categories.html#utappia-projects-ref">Utappia Projects</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#amd-ref">amd
+                <li><a href="./tags.html#bash-ref">bash
                     <span>2</span>
 </a></li>
                 <li><a href="./tags.html#drivers-ref">drivers
                     <span>4</span>
+</a></li>
+                <li><a href="./tags.html#nvidia-ref">nvidia
+                    <span>3</span>
+</a></li>
+                <li><a href="./tags.html#script-ref">script
+                    <span>2</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
