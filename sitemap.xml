@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://utappia.org/</loc>
-<lastmod>2015-06-16T20:22:33-00:00</lastmod>
+<lastmod>2015-06-16T22:28:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/archives.html</loc>
-<lastmod>2015-06-16T20:22:33-00:00</lastmod>
+<lastmod>2015-06-16T22:28:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/tags.html</loc>
-<lastmod>2015-06-16T20:22:33-00:00</lastmod>
+<lastmod>2015-06-16T22:28:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/categories.html</loc>
-<lastmod>2015-06-16T20:22:33-00:00</lastmod>
+<lastmod>2015-06-16T22:28:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -116,6 +116,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://utappia.org/nvidia-304-64-r310-drivers-deliver-massive-performance-boost-to-linux-gaming.html</loc>
+<lastmod>2012-11-06T19:33:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://utappia.org/how-to-change-desktop-environment-in-ubuntu.html</loc>
 <lastmod>2012-11-03T19:12:00+02:00</lastmod>
 <changefreq>daily</changefreq>
@@ -125,6 +132,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://utappia.org/how-to-install-ubuntu-on-macbook-air-2011-mid.html</loc>
 <lastmod>2012-10-30T00:59:00+02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/how-to-install-nvidia-310-14-drivers-major-changes.html</loc>
+<lastmod>2012-10-19T14:55:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -144,8 +158,43 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://utappia.org/how-to-install-nvidia-304-51-drivers-in-ubuntu.html</loc>
+<lastmod>2012-09-26T00:50:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/nvidia-304-48-drivers-released-install-guide.html</loc>
+<lastmod>2012-09-14T19:09:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://utappia.org/amd-catalyst-12-9-install-guide-ubuntu.html</loc>
 <lastmod>2012-09-14T18:39:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/nvidia-installer-script-ver-1-1-released.html</loc>
+<lastmod>2012-08-30T19:58:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/how-to-install-nvidia-304-43-with-one-click.html</loc>
+<lastmod>2012-08-29T01:30:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/nvidia-304-43-driver-released.html</loc>
+<lastmod>2012-08-27T20:25:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
