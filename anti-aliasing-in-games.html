@@ -7,23 +7,23 @@
         <meta name="author" content="drpaneas" />
         <meta name="copyright" content="drpaneas" />
 
-        <meta name="description" content="Installing different desktop environments in Ubuntu is just a couple commands away
+        <meta name="description" content="In this article we will discuss the anti-alising in games and some suggestions based on your monitors resolution
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="cinammon, desktop, e17, fluxbox, gnome, install, kde, kubuntu, lubuntu, ubuntu, unity, xfce, xubuntu, Deployment, " />
+<meta name="keywords" content="screen, graphics, antialising, Gaming, " />
 
-<meta property="og:title" content="How to change Desktop Environments in Ubuntu "/>
-<meta property="og:url" content="./how-to-change-desktop-environment-in-ubuntu.html" />
-<meta property="og:description" content="Installing different desktop environments in Ubuntu is just a couple commands away" />
+<meta property="og:title" content="Anti-Aliasing in games "/>
+<meta property="og:url" content="./anti-aliasing-in-games.html" />
+<meta property="og:description" content="In this article we will discuss the anti-alising in games and some suggestions based on your monitors resolution" />
 <meta property="og:site_name" content="Utappia" />
 <meta property="og:article:author" content="drpaneas" />
-<meta property="og:article:published_time" content="2012-11-03T19:12:00+02:00" />
-<meta name="twitter:title" content="How to change Desktop Environments in Ubuntu ">
-<meta name="twitter:description" content="Installing different desktop environments in Ubuntu is just a couple commands away">
+<meta property="og:article:published_time" content="2012-12-03T15:18:00+02:00" />
+<meta name="twitter:title" content="Anti-Aliasing in games ">
+<meta name="twitter:description" content="In this article we will discuss the anti-alising in games and some suggestions based on your monitors resolution">
 
-        <title>How to change Desktop Environments in Ubuntu  · Utappia
+        <title>Anti-Aliasing in games  · Utappia
 </title>
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
@@ -75,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./how-to-change-desktop-environment-in-ubuntu.html"> How to change Desktop Environments in Ubuntu  </a></h1>
+    <h1><a href="./anti-aliasing-in-games.html"> Anti-Aliasing in games  </a></h1>
     </header>
 </div>
 
@@ -85,22 +85,16 @@
         <h4>Contents</h4>
         <div class="toc">
 <ul>
-<li><a href="#introduction">Introduction</a><ul>
-<li><a href="#install-kde">Install KDE</a></li>
-<li><a href="#install-gnome-3">Install GNOME 3</a></li>
-<li><a href="#install-xfce-4">Install XFCE 4</a></li>
-<li><a href="#install-cinammon">Install Cinammon</a></li>
-<li><a href="#install-fluxbox">Install FluxBOX</a></li>
-<li><a href="#install-e17">Install E17</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#materials-and-methods">Materials and Methods</a><ul>
+<li><a href="#lower-than-22-inches-monitors">lower than 22" inches monitors</a></li>
+<li><a href="#24-or-26-inches-monitors">24" or 26" inches monitors</a></li>
+<li><a href="#impact-in-game-performance">Impact in game performance</a></li>
+<li><a href="#aliasing-vs-anti-aliasing">Aliasing vs Anti-Aliasing</a></li>
 </ul>
 </li>
-<li><a href="#full-desktop-installation">Full Desktop Installation</a><ul>
-<li><a href="#migrate-to-kubuntu">Migrate to Kubuntu</a></li>
-<li><a href="#migrate-to-xubuntu">Migrate to Xubuntu</a></li>
-<li><a href="#migrate-to-lubuntu">Migrate to Lubuntu</a></li>
-</ul>
-</li>
-<li><a href="#results-and-discussion">Results and discussion</a></li>
+<li><a href="#results-and-discussion">Results and Discussion</a></li>
 </ul>
 </div>
         </nav>
@@ -109,129 +103,88 @@
 
             
             <html><body>
+<p><img alt="Anti-Aliasing in games" src="/images/aliased-vs-antialiased.gif" style="width: 500px; height: auto;" title="Anti-Aliasing in games"/></p>
+<h1 id="abstract">Abstract</h1>
+<p>First of all, Anti-aliasing is the opposite of Aliasing. By studying DSP (digital Signal Processing) you will find out that Aliasing is not a
+desirable result, thus we use its opposite filter to avoid it. We don't want aliasing in games, because it makes the edges look sharp and rough.</p>
 <h1 id="introduction">Introduction</h1>
-<p>If you want to change the default desktop environment (Unity) and install anything else in
-Ubuntu, then this article is for you. 
-Just copy-paste the commands into your terminal, press enter ... wait a little bit for the packages to download and you are ready. 
-Logout, pick your favourite Desktop Environment and log back in.</p>
-<p>It's insanely simple:</p>
-<h3 id="install-kde">Install KDE</h3>
-<div class="highlight"><pre>sudo apt-get install kde-standard
-sudo apt-get install kde-full
-</pre></div>
-<h3 id="install-gnome-3">Install GNOME 3</h3>
-<div class="highlight"><pre>sudo add-apt-repository ppa:gnome3-team/gnome3
-sudo apt-get update
-sudo apt-get install gnome-shell
-</pre></div>
-<h3 id="install-xfce-4">Install XFCE 4</h3>
-<div class="highlight"><pre>sudo apt-get install xfce4
-sudo apt-get install xfce4-goodies
-</pre></div>
-<h3 id="install-cinammon">Install Cinammon</h3>
-<hr/>
-<div class="highlight"><pre>sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-stable
-sudo apt-get update
-sudo apt-get install cinnamon
-</pre></div>
-<h3 id="install-fluxbox">Install FluxBOX</h3>
-<hr/>
-<div class="highlight"><pre>sudo apt-get install fluxbox
-</pre></div>
-<h3 id="install-e17">Install E17</h3>
-<hr/>
-<div class="highlight"><pre>sudo apt-add-repository ppa:hannes-janetzek/enlightenment-svn
-sudo apt-get update
-sudo apt-get install e17
-</pre></div>
-<h1 id="full-desktop-installation">Full Desktop Installation</h1>
-<p>If you don't want to download and install the whole package, but just
-the desktop related features of Ubuntu alternatives, add the following
-parameter:</p>
-<p><code>--no-install-recommends</code></p>
-<h3 id="migrate-to-kubuntu">Migrate to Kubuntu</h3>
-<div class="highlight"><pre>sudo apt-get install --no-install-recommends kubuntu-desktop
-</pre></div>
-<h3 id="migrate-to-xubuntu">Migrate to Xubuntu</h3>
-<div class="highlight"><pre>sudo apt-get install --no-install-recommends xubuntu-desktop
-</pre></div>
-<h3 id="migrate-to-lubuntu">Migrate to Lubuntu</h3>
-<div class="highlight"><pre>sudo apt-get install --no-install-recommends xubuntu-desktop
-</pre></div>
-<h1 id="results-and-discussion">Results and discussion</h1>
-<p>You should consider testing first the above commands in a lab environment (Ubuntu in a VM) so to be safe and have a look ate the results before using them in your actual machine.</p></body></html>
+<p>Anti-aliasing is a low-pass filter, known as blur (in Photoshop) and AA in games. When you apply a low-pass filter into a digital image, you
+remove all the high frequencies. </p>
+<p>For example, let's say you have a low pass filter, from -5 to 5 Hz and you apply that filter in a signal which
+extends from -100 to 100 Hz. The new signal will contains only the frequencies that are in between -5 and 5 Hz area.</p>
+<p>So, there is this one called Aliasing frequency, that after this value the signal goes bad. As I mentioned earlier, in games, there are many
+sharp and rough edges.</p>
+<h1 id="materials-and-methods">Materials and Methods</h1>
+<h3 id="lower-than-22-inches-monitors">lower than 22" inches monitors</h3>
+<p>Anti-aliasing is not noticeable in high resolutions on lower than 22" inches monitors. </p>
+<p>In low resolutions, such as  800x600 or 1024x768 you can easily notice much better the aliasing effects because the pixels are big enough to
+oberve the jaggers. However, when you use a higher resolution, such as 1920x1080, it's very difficult to observe the difference between the
+two. As such, there is no point to enable Anti-Aniliasing Filtering in games with resolution @1920x1080, especially when you have performance
+issues.</p>
+<p><img alt="Anti-Aliasing in games" src="/images/aliasedA.jpg" style="width: 176px; height: auto;" title="Aliasing letter A"/></p>
+<p>This "A" leter is suffering from aliasing. As you can see there are sharp edges, corners -- there is jaggering (zig-zag-zig-zag etc). This is a bad quality because the signal includes aliased frequencies (frequences beyond the Nyquist freq - aka Sampling Freq).</p>
+<p>To fix this problem, we apply a low pass filter, that cuts (removes) all these bad aliased frequencies. In other words, we use an Anti-Aliasing filter, fooling the eye and making the overall image quality looking way better than before.</p>
+<p>However if the resolution is too high, then you will hardly actually observe it. So when you play games like First Person Shooting, you don't have the time to notice such small glitches, especially if you play at high resolution (1920x1080). That's
+has been told, if you ever experience low performance issues, you can
+disable the Anti-Antiliasing and gain some FPS back.</p>
+<h3 id="24-or-26-inches-monitors">24" or 26" inches monitors</h3>
+<p>Anti-aliasing is noticeable in high resolutions and 24'' or 26'' inches monitor</p>
+<p>The bigger the screen, the larger the pixels. So, it's quite possible for some of you who have been trained in spotting game glitches, to
+identify aliased pixels even in high resolutions. That's when a 2x Anti-Aliasing technique is used.</p>
+<h3 id="impact-in-game-performance">Impact in game performance</h3>
+<p>Anti-Aliasing Filtering costs in game performance. When you enable Anti-Aliasing, your GPU has to reconstruct the signal
+(the digital image) and apply the Low-Pass filter. The more times the GPU scans the image (2x, 4x, 8x, 16x) the slower your game gets. So, if
+you want to apply Anti-Antiliasing filtering with 4x or 8x scans, make sure you have a fast enough GPU to perform the task, or you gonna have
+major drop in performance (lower FPS).</p>
+<h3 id="aliasing-vs-anti-aliasing">Aliasing vs Anti-Aliasing</h3>
+<p><img alt="Anti-Aliasing in games" src="/images/Aliasing-vs-AA.gif" style="width: 450px; height: auto;" title="Aliasing vs Anti-Aliasing"/> </p>
+<p>This image "Aliasing vs Anti-Aliasing in game difference" is taken from TomsHardware. They have an <a href="http://www.tomshardware.co.uk/anti-aliasing-nvidia-geforce-amd-radeon,review-32166.html">EXCELLENT article</a> about Anti-Aliasing and I strongly recommend you to read it.</p>
+<h1 id="results-and-discussion">Results and Discussion</h1>
+<p>Lets sum up what we have discussed</p>
+<p><em>Anti-Aliasing offers</em></p>
+<ul>
+<li>Improved image quality</li>
+<li>Smooths the edges</li>
+<li>Eliminates jaggering</li>
+</ul>
+<p><em>Anti-Aliasing impacts</em></p>
+<ul>
+<li>Costs in performance</li>
+<li>Not easily visible at higher resolutions</li>
+<li>Some types of AA, may seriously drop your performance (like Super
+    Sampling Anti-Aliasing)</li>
+</ul></body></html>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=How%20to%20change%20Desktop%20Environments%20in%20Ubuntu%20http%3A//utappia.org/how-to-change-desktop-environment-in-ubuntu.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=Anti-Aliasing%20in%20games%20http%3A//utappia.org/anti-aliasing-in-games.html" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/how-to-change-desktop-environment-in-ubuntu.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/anti-aliasing-in-games.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//utappia.org/how-to-change-desktop-environment-in-ubuntu.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/anti-aliasing-in-games.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=How%20to%20change%20Desktop%20Environments%20in%20Ubuntu&amp;body=http%3A//utappia.org/how-to-change-desktop-environment-in-ubuntu.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=Anti-Aliasing%20in%20games&amp;body=http%3A//utappia.org/anti-aliasing-in-games.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
             
             <hr/>
-<section>
-    <h2>Related Posts</h2>
-<ul class="related-posts-list">
-<li><a href="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html" title="BFS vs CFS: Some personal observations on Linux Kernel performance">BFS vs CFS: Some personal observations on Linux Kernel performance</a></li>
-<li><a href="./how-to-install-ubuntu-12-04-using-windows-7-or-8.html" title="How to install Ubuntu 12.04 using Windows 8">How to install Ubuntu 12.04 using Windows 8</a></li>
-<li><a href="./how-to-install-nvidia-304-43-with-one-click.html" title="How to Install nVIDIA 304.43 with one click">How to Install nVIDIA 304.43 with one click</a></li>
-<li><a href="./how-to-install-ubuntu-on-macbook-air-2011-mid.html" title="How to install Ubuntu on Macbook Air 2011 mid">How to install Ubuntu on Macbook Air 2011 mid</a></li>
-<li><a href="./how-to-install-cuda-toolkit-on-ubuntu.html" title="How to install CUDA Toolkit on Ubuntu">How to install CUDA Toolkit on Ubuntu</a></li>
-</ul>
-<hr />
-</section>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-11-03T19:12:00+02:00">Nov 3, 2012</time>
+            <time pubdate="pubdate" datetime="2012-12-03T15:18:00+02:00">Dec 3, 2012</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#deployment-ref">Deployment</a>
+            <a class="category-link" href="./categories.html#gaming-ref">Gaming</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#cinammon-ref">cinammon
+                <li><a href="./tags.html#antialising-ref">antialising
                     <span>1</span>
 </a></li>
-                <li><a href="./tags.html#desktop-ref">desktop
-                    <span>2</span>
-</a></li>
-                <li><a href="./tags.html#e17-ref">e17
+                <li><a href="./tags.html#graphics-ref">graphics
                     <span>1</span>
 </a></li>
-                <li><a href="./tags.html#fluxbox-ref">fluxbox
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#gnome-ref">gnome
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#install-ref">install
-                    <span>3</span>
-</a></li>
-                <li><a href="./tags.html#kde-ref">kde
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#kubuntu-ref">kubuntu
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#lubuntu-ref">lubuntu
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#ubuntu-ref">ubuntu
-                    <span>13</span>
-</a></li>
-                <li><a href="./tags.html#unity-ref">unity
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#xfce-ref">xfce
-                    <span>1</span>
-</a></li>
-                <li><a href="./tags.html#xubuntu-ref">xubuntu
+                <li><a href="./tags.html#screen-ref">screen
                     <span>1</span>
 </a></li>
             </ul>
