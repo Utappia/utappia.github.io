@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://utappia.org/</loc>
-<lastmod>2015-06-17T23:15:49-00:00</lastmod>
+<lastmod>2015-06-18T22:59:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/archives.html</loc>
-<lastmod>2015-06-17T23:15:49-00:00</lastmod>
+<lastmod>2015-06-18T22:59:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/tags.html</loc>
-<lastmod>2015-06-17T23:15:49-00:00</lastmod>
+<lastmod>2015-06-18T22:59:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/categories.html</loc>
-<lastmod>2015-06-17T23:15:49-00:00</lastmod>
+<lastmod>2015-06-18T22:59:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -181,6 +181,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://utappia.org/amd-catalyst-12-9-install-guide-ubuntu.html</loc>
 <lastmod>2012-09-14T18:39:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/desura-steam-like-client-with-free-games.html</loc>
+<lastmod>2012-09-04T17:04:00+03:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
