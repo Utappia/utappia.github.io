@@ -4,26 +4,26 @@
         <meta charset="utf-8"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="drpaneas" />
-        <meta name="copyright" content="drpaneas" />
+        <meta name="author" content="Salih Emin" />
+        <meta name="copyright" content="Salih Emin" />
 
-        <meta name="description" content="Here we will see how to install, upgrade and uninstall the AMD drivers
+        <meta name="description" content="In this tutorial we will discuss how to protect the source code of a shell script by converting it to a C binary
 " />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="amd, drivers, ppa, ubuntu, Maintenance, " />
+<meta name="keywords" content="script, encryption, bash, binary, Security, " />
 
-<meta property="og:title" content="AMD Catalyst 12.8 Released - Install Guide "/>
-<meta property="og:url" content="./amd-catalyst-12-8-released-install-guide.html" />
-<meta property="og:description" content="Here we will see how to install, upgrade and uninstall the AMD drivers" />
+<meta property="og:title" content="SHC: How to encrypt and convert a shell script into a binary executable "/>
+<meta property="og:url" content="./how-to-encrypt-convert-shell-script-to-binary-executable.html" />
+<meta property="og:description" content="In this tutorial we will discuss how to protect the source code of a shell script by converting it to a C binary" />
 <meta property="og:site_name" content="Utappia" />
-<meta property="og:article:author" content="drpaneas" />
-<meta property="og:article:published_time" content="2012-08-16T19:34:00+03:00" />
-<meta name="twitter:title" content="AMD Catalyst 12.8 Released - Install Guide ">
-<meta name="twitter:description" content="Here we will see how to install, upgrade and uninstall the AMD drivers">
+<meta property="og:article:author" content="Salih Emin" />
+<meta property="og:article:published_time" content="2015-08-16T14:04:00+03:00" />
+<meta name="twitter:title" content="SHC: How to encrypt and convert a shell script into a binary executable ">
+<meta name="twitter:description" content="In this tutorial we will discuss how to protect the source code of a shell script by converting it to a C binary">
 
-        <title>AMD Catalyst 12.8 Released - Install Guide  · Utappia
+        <title>SHC: How to encrypt and convert a shell script into a binary executable  · Utappia
 </title>
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
 <!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
@@ -75,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="./amd-catalyst-12-8-released-install-guide.html"> AMD Catalyst 12.8 Released - Install Guide  </a></h1>
+    <h1><a href="./how-to-encrypt-convert-shell-script-to-binary-executable.html"> SHC: How to encrypt and convert a shell script into a binary executable  </a></h1>
     </header>
 </div>
 
@@ -87,20 +87,17 @@
 <ul>
 <li><a href="#abstract">Abstract</a></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#materias-and-methods">Materias and Methods</a><ul>
-<li><a href="#the-easy-way-xorg-edgers-ppa-for-catalyst">The easy way: Xorg-Edgers PPA for Catalyst</a><ul>
-<li><a href="#ppa-installation">PPA Installation</a></li>
-<li><a href="#ppa-uninstallation">PPA Uninstallation</a></li>
+<li><a href="#materials-and-methods">Materials and Methods</a><ul>
+<li><a href="#install-required-packages">Install Required Packages</a></li>
+<li><a href="#download-and-build">Download and Build</a></li>
 </ul>
 </li>
-<li><a href="#the-hard-manual-way">The hard (manual) way</a><ul>
-<li><a href="#binary-installation">Binary Installation</a></li>
-<li><a href="#binary-upgrade">Binary Upgrade</a></li>
-<li><a href="#binary-uninstall">Binary Uninstall</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#options">OPTIONS</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li><a href="#results-and-discussion">Results and Discussion</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </div>
         </nav>
@@ -109,102 +106,66 @@
 
             
             <html><body>
-<p><img alt="AMD drivers Install Guide" src="/images/amdcatalyst.jpg" style="width: 800px; height: auto;" title="How to install, upgrade and uninstall the AMD drivers"/></p>
+<p><img alt="SHC: Shell script to binary converter" src="/images/shell-script-to-binary-executable-converter.png" style="width: 527px; height: auto;" title="Shell script to binary converter"/> </p>
 <h1 id="abstract">Abstract</h1>
-<p>Actually the Catalyst driver was released yesterday (15/8/12) but the
-official link was broken, although many users find out the mispelling
-and download the driver without problem -- currently the link is fixed.</p>
+<p>SHC is a free software (GPL v2) that takes a shell script and produces C source code. The generated source code is then compiled and linked to produce a stripped binary executable.</p>
 <h1 id="introduction">Introduction</h1>
-<p>There are two ways to install the AMD drivers:</p>
+<p>There are some uncomfortable times when you will be asked to not distribute the source code of a shell script (eg. automation script, deployment script, maintenance etc ) that you wrote for a job you have taken as a freelancer or as a sysadmin for a private institution. This is where SCH comes in rescue.</p>
+<p>SHC creates a stripped binary executable version of the script specified with -f on the command line. If you supply an expiration date with the -e option the compiled binary will refuse to run after the date specified. The message "Please contact your provider" will be displayed instead. This message can be changed with the -m option.</p>
+<h1 id="materials-and-methods">Materials and Methods</h1>
+<p>You can use the SHC once you install some dependencies and run a make and install</p>
+<h3 id="install-required-packages">Install Required Packages</h3>
+<p>Install required packages for SHC compiler.
+For Debian/Ubuntu</p>
+<div class="highlight"><pre>sudo apt-get install libc6-dev 
+</pre></div>
+<h3 id="download-and-build">Download and Build</h3>
+<p>Download the latest source code of SHC compiler:</p>
 <ul>
-<li>Easy Way with Xorg-Edgers</li>
-<li>Hard way (Manual) from binaries</li>
+<li><a href="https://github.com/Utappia/shellscript-to-binary-converter/archive/master.zip">Download SHC 3.8.9</a></li>
 </ul>
-<p>Also, there are two ways to uninstall them if you need so:</p>
-<ul>
-<li>PPA purge if you used Xorg-Edgers</li>
-<li>Purge Autoremove if you used the manual way</li>
-</ul>
-<h1 id="materias-and-methods">Materias and Methods</h1>
-<p>Here we will see how to install, upgrade and uninstall the AMD drivers</p>
-<h2 id="the-easy-way-xorg-edgers-ppa-for-catalyst">The easy way: Xorg-Edgers PPA for Catalyst</h2>
-<p>Do you want to install a PPA once, then stay back and relax for life? If
-so, then follow the easy path that most Ubuntu users do. </p>
-<p>Xorg-Edgers offers you bleeding-edge drivers directly from upstream git, but in case
-of AMD Catalyst they always provide the latest stable AMD release, since
-AMD is not giving beta drivers in public (in contrast to NVIDIA). </p>
-<p>If you go to Xorg-Edgers Lauchpad profile, you will see the
-2:8.980-0ubuntu1\~xedgers\~precise1 is already available. Additionally,
-these guys are so crazy that they even provide the driver for the Ubuntu
-12.10 Alpha 3 release via fglrx 2:8.980-0ubuntu1\~xedgers\~quantal1.</p>
-<h3 id="ppa-installation">PPA Installation</h3>
-<p>Anyway, add the PPA into your source and update/upgrade your packages.
-If you had already add Xorg-Edgers into your Ubuntu, there is no need to
-do it again. Just update your system and reboot.</p>
-<div class="highlight"><pre>sudo add-apt-repository ppa:xorg-edgers/ppa
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt-get install fglrx-installer
+<p>Extract the zip and compile the SHC source code on your system and install it using the following commands.</p>
+<div class="highlight"><pre>cd where-the-extracted-is
+make 
+sudo make install
 </pre></div>
-<h3 id="ppa-uninstallation">PPA Uninstallation</h3>
-<p>In case you want to upgrade Ubuntu up to a new version (eg from Ubuntu
-12.04 upgrade into Ubuntu 12.10) you have to remove this PPA or strange
-things will happen and maybe render unstable the whole system. So before
-you upgrade to the newer Ubuntu distro, please act wise and remove it..</p>
-<div class="highlight"><pre>sudo apt-get install ppa-purge
-sudo ppa-purge ppa:xorg-edgers/ppa
+<h1 id="usage">Usage</h1>
+<p>Use the following command to create a binary file of your script.sh</p>
+<div class="highlight"><pre>shc -T -f script.sh
 </pre></div>
-<p>So far, we have covered the easy method and now you should be able to
-install and remove them properly. You can stop reading now and reboot your PC. Have fun!</p>
-<h2 id="the-hard-manual-way">The hard (manual) way</h2>
-<p>First you will need to download the driver</p>
-<p>Click to download the drivers for 64/32 bit (the package contains both the 32-bit and 64-bit driver.).</p>
-<ul>
-<li><a href="http://www2.ati.com/drivers/linux/amd-driver-installer-12-8-x86.x86_64.zip">Download 32/64bit</a></li>
-</ul>
-<p>If you install the AMD Catalyst for the first time then follow the following procedure</p>
-<h3 id="binary-installation">Binary Installation</h3>
-<p>Install prerequisite packages</p>
-<div class="highlight"><pre>sudo apt-get install build-essential cdbs dh-make dkms
-sudo apt-get install execstack dh-modaliases fakeroot libqtgui4
-</pre></div>
-<p>If you are 64 bit, install these too</p>
-<div class="highlight"><pre>sudo apt-get install ia32-libs ia32-libs-multiarch:i386
-sudo apt-get install lib32gcc1 libc6-i386
-cd /usr ; sudo ln -svT lib /usr/lib64
-</pre></div>
-<p>Now go into your Downloads folder (I suppose you have already download the driver), make the package executable, create and install deb packages</p>
-<div class="highlight"><pre>cd Downloads
-chmod +x amd-driver-installer-8.982-x86.x86_64.run
-sudo sh ./amd-driver-installer-8.982-x86.x86_64.run --buildpkg Ubuntu/precise
-sudo dpkg -i fglrx*.deb
-</pre></div>
-<p>Now enable new settings</p>
-<div class="highlight"><pre>sudo aticonfig --initial -f
-</pre></div>
-<h3 id="binary-upgrade">Binary Upgrade</h3>
-<p>If you are to Upgrade from AMD Catalyst 12.6 to 12.8 then follow the following procedure:</p>
-<p>Go into your Downloads folder (I suppose you have already download the driver), make the package executable, create deb packages, force overwrite the older packages with the new ones</p>
-<div class="highlight"><pre>cd Downloads
-chmod +x amd-driver-installer-8.982-x86.x86_64.run
-sudo sh ./amd-driver-installer-8.982-x86.x86_64.run --buildpkg Ubuntu/precise
-sudo dpkg --force-overwrite -i *.deb
-</pre></div>
-<p>Now reboot you PC.</p>
-<h3 id="binary-uninstall">Binary Uninstall</h3>
-<p>If want to unistall them</p>
-<div class="highlight"><pre>sudo apt-get --purge autoremove fglrx fglrx_* fglrx-amdcccle* fglrx-dev*
-</pre></div></body></html>
+<h3 id="options">OPTIONS</h3>
+<p>The command line options that are aalso available are:</p>
+<p><strong>-e</strong>  date: Expiration date in dd/mm/yyyy format [default:none] </p>
+<p><strong>-m</strong>  message: message to display upon expiration [default: "Please contact your provider"] </p>
+<p><strong>-f</strong>  script_name: File name of the script to compile </p>
+<p><strong>-i</strong>  inline_option: Inline option for the shell interpreter i.e: -e </p>
+<p><strong>-x</strong>  comand: exec command, as a printf format i.e: exec(\'%s\',@ARGV); </p>
+<p><strong>-l</strong>  last_option: Last shell option i.e: -- </p>
+<p><strong>-r</strong>  Relax security. Make a redistributable binary which executes on different systems running the same operating system. </p>
+<p><strong>-v</strong>  Verbose compilation  -D Switch on debug exec calls </p>
+<p><strong>-T</strong>  Allow binary to be traceable (using strace, ptrace, truss, etc.) </p>
+<p><strong>-C</strong>  Display license and exit </p>
+<p><strong>-A</strong>  Display abstract and exit </p>
+<p><strong>-h</strong>  Display help and exit </p>
+<h1 id="results-and-discussion">Results and Discussion</h1>
+<p>SHC itself is not a compiler such as cc, it rather encodes and encrypts a shell script and generates C source code with the added expiration capability. It then uses the system compiler to compile a stripped binary which behaves exactly like the original script. Upon execution, the compiled binary will decrypt and execute the code with the shell -c option. Unfortunatelly, it will not give you any speed improvement as a real C program would.</p>
+<p>The compiled binary will still be dependent on the shell specified in the first line of the shell code (i.e. #!/bin/sh), thus shc does not create completely independent binaries.</p>
+<p>SHC's main purpose is to protect your shell scripts from modification or inspection. You can use it if you wish to distribute your scripts but don't want them to be easily readable by other people.</p>
+<h1 id="references">References</h1>
+<p>SHC is a tool writen by Francisco Rosales Garcia and distributed under the terms of GNU GPL version 2</p>
+<ol>
+<li>Author:  <a href="http://www.datsi.fi.upm.es/~frosal">Francisco Rosales Garcia</a></li>
+</ol></body></html>
             <section>
     <p id="post-share-links">
     Share on:
-    <a href="http://twitter.com/home?status=AMD%20Catalyst%2012.8%20Released%20-%20Install%20Guide%20http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/home?status=SHC%3A%20How%20to%20encrypt%20and%20convert%20a%20shell%20script%20into%20a%20binary%20executable%20http%3A//utappia.org/how-to-encrypt-convert-shell-script-to-binary-executable.html" target="_blank" title="Share on Twitter">Twitter</a>
     ❄
-    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Burl%5D=http%3A//utappia.org/how-to-encrypt-convert-shell-script-to-binary-executable.html" target="_blank" title="Share on Facebook">Facebook</a>
     ❄
-    <a href="https://plus.google.com/share?url=http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share on Google Plus">Google+</a>
+    <a href="https://plus.google.com/share?url=http%3A//utappia.org/how-to-encrypt-convert-shell-script-to-binary-executable.html" target="_blank" title="Share on Google Plus">Google+</a>
     ❄
-    <a href="mailto:?subject=AMD%20Catalyst%2012.8%20Released%20-%20Install%20Guide&amp;body=http%3A//utappia.org/amd-catalyst-12-8-released-install-guide.html" target="_blank" title="Share via Email">Email</a>
+    <a href="mailto:?subject=SHC%3A%20How%20to%20encrypt%20and%20convert%20a%20shell%20script%20into%20a%20binary%20executable&amp;body=http%3A//utappia.org/how-to-encrypt-convert-shell-script-to-binary-executable.html" target="_blank" title="Share via Email">Email</a>
     </p>
 </section>
 
@@ -213,10 +174,10 @@ sudo dpkg --force-overwrite -i *.deb
 <section>
     <h2>Related Posts</h2>
 <ul class="related-posts-list">
-<li><a href="./how-to-install-or-upgrade-nvidia-video-drivers.html" title="How to install or upgrade Nvidia Video Drivers">How to install or upgrade Nvidia Video Drivers</a></li>
+<li><a href="./must-have-aliases-for-system-maintenance.html" title="Must have aliases for system maintenance">Must have aliases for system maintenance</a></li>
 <li><a href="./nvidia-drivers-installer-script.html" title="NVIDIA Drivers installer script">NVIDIA Drivers installer script</a></li>
+<li><a href="./how-to-install-nvidia-304-43-with-one-click.html" title="How to Install nVIDIA 304.43 with one click">How to Install nVIDIA 304.43 with one click</a></li>
 <li><a href="./nvidia-installer-script-ver-1-1-released.html" title="nVIDIA Installer script ver 1.1 released">nVIDIA Installer script ver 1.1 released</a></li>
-<li><a href="./amd-catalyst-12-9-install-guide-ubuntu.html" title="AMD Catalyst 12.9 released - Install Guide (updated)">AMD Catalyst 12.9 released - Install Guide (updated)</a></li>
 <li><a href="./how-to-install-nvidia-304-51-drivers-in-ubuntu.html" title="How to install nNVIDIA 304.51 drivers in Ubuntu">How to install nNVIDIA 304.51 drivers in Ubuntu</a></li>
 </ul>
 <hr />
@@ -225,22 +186,22 @@ sudo dpkg --force-overwrite -i *.deb
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-08-16T19:34:00+03:00">Αύγ 16, 2012</time>
+            <time pubdate="pubdate" datetime="2015-08-16T14:04:00+03:00">Αύγ 16, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="./categories.html#maintenance-ref">Maintenance</a>
+            <a class="category-link" href="./categories.html#security-ref">Security</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="./tags.html#amd-ref">amd
-                    <span>2</span>
+                <li><a href="./tags.html#bash-ref">bash
+                    <span>5</span>
 </a></li>
-                <li><a href="./tags.html#drivers-ref">drivers
-                    <span>11</span>
+                <li><a href="./tags.html#binary-ref">binary
+                    <span>1</span>
 </a></li>
-                <li><a href="./tags.html#ppa-ref">ppa
-                    <span>2</span>
+                <li><a href="./tags.html#encryption-ref">encryption
+                    <span>1</span>
 </a></li>
-                <li><a href="./tags.html#ubuntu-ref">ubuntu
-                    <span>13</span>
+                <li><a href="./tags.html#script-ref">script
+                    <span>6</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
