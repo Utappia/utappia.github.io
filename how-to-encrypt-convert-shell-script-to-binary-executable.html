@@ -123,11 +123,15 @@ For Debian/Ubuntu</p>
 <p>Download the latest source code of SHC compiler:</p>
 <ul>
 <li><a href="https://github.com/Utappia/shellscript-to-binary-converter/archive/master.zip">Download SHC 3.8.9</a></li>
+<li><a href="https://github.com/Utappia/shellscript-to-binary-converter/blob/master/CHANGES">Version Changes/bug fixes</a></li>
 </ul>
 <p>Extract the zip and compile the SHC source code on your system and install it using the following commands.</p>
 <div class="highlight"><pre>cd where-the-extracted-is
 make 
 sudo make install
+</pre></div>
+<p>As of Debian 8.0+ (Jessie) and Ubuntu 15.04+ (Vivid) SHC (version 3.8.7-2) is available from the repositories. So if you are on any of this and you dont mind any <strong>bugs available on this older version</strong> (see Version bug fixes) you can simply install it by running:</p>
+<div class="highlight"><pre>sudo apt install shc
 </pre></div>
 <h1 id="usage">Usage</h1>
 <p>Use the following command to create a binary file of your script.sh</p>
