@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://utappia.org/</loc>
-<lastmod>2015-09-21T17:25:43-00:00</lastmod>
+<lastmod>2015-09-23T19:44:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/archives.html</loc>
-<lastmod>2015-09-21T17:25:43-00:00</lastmod>
+<lastmod>2015-09-23T19:44:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/tags.html</loc>
-<lastmod>2015-09-21T17:25:43-00:00</lastmod>
+<lastmod>2015-09-23T19:44:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://utappia.org/categories.html</loc>
-<lastmod>2015-09-21T17:25:43-00:00</lastmod>
+<lastmod>2015-09-23T19:44:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -43,6 +43,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2015-05-06T13:30:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>http://utappia.org/parallel-compression-decompression-files-multicore-multithreaded-cpu.html</loc>
+<lastmod>2015-09-23T15:04:00+03:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
