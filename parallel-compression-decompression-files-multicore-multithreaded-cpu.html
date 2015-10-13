@@ -15,7 +15,7 @@
 <meta name="keywords" content="parallel, multi-core, multi-thread, tar, gzip, bzip, xz, pxz, pigz, pbzip2, benchmark, Tuning - Optimization - Benchmarking, " />
 
 <meta property="og:title" content="Parallel compression - decompression of files on multi-core-multi-threaded cpu&#39;s "/>
-<meta property="og:url" content="http://utappia.org/parallel-compression-decompression-files-multicore-multithreaded-cpu.html" />
+<meta property="og:url" content="./parallel-compression-decompression-files-multicore-multithreaded-cpu.html" />
 <meta property="og:description" content="In this tutorial we will discuss how to utilize our multi-core/multithreaded cpu to compress and decompress files" />
 <meta property="og:site_name" content="Utappia" />
 <meta property="og:article:author" content="Salih Emin" />
@@ -25,14 +25,14 @@
 
         <title>Parallel compression - decompression of files on multi-core-multi-threaded cpu&#39;s  · Utappia
 </title>
-<!--	<link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/bootstrap-combined.min.css" media="screen">-->
-<!--	<link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/font-awesome.css" media="screen"> -->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
         <link href="http://utappia.org/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Utappia - Full Atom Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -53,16 +53,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://utappia.org/"><span class=site-name>Utappia</span></a>
+                    <a class="brand" href="./"><span class=site-name>Utappia</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://utappia.org">Home</a></li>
-                            <li ><a href="http://utappia.org/pages/downloads.html">Downloads</a></li>
-                            <li ><a href="http://utappia.org/pages/feedback.html">Feedback</a></li>
-                            <li ><a href="http://utappia.org/categories.html">Categories</a></li>
-                            <li ><a href="http://utappia.org/tags.html">Tags</a></li>
-                            <li ><a href="http://utappia.org/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://utappia.org/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/downloads.html">Downloads</a></li>
+                            <li ><a href="./pages/feedback.html">Feedback</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://utappia.org/parallel-compression-decompression-files-multicore-multithreaded-cpu.html"> Parallel compression - decompression of files on multi-core-multi-threaded cpu's  </a></h1>
+    <h1><a href="./parallel-compression-decompression-files-multicore-multithreaded-cpu.html"> Parallel compression - decompression of files on multi-core-multi-threaded cpu's  </a></h1>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Front page -->
 <ins class="adsbygoogle"
@@ -122,7 +122,7 @@
 
             
             
-<p><img alt="multi-core-compression-decompression" src="http://utappia.org/images/multi-core-compression.jpg" style="width: 380px; height: auto;"/></p>
+<p><img alt="multi-core-compression-decompression" src="./images/multi-core-compression.jpg" style="width: 380px; height: auto;"/></p>
 <h1 id="abstract">Abstract</h1>
 <p>Using multiple cores and processors simultaneously to achieve faster compression and decompression rates is possible nowadays with 
 the new generation of multi-core cpu's. Using the following methods to create compressed backups of your files will be less time consuming.</p>
@@ -274,7 +274,7 @@ pxz -d -f testingfiles.tar.xz  0.72s user 0.43s system 98% cpu 1.165 total
 </tr>
 </tbody>
 </table>
-<p><img alt="comprassion-chart" src="http://utappia.org/images/compression-bench.jpg" style="width: 607px; height: auto;"/></p>
+<p><img alt="comprassion-chart" src="./images/compression-bench.jpg" style="width: 607px; height: auto;"/></p>
 <h3 id="decompression">Decompression</h3>
 <table>
 <thead>
@@ -309,7 +309,7 @@ pxz -d -f testingfiles.tar.xz  0.72s user 0.43s system 98% cpu 1.165 total
 </tr>
 </tbody>
 </table>
-<p><img alt="decompration-chart" src="http://utappia.org/images/decompression-bench.jpg" style="width: 608px; height: auto;"/></p>
+<p><img alt="decompration-chart" src="./images/decompression-bench.jpg" style="width: 608px; height: auto;"/></p>
 <h2 id="commentary">Commentary</h2>
 <p>Lets try and interpret the results:</p>
 <ul>
@@ -350,7 +350,7 @@ pxz -d -f testingfiles.tar.xz  0.72s user 0.43s system 98% cpu 1.165 total
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://utappia.org/parallel-compression-decompression-files-multicore-multithreaded-cpu.html#disqus_thread">
+                href="./parallel-compression-decompression-files-multicore-multithreaded-cpu.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -360,8 +360,8 @@ pxz -d -f testingfiles.tar.xz  0.72s user 0.43s system 98% cpu 1.165 total
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'utappia';
-        var disqus_identifier = 'http://utappia.org/parallel-compression-decompression-files-multicore-multithreaded-cpu.html';
-    var disqus_url = 'http://utappia.org/parallel-compression-decompression-files-multicore-multithreaded-cpu.html';
+        var disqus_identifier = './parallel-compression-decompression-files-multicore-multithreaded-cpu.html';
+    var disqus_url = './parallel-compression-decompression-files-multicore-multithreaded-cpu.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -383,8 +383,8 @@ pxz -d -f testingfiles.tar.xz  0.72s user 0.43s system 98% cpu 1.165 total
 <section>
     <h2>Related Posts</h2>
 <ul class="related-posts-list">
-<li><a href="http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html" title="BFS vs CFS: Some personal observations on Linux Kernel performance">BFS vs CFS: Some personal observations on Linux Kernel performance</a></li>
-<li><a href="http://utappia.org/how-to-benchmark-with-team-fortress-2.html" title="How to Benchmark with Team Fortress 2">How to Benchmark with Team Fortress 2</a></li>
+<li><a href="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html" title="BFS vs CFS: Some personal observations on Linux Kernel performance">BFS vs CFS: Some personal observations on Linux Kernel performance</a></li>
+<li><a href="./how-to-benchmark-with-team-fortress-2.html" title="How to Benchmark with Team Fortress 2">How to Benchmark with Team Fortress 2</a></li>
 </ul>
 <hr />
 </section>
@@ -394,40 +394,40 @@ pxz -d -f testingfiles.tar.xz  0.72s user 0.43s system 98% cpu 1.165 total
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2015-09-23T15:04:00+03:00">Sep 23, 2015</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://utappia.org/categories.html#tuning-optimization-benchmarking-ref">Tuning - Optimization - Benchmarking</a>
+            <a class="category-link" href="./categories.html#tuning-optimization-benchmarking-ref">Tuning - Optimization - Benchmarking</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://utappia.org/tags.html#benchmark-ref">benchmark
+                <li><a href="./tags.html#benchmark-ref">benchmark
                     <span>3</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#bzip-ref">bzip
+                <li><a href="./tags.html#bzip-ref">bzip
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#gzip-ref">gzip
+                <li><a href="./tags.html#gzip-ref">gzip
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#multi-core-ref">multi-core
+                <li><a href="./tags.html#multi-core-ref">multi-core
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#multi-thread-ref">multi-thread
+                <li><a href="./tags.html#multi-thread-ref">multi-thread
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#parallel-ref">parallel
+                <li><a href="./tags.html#parallel-ref">parallel
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#pbzip2-ref">pbzip2
+                <li><a href="./tags.html#pbzip2-ref">pbzip2
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#pigz-ref">pigz
+                <li><a href="./tags.html#pigz-ref">pigz
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#pxz-ref">pxz
+                <li><a href="./tags.html#pxz-ref">pxz
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#tar-ref">tar
+                <li><a href="./tags.html#tar-ref">tar
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#xz-ref">xz
+                <li><a href="./tags.html#xz-ref">xz
                     <span>1</span>
 </a></li>
             </ul>

@@ -15,7 +15,7 @@
 <meta name="keywords" content="optimus kernel, benchmark, bfq, bfs, cfs, comparison, desktop, kernel, linux, performance, scheduler, story, Utappia Projects, " />
 
 <meta property="og:title" content="BFS vs CFS: Some personal observations on Linux Kernel performance "/>
-<meta property="og:url" content="http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html" />
+<meta property="og:url" content="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html" />
 <meta property="og:description" content="For some time now, I have stopped using the Linux kernel that comes bundled with the Ubuntu operating system and use a version that has a different approach on the matter of kernel schedulers. &#34;Scheduler&#34; is a time-resource-manager (task scheduler) who determines which process and how much it employs the ..." />
 <meta property="og:site_name" content="Utappia" />
 <meta property="og:article:author" content="Salih Emin" />
@@ -25,14 +25,14 @@
 
         <title>BFS vs CFS: Some personal observations on Linux Kernel performance  · Utappia
 </title>
-<!--	<link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/bootstrap-combined.min.css" media="screen">-->
-<!--	<link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/font-awesome.css" media="screen"> -->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/bootstrap-combined.min.css" media="screen">-->
+<!--	<link rel="stylesheet" type="text/css" href="./theme/css/font-awesome.css" media="screen"> -->
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://utappia.org/theme/css/custom.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/custom.css" media="screen">
         <link href="http://utappia.org/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Utappia - Full Atom Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -53,16 +53,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://utappia.org/"><span class=site-name>Utappia</span></a>
+                    <a class="brand" href="./"><span class=site-name>Utappia</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://utappia.org">Home</a></li>
-                            <li ><a href="http://utappia.org/pages/downloads.html">Downloads</a></li>
-                            <li ><a href="http://utappia.org/pages/feedback.html">Feedback</a></li>
-                            <li ><a href="http://utappia.org/categories.html">Categories</a></li>
-                            <li ><a href="http://utappia.org/tags.html">Tags</a></li>
-                            <li ><a href="http://utappia.org/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://utappia.org/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./pages/downloads.html">Downloads</a></li>
+                            <li ><a href="./pages/feedback.html">Feedback</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html"> BFS vs CFS: Some personal observations on Linux Kernel performance  </a></h1>
+    <h1><a href="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html"> BFS vs CFS: Some personal observations on Linux Kernel performance  </a></h1>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Front page -->
 <ins class="adsbygoogle"
@@ -109,7 +109,7 @@
 <p>In this experiment I used a 1,6 GB video file (.MOV) 40 minutes long and started to render it on 720p resolution. The system had the same Uptime and same conditions. The screenshot was taken on the same percentage so that we can have a fair measurement on "estimated completion time".
 I repeated this experiment for about 10 times, keeping the same conditions and it gave me the same results.</p>
 <p>Now this is what I got :</p>
-<p><img alt="cfs vs bfs kernel on rendering a videofile" src="/images/cfs_vs_bfs_rendering.png" /></p>
+<p><img alt="cfs vs bfs kernel on rendering a videofile" src="/images/cfs_vs_bfs_rendering.png" style="width: 1650px; height: auto;"/></p>
 <p>As you can see with the BFS scheduler the "Job" will be completed in half of the time that CFS needs. One observation that can not be seen in a picture is that with BFS the CPU had a constant and steady 98-100% CPU utilization, in contrast with CFS the CPU utilization was dropping from time to time to 25%.</p>
 <blockquote>
 <p>A "must read" paper for a Scientific measurements of CFS vs BFS : 
@@ -134,7 +134,7 @@ I repeated this experiment for about 10 times, keeping the same conditions and i
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html#disqus_thread">
+                href="./bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -144,8 +144,8 @@ I repeated this experiment for about 10 times, keeping the same conditions and i
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'utappia';
-        var disqus_identifier = 'http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html';
-    var disqus_url = 'http://utappia.org/bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html';
+        var disqus_identifier = './bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html';
+    var disqus_url = './bfs-vs-cfs-some-personal-observations-on-linux-kernel-performance.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -167,11 +167,11 @@ I repeated this experiment for about 10 times, keeping the same conditions and i
 <section>
     <h2>Related Posts</h2>
 <ul class="related-posts-list">
-<li><a href="http://utappia.org/bfs-bfq-optimized-linux-kernel-packages-ready-for-install.html" title="BFS – BFQ optimized linux kernel packages ready for install">BFS – BFQ optimized linux kernel packages ready for install</a></li>
-<li><a href="http://utappia.org/the-story-behind-optimus-kernel.html" title="The story behind Optimus Kernel">The story behind Optimus Kernel</a></li>
-<li><a href="http://utappia.org/optimus-kernel-3-2-14-released.html" title="Optimus Kernel 3.2.14 released">Optimus Kernel 3.2.14 released</a></li>
-<li><a href="http://utappia.org/optimus-kernel-3-3-4-released.html" title="Optimus Kernel 3.3.4 released">Optimus Kernel 3.3.4 released</a></li>
-<li><a href="http://utappia.org/optimus-kernel-3-2-0-29-released.html" title="Optimus Kernel 3.2.0.29 released">Optimus Kernel 3.2.0.29 released</a></li>
+<li><a href="./optimuskernel-download.html" title="Download Optimus Kernel">Download Optimus Kernel</a></li>
+<li><a href="./bfs-bfq-optimized-linux-kernel-packages-ready-for-install.html" title="BFS – BFQ optimized linux kernel packages ready for install">BFS – BFQ optimized linux kernel packages ready for install</a></li>
+<li><a href="./the-story-behind-optimus-kernel.html" title="The story behind Optimus Kernel">The story behind Optimus Kernel</a></li>
+<li><a href="./linux-v3-3-1-and-v3-2-14-are-released.html" title="Linux v3.3.1 and v3.2.14 are released">Linux v3.3.1 and v3.2.14 are released</a></li>
+<li><a href="./optimus-kernel-3-2-0-29-released.html" title="Optimus Kernel 3.2.0.29 released">Optimus Kernel 3.2.0.29 released</a></li>
 </ul>
 <hr />
 </section>
@@ -181,43 +181,43 @@ I repeated this experiment for about 10 times, keeping the same conditions and i
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2012-03-22T14:55:00+02:00">Mar 22, 2012</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://utappia.org/categories.html#utappia-projects-ref">Utappia Projects</a>
+            <a class="category-link" href="./categories.html#utappia-projects-ref">Utappia Projects</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://utappia.org/tags.html#benchmark-ref">benchmark
+                <li><a href="./tags.html#benchmark-ref">benchmark
                     <span>3</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#bfq-ref">bfq
+                <li><a href="./tags.html#bfq-ref">bfq
                     <span>2</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#bfs-ref">bfs
+                <li><a href="./tags.html#bfs-ref">bfs
                     <span>2</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#cfs-ref">cfs
+                <li><a href="./tags.html#cfs-ref">cfs
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#comparison-ref">comparison
+                <li><a href="./tags.html#comparison-ref">comparison
                     <span>3</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#desktop-ref">desktop
+                <li><a href="./tags.html#desktop-ref">desktop
                     <span>2</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#kernel-ref">kernel
+                <li><a href="./tags.html#kernel-ref">kernel
                     <span>4</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#linux-ref">linux
+                <li><a href="./tags.html#linux-ref">linux
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#optimus-kernel-ref">optimus kernel
+                <li><a href="./tags.html#optimus-kernel-ref">optimus kernel
                     <span>11</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#performance-ref">performance
+                <li><a href="./tags.html#performance-ref">performance
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#scheduler-ref">scheduler
+                <li><a href="./tags.html#scheduler-ref">scheduler
                     <span>1</span>
 </a></li>
-                <li><a href="http://utappia.org/tags.html#story-ref">story
+                <li><a href="./tags.html#story-ref">story
                     <span>5</span>
 </a></li>
             </ul>
