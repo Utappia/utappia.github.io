@@ -219,6 +219,8 @@ body {
     cursor: pointer;
     min-height: 44px;
     touch-action: manipulation;
+    position: relative;
+    z-index: 1;
 }
 
 .card-inner {
@@ -300,6 +302,8 @@ h2 {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     box-shadow: 0 3.9px 11.7px rgba(46, 204, 113, 0.3);
+    position: relative;
+    z-index: 10;
 }
 
 .copy-message.show {
