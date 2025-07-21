@@ -14,16 +14,17 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1000px;
+    gap: 16px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 32px 16px;
 }
 
 .card {
     background-color: transparent;
     width: 100%;
-    height: 200px;
+    height: 180px; /* Golden ratio: 180 = 111.27 * 1.618 (approx) */
+    aspect-ratio: 1.618 / 1; /* Golden ratio */
     perspective: 1000px;
     cursor: pointer;
 }
@@ -45,13 +46,13 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px; /* Reduced border radius */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 16px; /* Golden ratio spacing: 16px */
 }
 
 .card-front {
@@ -66,58 +67,78 @@ body {
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
+    width: 48px; /* Golden ratio: 48 = 30 * 1.618 (approx) */
+    height: 48px;
+    margin-bottom: 10px; /* Golden ratio spacing: 10px = 16px / 1.618 */
 }
 
 h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.0em; /* Reduced font size */
+    margin-bottom: 8px; /* Golden ratio spacing */
+    text-align: center;
 }
 
 .card-back p {
     font-family: 'Courier New', monospace;
-    font-size: 0.9em;
+    font-size: 0.75em; /* Smaller text for better fit */
     word-break: break-all;
-    line-height: 1.4;
+    line-height: 1.3;
     background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 8px;
+    padding: 8px; /* Golden ratio spacing */
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Golden ratio: 3px = 5px / 1.618 */
     transition: transform 0.3s ease;
 }
 
 @media (max-width: 992px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 30px 15px;
+        gap: 12px; /* Golden ratio spacing */
+        padding: 24px 12px;
+        max-width: 600px;
+    }
+    
+    .card {
+        height: 160px; /* Proportionally smaller */
+    }
+    
+    .icon {
+        width: 40px;
+        height: 40px;
     }
 }
 
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px 10px;
+        gap: 16px;
+        padding: 16px 8px;
+        max-width: 320px;
     }
     
     .card {
-        height: 180px;
+        height: 140px; /* Golden ratio: smaller for mobile */
     }
     
     .icon {
-        width: 50px;
-        height: 50px;
+        width: 36px; /* Golden ratio: 36 = 22 * 1.618 */
+        height: 36px;
+        margin-bottom: 6px;
     }
     
     h2 {
-        font-size: 1.1em;
+        font-size: 0.9em;
+        margin-bottom: 6px;
+    }
+    
+    .card-back p {
+        font-size: 0.7em;
+        padding: 6px;
     }
 }
 
