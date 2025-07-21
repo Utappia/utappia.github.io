@@ -21,26 +21,31 @@ body {
 }
 
 .intro-container {
-    display: grid;
-    grid-template-columns: 1fr 1.618fr; /* Golden ratio: photo to bio */
-    gap: 32px;
+    display: flex;
+    gap: 24px;
     padding: 32px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .intro-photo {
+    flex-shrink: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .profile-img {
-    width: 180px; /* Golden ratio base */
-    height: 180px;
+    width: 140px; /* Slightly smaller for better layout */
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid rgba(102, 126, 234, 0.3);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.intro-bio {
+    flex: 1;
+    padding-left: 8px;
 }
 
 .intro-bio h1 {
@@ -164,15 +169,25 @@ h2 {
 
 @media (max-width: 992px) {
     .intro-container {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        flex-direction: column;
+        gap: 20px;
         padding: 24px;
         text-align: center;
+        align-items: center;
+    }
+    
+    .intro-photo {
+        justify-content: center;
     }
     
     .profile-img {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .intro-bio {
+        padding-left: 0;
+        text-align: center;
     }
     
     .intro-bio h1 {
@@ -202,13 +217,25 @@ h2 {
     }
     
     .intro-container {
-        gap: 20px;
+        flex-direction: column;
+        gap: 16px;
         padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .intro-photo {
+        justify-content: center;
     }
     
     .profile-img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .intro-bio {
+        padding-left: 0;
+        text-align: center;
     }
     
     .intro-bio h1 {
