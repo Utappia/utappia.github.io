@@ -203,9 +203,9 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15.6px;
-    max-width: 886px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 31.2px 15.6px;
 }
@@ -213,8 +213,8 @@ body {
 .card {
     background-color: transparent;
     width: 100%;
-    height: 176.1px;
-    aspect-ratio: 1.618 / 1;
+    height: 140px;
+    aspect-ratio: 1.2 / 1;
     perspective: 1000px;
     cursor: pointer;
     min-height: 44px;
@@ -261,22 +261,22 @@ body {
 }
 
 .icon {
-    width: 46.9px;
-    height: 46.9px;
-    margin-bottom: 9.8px;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 6px;
 }
 
 h2 {
-    font-size: 1.0em;
-    margin-bottom: 7.8px;
+    font-size: 0.85em;
+    margin-bottom: 6px;
     text-align: center;
 }
 
 .card-back p {
     font-family: 'Courier New', monospace;
-    font-size: 0.735em;
+    font-size: 0.6em;
     word-break: break-all;
-    line-height: 1.3;
+    line-height: 1.2;
     background: rgba(255, 255, 255, 0.1);
     padding: 7.8px;
     border-radius: 5.9px;
@@ -368,13 +368,13 @@ h2 {
     
     .container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 11.7px;
-        padding: 23.3px 11.7px;
-        max-width: 588px;
+        gap: 10px;
+        padding: 20px 10px;
+        max-width: 500px;
     }
     
     .card {
-        height: 156.8px;
+        height: 120px;
     }
     
     .icon {
@@ -514,30 +514,30 @@ h2 {
     }
     
     .container {
-        grid-template-columns: 1fr;
-        gap: 15.6px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
         padding: 15.6px 7.8px;
-        max-width: 313.6px;
+        max-width: 400px;
     }
     
     .card {
-        height: 137.1px;
+        height: 110px;
         min-height: 88px;
     }
     
     .icon {
-        width: 35.3px;
-        height: 35.3px;
-        margin-bottom: 5.9px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 4px;
     }
     
     h2 {
-        font-size: 0.882em;
-        margin-bottom: 5.9px;
+        font-size: 0.75em;
+        margin-bottom: 4px;
     }
     
     .card-back p {
-        font-size: 0.686em;
+        font-size: 0.55em;
         padding: 5.9px;
     }
 }
