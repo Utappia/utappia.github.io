@@ -128,8 +128,8 @@ body {
 }
 
 .support-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,6 +147,7 @@ body {
     color: #2c3e50;
     margin: 0;
     font-weight: bold;
+    display: none; /* Hide the titles */
 }
 
 .support-card p {
@@ -356,8 +357,8 @@ h2 {
     }
     
     .support-icon {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         overflow: hidden;
     }
     
