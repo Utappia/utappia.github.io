@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function showCopyNotification() {
-        console.log('showCopyNotification called'); // Debug log
+        console.log('showCopyNotification called - v2'); // Updated debug log
         const notification = document.createElement('div');
         notification.textContent = 'Address copied to clipboard!';
         notification.style.cssText = `
@@ -39,15 +39,32 @@ document.addEventListener('DOMContentLoaded', function() {
             padding: 10px 20px;
             border-radius: 5px;
             z-index: 1000;
-            animation: slideIn 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
         `;
         
         document.body.appendChild(notification);
         
+        // Trigger animation
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateY(0)';
+        }, 10);
+        
+        // Remove notification
         setTimeout(() => {
             if (notification && notification.parentNode) {
-                notification.remove();
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateY(-10px)';
+                setTimeout(() => {
+                    if (notification && notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
             }
         }, 2000);
     }
