@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(() => {
             notification.remove();
-        }, 1000);
+        }, 2000);
     }
     
     function fallbackCopyTextToClipboard(text) {
