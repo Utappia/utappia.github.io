@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Fallback for older browsers
                         fallbackCopyTextToClipboard(address);
                     });
+                } else {
+                    // If navigator.clipboard is not available, use fallback
+                    fallbackCopyTextToClipboard(address);
                 }
             }
         });
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         textArea.select();
         
         try {
+            // Intentionally using deprecated execCommand('copy') for compatibility with older browsers
             document.execCommand('copy');
             showCopyNotification();
         } catch (err) {
