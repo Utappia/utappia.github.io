@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function showCopyNotification() {
+        console.log('showCopyNotification called'); // Debug log
         const notification = document.createElement('div');
         notification.textContent = 'Address copied to clipboard!';
         notification.style.cssText = `
@@ -45,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(notification);
         
         setTimeout(() => {
-            notification.remove();
+            if (notification && notification.parentNode) {
+                notification.remove();
+            }
         }, 2000);
     }
     
