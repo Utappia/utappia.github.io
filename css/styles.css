@@ -50,8 +50,15 @@ body {
     box-shadow: 0 7.8px 23.3px rgba(0, 0, 0, 0.15);
 }
 
-.intro-bio {
+.intro-content {
     flex: 1;
+    display: flex;
+    gap: 23.3px;
+    align-items: flex-start;
+}
+
+.intro-bio {
+    flex: 2;
     padding-left: 7.8px;
 }
 
@@ -69,14 +76,31 @@ body {
     margin-bottom: 15.6px;
 }
 
+.social-links-box {
+    flex: 1;
+    background: rgba(102, 126, 234, 0.1);
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 11.7px;
+    padding: 19.5px;
+    min-width: 200px;
+}
+
+.social-links-box h3 {
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-bottom: 15.6px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .social-links {
     display: flex;
-    gap: 15.6px;
-    margin-top: 23.3px;
+    flex-direction: column;
+    gap: 11.7px;
 }
 
 .social-link {
-    padding: 7.8px 15.6px;
+    padding: 11.7px 15.6px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     text-decoration: none;
@@ -86,6 +110,8 @@ body {
     min-height: 44px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     touch-action: manipulation;
 }
 
@@ -344,6 +370,12 @@ h2 {
         align-items: center;
     }
     
+    .intro-content {
+        flex-direction: column;
+        gap: 15.6px;
+        width: 100%;
+    }
+    
     .intro-photo {
         justify-content: center;
     }
@@ -357,6 +389,17 @@ h2 {
     .intro-bio {
         padding-left: 0;
         text-align: center;
+    }
+    
+    .social-links-box {
+        min-width: auto;
+        padding: 15.6px;
+        width: 100%;
+    }
+    
+    .social-links-box h3 {
+        font-size: 1.0em;
+        margin-bottom: 11.7px;
     }
     
     .intro-bio h1 {
