@@ -289,29 +289,6 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.copy-message {
-    position: absolute;
-    top: 7.8px;
-    right: 7.8px;
-    padding: 7.8px 15.6px;
-    background: #2ecc71;
-    color: white;
-    border-radius: 19.5px;
-    font-size: 0.85em;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    box-shadow: 0 3.9px 11.7px rgba(46, 204, 113, 0.3);
-    z-index: 10;
-    pointer-events: none;
-}
-
-.copy-message.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 @media (max-width: 992px) {
     body {
         padding: 12.1px;

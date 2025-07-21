@@ -10,48 +10,46 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('click', function(e) {
             if (this.classList.contains('flipped')) {
                 const address = this.dataset.address;
-                const copyMessage = this.querySelector('.copy-message');
                 
                 if (navigator.clipboard) {
                     navigator.clipboard.writeText(address).then(() => {
-                        showCopyMessage(copyMessage);
+                        showCopyNotification();
                     }).catch(() => {
                         // Fallback for older browsers
-                        fallbackCopyTextToClipboard(address, copyMessage);
+                        fallbackCopyTextToClipboard(address);
                     });
                 } else {
                     // If navigator.clipboard is not available, use fallback
-                    fallbackCopyTextToClipboard(address, copyMessage);
+                    fallbackCopyTextToClipboard(address);
                 }
             }
         });
     });
     
-    function showCopyMessage(messageElement) {
-        // Hide any other visible copy messages first
-        document.querySelectorAll('.copy-message').forEach(msg => {
-            msg.style.display = 'none';
-            msg.classList.remove('show');
-        });
+    function showCopyNotification() {
+        const notification = document.createElement('div');
+        notification.textContent = 'Address copied to clipboard!';
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        `;
         
-        // Show the current message
-        messageElement.style.display = 'block';
+        document.body.appendChild(notification);
         
-        // Use a small delay to ensure the display change is processed before adding the show class
         setTimeout(() => {
-            messageElement.classList.add('show');
-        }, 10);
-        
-        // Hide the message after 2.5 seconds
-        setTimeout(() => {
-            messageElement.classList.remove('show');
-            setTimeout(() => {
-                messageElement.style.display = 'none';
-            }, 300); // Wait for fade out animation
-        }, 2500);
+            notification.remove();
+        }, 2000);
     }
     
-    function fallbackCopyTextToClipboard(text, messageElement) {
+    function fallbackCopyTextToClipboard(text) {
         const textArea = document.createElement("textarea");
         textArea.value = text;
         textArea.style.top = "0";
@@ -65,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Intentionally using deprecated execCommand('copy') for compatibility with older browsers
             document.execCommand('copy');
-            showCopyMessage(messageElement);
+            showCopyNotification();
         } catch (err) {
             console.error('Fallback: Could not copy text: ', err);
         }
