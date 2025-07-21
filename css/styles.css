@@ -203,11 +203,11 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 31.2px 20px;
+    padding: 31.2px;
 }
 
 .card {
