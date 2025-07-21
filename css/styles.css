@@ -8,22 +8,29 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 19.6px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .intro-section {
-    max-width: 900px;
-    margin: 0 auto 48px auto; /* Golden ratio spacing */
+    max-width: 886px;
+    margin: 0 auto 46.7px auto;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 15.6px;
+    box-shadow: 0 7.8px 31.2px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .intro-container {
     display: flex;
-    gap: 24px;
-    padding: 32px;
+    gap: 23.3px;
+    padding: 31.2px;
     align-items: flex-start;
 }
 
@@ -35,101 +42,107 @@ body {
 }
 
 .profile-img {
-    width: 140px; /* Slightly smaller for better layout */
-    height: 140px;
+    width: 138.2px;
+    height: 138.2px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid rgba(102, 126, 234, 0.3);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 3.9px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 7.8px 23.3px rgba(0, 0, 0, 0.15);
 }
 
 .intro-bio {
     flex: 1;
-    padding-left: 8px;
+    padding-left: 7.8px;
 }
 
 .intro-bio h1 {
-    font-size: 2.618em; /* Golden ratio: φ² */
+    font-size: 2.618em;
     color: #2c3e50;
-    margin-bottom: 16px;
+    margin-bottom: 15.6px;
     font-weight: bold;
 }
 
 .intro-bio p {
     font-size: 1.0em;
-    line-height: 1.618; /* Golden ratio line height */
+    line-height: 1.618;
     color: #4a5568;
-    margin-bottom: 16px;
+    margin-bottom: 15.6px;
 }
 
 .social-links {
     display: flex;
-    gap: 16px;
-    margin-top: 24px;
+    gap: 15.6px;
+    margin-top: 23.3px;
 }
 
 .social-link {
-    padding: 8px 16px;
+    padding: 7.8px 15.6px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 19.5px;
     font-size: 0.9em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
 }
 
 .social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transform: translateY(-1.9px);
+    box-shadow: 0 3.9px 11.7px rgba(102, 126, 234, 0.3);
 }
 
 .support-section, .crypto-section {
-    max-width: 900px;
-    margin: 0 auto 32px auto;
+    max-width: 886px;
+    margin: 0 auto 31.2px auto;
 }
 
 .section-title {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.472em;
     color: white;
-    margin-bottom: 24px;
+    margin-bottom: 23.3px;
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1.9px 3.9px rgba(0, 0, 0, 0.3);
 }
 
 .support-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    padding: 0 16px;
-    margin-bottom: 16px;
+    gap: 23.3px;
+    padding: 0 15.6px;
+    margin-bottom: 15.6px;
 }
 
 .support-card {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: 11.7px;
+    padding: 23.3px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5.9px 19.5px rgba(0, 0, 0, 0.12);
     text-align: center;
+    min-height: 44px;
+    touch-action: manipulation;
 }
 
 .support-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3.9px);
+    box-shadow: 0 7.8px 24.4px rgba(0, 0, 0, 0.2);
 }
 
 .support-card-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 11.7px;
 }
 
 .support-icon {
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,19 +172,21 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    max-width: 900px;
+    gap: 15.6px;
+    max-width: 886px;
     margin: 0 auto;
-    padding: 32px 16px;
+    padding: 31.2px 15.6px;
 }
 
 .card {
     background-color: transparent;
     width: 100%;
-    height: 180px; /* Golden ratio: 180 = 111.27 * 1.618 (approx) */
-    aspect-ratio: 1.618 / 1; /* Golden ratio */
+    height: 176.1px;
+    aspect-ratio: 1.618 / 1;
     perspective: 1000px;
     cursor: pointer;
+    min-height: 44px;
+    touch-action: manipulation;
 }
 
 .card-inner {
@@ -191,13 +206,13 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 12px; /* Reduced border radius */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 11.7px;
+    box-shadow: 0 5.9px 19.5px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px; /* Golden ratio spacing: 16px */
+    padding: 15.6px;
 }
 
 .card-front {
@@ -212,39 +227,43 @@ body {
 }
 
 .icon {
-    width: 48px; /* Golden ratio: 48 = 30 * 1.618 (approx) */
-    height: 48px;
-    margin-bottom: 10px; /* Golden ratio spacing: 10px = 16px / 1.618 */
+    width: 46.9px;
+    height: 46.9px;
+    margin-bottom: 9.8px;
 }
 
 h2 {
-    font-size: 1.0em; /* Reduced font size */
-    margin-bottom: 8px; /* Golden ratio spacing */
+    font-size: 1.0em;
+    margin-bottom: 7.8px;
     text-align: center;
 }
 
 .card-back p {
     font-family: 'Courier New', monospace;
-    font-size: 0.75em; /* Smaller text for better fit */
+    font-size: 0.735em;
     word-break: break-all;
     line-height: 1.3;
     background: rgba(255, 255, 255, 0.1);
-    padding: 8px; /* Golden ratio spacing */
-    border-radius: 6px;
+    padding: 7.8px;
+    border-radius: 5.9px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-3px); /* Golden ratio: 3px = 5px / 1.618 */
+    transform: translateY(-2.9px);
     transition: transform 0.3s ease;
 }
 
 @media (max-width: 992px) {
+    body {
+        padding: 12.1px;
+    }
+    
     .intro-container {
         flex-direction: column;
-        gap: 20px;
-        padding: 24px;
+        gap: 19.5px;
+        padding: 23.3px;
         text-align: center;
         align-items: center;
     }
@@ -254,8 +273,9 @@ h2 {
     }
     
     .profile-img {
-        width: 120px;
-        height: 120px;
+        width: 117.4px;
+        height: 117.4px;
+        border-width: 3.0px;
     }
     
     .intro-bio {
@@ -264,49 +284,62 @@ h2 {
     }
     
     .intro-bio h1 {
-        font-size: 2.0em;
+        font-size: 1.96em;
+    }
+    
+    .intro-bio p {
+        margin-bottom: 12.1px;
     }
     
     .support-container {
-        gap: 16px;
-        padding: 0 12px;
+        gap: 15.6px;
+        padding: 0 11.7px;
     }
     
     .support-card {
-        padding: 20px;
+        padding: 19.5px;
+    }
+    
+    .support-icon {
+        width: 60.6px;
+        height: 60.6px;
     }
     
     .section-title {
-        font-size: 1.3em;
-        margin-bottom: 20px;
+        font-size: 1.273em;
+        margin-bottom: 19.5px;
     }
     
     .container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px; /* Golden ratio spacing */
-        padding: 24px 12px;
-        max-width: 600px;
+        gap: 11.7px;
+        padding: 23.3px 11.7px;
+        max-width: 588px;
     }
     
     .card {
-        height: 160px; /* Proportionally smaller */
+        height: 156.8px;
     }
     
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 39.1px;
+        height: 39.1px;
     }
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 9.8px;
+    }
+    
     .intro-section {
-        margin-bottom: 32px;
+        margin-bottom: 31.2px;
     }
     
     .intro-container {
         flex-direction: column;
-        gap: 16px;
-        padding: 20px;
+        gap: 15.6px;
+        padding: 19.5px;
         text-align: center;
         align-items: center;
     }
@@ -316,8 +349,9 @@ h2 {
     }
     
     .profile-img {
-        width: 100px;
-        height: 100px;
+        width: 97.9px;
+        height: 97.9px;
+        border-width: 2.4px;
     }
     
     .intro-bio {
@@ -326,39 +360,41 @@ h2 {
     }
     
     .intro-bio h1 {
-        font-size: 1.8em;
-        margin-bottom: 12px;
+        font-size: 1.764em;
+        margin-bottom: 11.7px;
     }
     
     .intro-bio p {
-        font-size: 0.9em;
-        margin-bottom: 12px;
+        font-size: 0.882em;
+        margin-bottom: 11.7px;
     }
     
     .social-links {
         flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 16px;
+        gap: 11.7px;
+        margin-top: 15.6px;
     }
     
     .social-link {
-        padding: 6px 12px;
-        font-size: 0.85em;
+        padding: 5.9px 11.7px;
+        font-size: 0.833em;
+        min-height: 44px;
     }
     
     .support-container {
         grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 0 8px;
+        gap: 15.6px;
+        padding: 0 7.8px;
     }
     
     .support-card {
-        padding: 16px;
+        padding: 15.6px;
+        min-height: 88px;
     }
     
     .support-icon {
-        width: 70px;
-        height: 70px;
+        width: 68.5px;
+        height: 68.5px;
         overflow: hidden;
     }
     
@@ -369,43 +405,44 @@ h2 {
     }
     
     .support-card h3 {
-        font-size: 1.1em;
+        font-size: 1.078em;
     }
     
     .support-card p {
-        font-size: 0.85em;
+        font-size: 0.833em;
     }
     
     .section-title {
-        font-size: 1.2em;
-        margin-bottom: 16px;
+        font-size: 1.176em;
+        margin-bottom: 15.6px;
     }
     
     .container {
         grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 16px 8px;
-        max-width: 320px;
+        gap: 15.6px;
+        padding: 15.6px 7.8px;
+        max-width: 313.6px;
     }
     
     .card {
-        height: 140px; /* Golden ratio: smaller for mobile */
+        height: 137.1px;
+        min-height: 88px;
     }
     
     .icon {
-        width: 36px; /* Golden ratio: 36 = 22 * 1.618 */
-        height: 36px;
-        margin-bottom: 6px;
+        width: 35.3px;
+        height: 35.3px;
+        margin-bottom: 5.9px;
     }
     
     h2 {
-        font-size: 0.9em;
-        margin-bottom: 6px;
+        font-size: 0.882em;
+        margin-bottom: 5.9px;
     }
     
     .card-back p {
-        font-size: 0.7em;
-        padding: 6px;
+        font-size: 0.686em;
+        padding: 5.9px;
     }
 }
 
