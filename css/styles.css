@@ -55,11 +55,15 @@ body {
     display: flex;
     gap: 23.3px;
     align-items: flex-start;
+    position: relative;
 }
 
 .intro-bio {
-    flex: 2;
+    flex: 1;
     padding-left: 7.8px;
+    padding-right: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .intro-bio h1 {
@@ -77,12 +81,14 @@ body {
 }
 
 .social-links-box {
-    flex: 1;
     background: rgba(102, 126, 234, 0.1);
     border: 2px solid rgba(102, 126, 234, 0.2);
     border-radius: 11.7px;
     padding: 19.5px;
-    min-width: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 280px;
 }
 
 .social-links-box h3 {
@@ -394,6 +400,7 @@ h2 {
         flex-direction: column;
         gap: 15.6px;
         width: 100%;
+        position: static;
     }
     
     .intro-photo {
@@ -408,6 +415,7 @@ h2 {
     
     .intro-bio {
         padding-left: 0;
+        padding-right: 0;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -430,6 +438,7 @@ h2 {
     }
     
     .social-links-box {
+        position: static;
         min-width: auto;
         padding: 15.6px;
         width: 100%;
