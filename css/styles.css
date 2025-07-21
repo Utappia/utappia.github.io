@@ -409,12 +409,32 @@ h2 {
     .intro-bio {
         padding-left: 0;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .intro-bio h1 {
+        order: 1;
+    }
+    
+    .intro-bio p:first-of-type {
+        order: 2;
+    }
+    
+    .intro-bio p:nth-of-type(2) {
+        order: 4;
+    }
+    
+    .intro-bio p:last-of-type {
+        order: 5;
     }
     
     .social-links-box {
         min-width: auto;
         padding: 15.6px;
         width: 100%;
+        order: 3;
+        margin: 15.6px 0;
     }
     
     .social-links-box h3 {
