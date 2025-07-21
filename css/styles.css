@@ -264,6 +264,13 @@ body {
     width: 36px;
     height: 36px;
     margin-bottom: 6px;
+    object-fit: contain;
+}
+
+.icon[src$=".png"] {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
 }
 
 h2 {
