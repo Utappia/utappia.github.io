@@ -84,11 +84,11 @@ body {
     background: rgba(102, 126, 234, 0.1);
     border: 2px solid rgba(102, 126, 234, 0.2);
     border-radius: 11.7px;
-    padding: 19.5px;
+    padding: 10px 12px;
     position: absolute;
     right: 0;
     top: 0;
-    width: 280px;
+    width: 180px;
 }
 
 .social-links-box h3 {
@@ -102,7 +102,7 @@ body {
 .social-links {
     display: flex;
     flex-direction: column;
-    gap: 11.7px;
+    gap: 7px;
 }
 
 .social-link {
